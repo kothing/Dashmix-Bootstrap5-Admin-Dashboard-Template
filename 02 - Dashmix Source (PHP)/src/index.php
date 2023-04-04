@@ -18,7 +18,7 @@
           Create the most refreshing and powerful dashboards for your web apps. Built with <span class="fw-semibold">Bootstrap 5</span>, <span class="fw-semibold">Sass</span> and <span class="fw-semibold">ES6</span>. <span class="fw-semibold">No jQuery</span> in core. Now with a brand new <a class="link-fx fw-semibold" href="javascript:void(0)" data-toggle="layout" data-action="dark_mode_toggle">dark mode</a>.
         </p>
         <div>
-          <a class="btn btn-alt-success px-4 py-2 m-1" href="https://1.envato.market/r6y">
+          <a class="btn btn-alt-success px-4 py-2 m-1" >
             <i class="fa fa-fw fa-shopping-cart opacity-50 me-1"></i> Purchase
           </a>
           <a class="btn btn-alt-primary px-4 py-2 m-1" href="be_pages_dashboard.php" target="_blank">
@@ -709,7 +709,7 @@
 <div class="content">
   <div class="py-5 py-md-7 text-center">
     <h2 class="fw-bold mb-3">
-      Crafted with <i class="fa fa-fw fa-heart text-danger"></i> by <a class="link-fx" href="https://1.envato.market/ydb">pixelcave</a>
+      Crafted with <i class="fa fa-fw fa-heart text-danger"></i> by <a class="link-fx" >pixelcave</a>
     </h2>
     <p class="fs-lg mb-0">
       Over-profit by choosing <strong>Dashmix</strong>. It is crafted with passion to enable you build the best dashboards.
@@ -1508,12 +1508,12 @@
   <div class="content content-full">
     <div class="py-5 py-md-8 text-center">
       <h2 class="fw-bold mb-3">
-        Dash<span class="text-primary">mix</span> was crafted with <i class="fa fa-fw fa-heart text-danger"></i> by <a class="text-primary link-fx" href="https://1.envato.market/ydb">pixelcave</a>
+        Dash<span class="text-primary">mix</span> was crafted with <i class="fa fa-fw fa-heart text-danger"></i> by <a class="text-primary link-fx" >pixelcave</a>
       </h2>
       <p class="fs-lg mb-4">
         Passionate web design and development with over 15,000 customers worldwide.
       </p>
-      <a class="btn btn-alt-success px-4 py-2 m-1" href="https://1.envato.market/r6y">
+      <a class="btn btn-alt-success px-4 py-2 m-1" >
         <i class="fa fa-fw fa-shopping-cart opacity-50 me-1"></i> Purchase
       </a>
       <a class="btn btn-alt-primary px-4 py-2 m-1" href="be_pages_dashboard.php" target="_blank">
@@ -1529,10 +1529,10 @@
   <div class="content py-5">
     <div class="row fs-sm">
       <div class="col-sm-6 order-sm-2 py-1 text-center text-sm-end">
-        Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+        Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold"  target="_blank">pixelcave</a>
       </div>
       <div class="col-sm-6 order-sm-1 py-1 text-center text-sm-start">
-        <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank"><?php echo $dm->name . ' ' . $dm->version; ?></a> &copy; <span data-toggle="year-copy"></span>
+        <a class="fw-semibold"  target="_blank"><?php echo $dm->name . ' ' . $dm->version; ?></a> &copy; <span data-toggle="year-copy"></span>
       </div>
     </div>
   </div>

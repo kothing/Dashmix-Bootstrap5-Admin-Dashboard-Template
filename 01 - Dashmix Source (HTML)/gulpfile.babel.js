@@ -64,7 +64,7 @@ const pkgNameJSMain = pkgName + '.app';
 // Banner to be added at the top of the files
 const banner = ['/*!',
   ` * ${pkg.name} - v${pkg.version}`,
-  ` * @author ${pkg.author} - https://pixelcave.com`,
+  ` * @author ${pkg.author}`,
   ` * Copyright (c) ${new Date().getFullYear()}`,
   ' */',
   ''].join('\n');
