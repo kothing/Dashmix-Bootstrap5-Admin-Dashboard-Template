@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xinspire.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="page-header-dark main-content-boxed">
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div class="d-flex align-items-center">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Booking</span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary ms-2" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-search"></i>
+            </button>
+            <!-- END Open Search Section -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary dropdown-toggle" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="img-avatar img-avatar32 img-avatar-thumb" src="assets/media/avatars/avatar1.jpg" alt="">
+                <span class="d-none d-sm-inline ms-1">Jessica</span>
+                <span class="badge rounded-pill bg-warning ms-1">.genius</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0" aria-labelledby="page-header-user-dropdown">
+                <div class="rounded-top fw-semibold text-white text-center bg-image" style="background-image: url('assets/media/photos/photo13.jpg');">
+                  <div class="p-3">
+                    <img class="img-avatar img-avatar-thumb" src="assets/media/avatars/avatar1.jpg" alt="">
+                  </div>
+                  <div class="p-3 bg-black-75">
+                    <a class="text-white fw-semibold" href="be_pages_generic_profile.html">Jessica Taylor</a>
+                    <div class="text-white-75">jesst@example.com</div>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Profile
+                    <i class="fa fa-fw fa-user opacity-50 ms-1"></i>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Bookings
+                    <div>
+                      <span class="badge rounded-pill bg-primary">3</span>
+                      <i class="fa fa-fw fa-pencil-alt opacity-50 ms-1"></i>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Travel Guides
+                    <i class="fa fa-fw fa-plane opacity-50 ms-1"></i>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Billing
+                    <div>
+                      <span class="badge rounded-pill bg-primary">1</span>
+                      <i class="fa fa-fw fa-money-bill-wave-alt opacity-50 ms-1"></i>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Settings
+                    <i class="fa fa-fw fa-cog opacity-50 ms-1"></i>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="op_auth_signin.html">
+                    Sign Out
+                    <i class="fa fa-fw fa-sign-out-alt text-danger ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-header-dark">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-primary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+                <input type="text" class="form-control" placeholder="Where to?" id="page-header-search-input" name="page-header-search-input">
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-header-dark">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-sun fa-spin text-primary"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Top Navigation -->
+        <div class="bg-body-extra-light">
+          <div class="content py-3">
+            <ul class="nav nav-pills justify-content-center justify-content-md-start">
+              <li class="nav-item me-1">
+                <a class="nav-link active" href="db_booking.html">
+                  <i class="fa fa-building fa-fw"></i> <span class="d-none d-md-inline ms-1">Hotels</span>
+                </a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="db_booking.html">
+                  <i class="fa fa-plane fa-fw"></i> <span class="d-none d-md-inline ms-1">Flights</span>
+                </a>
+              </li>
+              <li class="nav-item me-1">
+                <a class="nav-link" href="db_booking.html">
+                  <i class="fa fa-car fa-fw"></i> <span class="d-none d-md-inline ms-1">Rent a car</span>
+                </a>
+              </li>
+              <li class="nav-item ms-md-auto">
+                <a class="nav-link" href="db_booking.html">
+                  <i class="fa fa-star text-warning fa-fw"></i> <span class="d-none d-md-inline ms-1">Special Offers</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- END Top Navigation -->
+
+        <!-- Search -->
+        <div class="content">
+          <div class="text-center py-3">
+            <h1 class="h3 fw-bold mb-2">Where are you going next?</h1>
+            <h2 class="h5 fw-normal text-muted">Explore over 168 destinations with the best deals online!</h2>
+          </div>
+          <form action="db_booking.html" method="POST" onsubmit="return false;">
+            <div class="mb-4">
+              <input type="text" class="form-control form-control-lg py-3 text-center" id="dm-booking-destination" name="dm-booking-destination" placeholder="Where do you want to go?">
+            </div>
+            <div class="row items-push">
+              <div class="col-md-6">
+                <div class="input-daterange input-group" data-date-format="mm/dd/yyyy" data-week-start="1" data-autoclose="true" data-today-highlight="true">
+                  <input type="text" class="form-control" id="dm-booking-checkin" name="dm-booking-checkin" placeholder="Check in" data-week-start="1" data-autoclose="true" data-today-highlight="true">
+                  <span class="input-group-text fw-semibold">
+                    <i class="fa fa-fw fa-arrow-right"></i>
+                  </span>
+                  <input type="text" class="form-control" id="dm-booking-checkout" name="dm-booking-checkout" placeholder="Check out" data-week-start="1" data-autoclose="true" data-today-highlight="true">
+                </div>
+              </div>
+              <div class="col-md-2">
+                <select class="form-select" id="example-hosting-vps" name="example-hosting-vps">
+                  <option value="0">People..</option>
+                  <option value="1">On my own</option>
+                  <option value="2">2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6 People</option>
+                  <option value="7">7 People</option>
+                  <option value="8">8 People</option>
+                  <option value="9">9 People</option>
+                  <option value="10">10+ People</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- END Search -->
+
+        <!-- Travel Packages -->
+        <div class="bg-body-extra-light">
+          <div class="content">
+            <div class="row">
+              <div class="col-md-6 d-md-flex align-items-md-stretch">
+                <a class="block block-transparent w-100 d-md-flex align-items-md-stretch bg-image" style="background-image: url('assets/media/photos/photo14.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$2199</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <i class="fa fa-star text-warning"></i>
+                      <h3 class="h1 fw-bold text-white mb-1">Hong Kong</h3>
+                      <h5 class="fw-normal text-body-color-light">3 Day Tour</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo16.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom bg-black-25">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$1999</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">Mountain</h3>
+                      <h5 class="fw-normal text-body-color-light">Weekly Tour</h5>
+                    </div>
+                  </div>
+                </a>
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo5.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$1599</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">Greece</h3>
+                      <h5 class="fw-normal text-body-color-light">10 Days Package</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4">
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo17.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$3999</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">Xtreme</h3>
+                      <h5 class="fw-normal text-body-color-light">For nature enthusiasts</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4">
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo1.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom bg-black-25">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$899</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">Berlin</h3>
+                      <h5 class="fw-normal text-body-color-light">5 Days Tour</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-4">
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo3.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom bg-black-10">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$1249</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">Rome</h3>
+                      <h5 class="fw-normal text-body-color-light">Romantic Getaway</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo12.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom bg-black-10">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$299</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">New York</h3>
+                      <h5 class="fw-normal text-body-color-light">Night food tour</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6">
+                <a class="block block-transparent bg-image" style="background-image: url('assets/media/photos/photo7.jpg');" href="javascript:void(0)" data-toggle="click-ripple">
+                  <div class="block-content ribbon ribbon-bookmark ribbon-primary ribbon-bottom bg-black-50">
+                    <div class="ribbon-box">
+                      from <span class="fw-bold">$499</span>
+                    </div>
+                    <div class="pt-4 pb-6 px-md-3">
+                      <h3 class="h1 fw-bold text-white mb-1">Metsovo</h3>
+                      <h5 class="fw-normal text-body-color-light">Inspiring break</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Travel Packages -->
+
+        <!-- My Bookings -->
+        <div class="bg-body-dark">
+          <div class="content content-full">
+            <div class="text-center py-3">
+              <h2 class="h3 fw-bold mb-2">My Bookings</h2>
+              <h3 class="h5 fw-normal text-muted">Manage and handle all your upcoming bookings</h3>
+            </div>
+            <div class="block block-rounded block-transparent bg-image" style="background-image: url('assets/media/photos/photo6.jpg');">
+              <div class="block-content block-content-full bg-black-75">
+                <div class="d-md-flex justify-content-md-between align-items-md-center">
+                  <div class="p-3 p-md-4">
+                    <h3 class="h4 fw-bold text-white mb-1">Greece Vacation</h3>
+                    <p class="text-white-75 fw-semibold mb-0">
+                      7 nights - in 20 days
+                    </p>
+                  </div>
+                  <div class="p-3 p-md-4">
+                    <a class="btn btn-sm btn-alt-primary px-3 me-1 my-1" href="javascript:void(0)">
+                      Change
+                    </a>
+                    <a class="btn btn-sm btn-alt-danger px-3 my-1" href="javascript:void(0)">
+                      <i class="fa fa-times opacity-50 me-1"></i> Cancel
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block block-rounded block-transparent bg-image" style="background-image: url('assets/media/photos/photo12.jpg');">
+              <div class="block-content block-content-full bg-black-75">
+                <div class="d-md-flex justify-content-md-between align-items-md-center">
+                  <div class="p-3 p-md-4">
+                    <h3 class="h4 fw-bold text-white mb-1">City Food Tour</h3>
+                    <p class="text-white-75 fw-semibold mb-0">
+                      3 hours - in 4 months
+                    </p>
+                  </div>
+                  <div class="p-3 p-md-4">
+                    <a class="btn btn-sm btn-alt-primary px-3 me-1 my-1" href="javascript:void(0)">
+                      Change
+                    </a>
+                    <a class="btn btn-sm btn-alt-danger px-3 my-1" href="javascript:void(0)">
+                      <i class="fa fa-times opacity-50 me-1"></i> Cancel
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block block-rounded block-transparent bg-image" style="background-image: url('assets/media/photos/photo19.jpg');">
+              <div class="block-content block-content-full bg-black-75">
+                <div class="d-md-flex justify-content-md-between align-items-md-center">
+                  <div class="p-3 p-md-4">
+                    <h3 class="h4 fw-bold text-white mb-1">Mountain Escape</h3>
+                    <p class="text-white-75 fw-semibold mb-0">
+                      3 nights - in 1 year
+                    </p>
+                  </div>
+                  <div class="p-3 p-md-4">
+                    <a class="btn btn-sm btn-alt-primary px-3 me-1 my-1" href="javascript:void(0)">
+                      Change
+                    </a>
+                    <a class="btn btn-sm btn-alt-danger px-3 my-1" href="javascript:void(0)">
+                      <i class="fa fa-times opacity-50 me-1"></i> Cancel
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END My Bookings -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="footer-static bg-body-extra-light">
+        <div class="content py-4">
+          <!-- Footer Navigation -->
+          <div class="row items-push fs-sm border-bottom pt-4">
+            <div class="col-6 col-md-4">
+              <h3 class="h5 fw-bold">Destinations</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Countries</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">States</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Cities</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Airports</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Hotels</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">POIs</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <h3 class="h5 fw-bold">Experiences</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Food</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Drink</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Cars</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Sports</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Islands</a>
+                </li>
+                <li>
+                  <a class="link-fx fw-semibold" href="javascript:void(0)">Xtreme</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3 class="h5 fw-bold">Special Offers</h3>
+              <form class="mb-4" action="db_booking.html" method="POST">
+                <div class="input-group">
+                  <input type="email" class="form-control" id="dm-subscribe-email" name="dm-subscribe-email" placeholder="Email Address..">
+                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+              </form>
+              <h3 class="h5 fw-bold">Our Company</h3>
+              <div>
+                0956 Sunshine Street, Suite 85<br>
+                Los Angeles, CA 98852<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </div>
+            </div>
+          </div>
+          <!-- END Footer Navigation -->
+
+          <!-- Footer Copyright -->
+          <div class="row fs-sm pt-4">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+          <!-- END Footer Copyright -->
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for BS Datepicker plugin) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+    <!-- Page JS Helpers (BS Datepicker plugin) -->
+    <script>Dashmix.helpersOnLoad(['jq-datepicker']);</script>
+  </body>
+</html>

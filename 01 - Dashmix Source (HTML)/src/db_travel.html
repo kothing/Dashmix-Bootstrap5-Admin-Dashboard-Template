@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.css">
+    <link rel="stylesheet" href="assets/js/plugins/slick-carousel/slick.css">
+    <link rel="stylesheet" href="assets/js/plugins/slick-carousel/slick-theme.css">
+
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o sidebar-dark sidebar-mini enable-page-overlay side-scroll">
+      <!-- Side Overlay-->
+      <aside id="side-overlay">
+        <!-- Side Header -->
+        <div class="content-header bg-dark">
+          <div class="fw-semibold text-white">
+            Downtown Apartment
+          </div>
+
+          <!-- Close Side Overlay -->
+          <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+          <a class="ms-auto text-white" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
+            <i class="fa fa-times-circle"></i>
+          </a>
+          <!-- END Close Side Overlay -->
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Gallery -->
+        <!-- Slick Slider (.js-slider class is initialized in Helpers.jqSlick()) -->
+        <!-- For more info and examples you can check out http://kenwheeler.github.io/slick/ -->
+        <div class="js-slider slick-nav-black slick-nav-hover slick-dotted-inner slick-dotted-white img-fluid-100" data-dots="true" data-arrows="true" data-autoplay="true" data-autoplay-speed="3000">
+          <div>
+            <img class="img-fluid" src="assets/media/photos/photo26@2x.jpg" alt="">
+          </div>
+          <div>
+            <img class="img-fluid" src="assets/media/photos/photo28@2x.jpg" alt="">
+          </div>
+          <div>
+            <img class="img-fluid" src="assets/media/photos/photo29@2x.jpg" alt="">
+          </div>
+          <div>
+            <img class="img-fluid" src="assets/media/photos/photo30@2x.jpg" alt="">
+          </div>
+        </div>
+        <!-- END Gallery -->
+
+        <!-- Info -->
+        <div class="content-side content-side-full">
+          <h5 class="h2 fw-light text-center mb-2">
+            $150 <span class="fs-3 text-muted">per night</span>
+          </h5>
+          <div class="text-warning text-center push">
+            <i class="fa fa-fw fa-star"></i>
+            <i class="fa fa-fw fa-star"></i>
+            <i class="fa fa-fw fa-star"></i>
+            <i class="fa fa-fw fa-star"></i>
+            <i class="fa fa-fw fa-star"></i>
+            <span class="text-muted">(19)</span>
+          </div>
+          <div class="row text-center border-top border-bottom bg-body-light pull-x push">
+            <div class="col-6 border-bottom border-end">
+              <p class="py-3 mb-0">
+                <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>2</strong> Bedrooms
+              </p>
+            </div>
+            <div class="col-6 border-bottom">
+              <p class="py-3 mb-0">
+                <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>1</strong> Bathroom
+              </p>
+            </div>
+            <div class="col-6 border-end">
+              <p class="py-3 mb-0">
+                <i class="fa fa-fw fa-check text-success me-1"></i> Wifi
+              </p>
+            </div>
+            <div class="col-6">
+              <p class="py-3 mb-0">
+                <i class="fa fa-fw fa-check text-success me-1"></i> Breakfast
+              </p>
+            </div>
+          </div>
+          <p class="fs-sm fw-medium">
+            Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.
+          </p>
+          <div class="row g-sm">
+            <div class="col-6">
+              <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                Rent
+              </a>
+            </div>
+            <div class="col-6">
+              <a class="btn btn-sm btn-alt-primary w-100" href="javascript:void(0)">
+                View More
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- END Info -->
+      </aside>
+      <!-- END Side Overlay -->
+
+      <!-- Sidebar -->
+      <!--
+        Sidebar Mini Mode - Display Helper classes
+
+        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header -->
+        <div class="content-header bg-black-10">
+          <!-- Logo -->
+          <a class="fw-semibold text-white tracking-wide" href="index.html">
+            <span class="smini-visible">
+              D<span class="opacity-75">x</span>
+            </span>
+            <span class="smini-hidden">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Travel</span>
+            </span>
+          </a>
+          <!-- END Logo -->
+
+          <!-- Options -->
+          <div>
+            <!-- Close Sidebar, Visible only on mobile screens -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <a class="d-lg-none text-white ms-2" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
+              <i class="fa fa-times-circle"></i>
+            </a>
+            <!-- END Close Sidebar -->
+          </div>
+          <!-- END Options -->
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+          <!-- Side Navigation -->
+          <div class="content-side">
+            <ul class="nav-main">
+              <li class="nav-main-item">
+                <a class="nav-main-link active" href="db_travel.html">
+                  <i class="nav-main-link-icon fa fa-fire text-muted"></i>
+                  <span class="nav-main-link-name">Dashboard</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-dark">3</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-building text-muted"></i>
+                  <span class="nav-main-link-name">Apartments</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-dark">1</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-home text-muted"></i>
+                  <span class="nav-main-link-name">Houses</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-dark">2</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-smile-beam text-muted"></i>
+                  <span class="nav-main-link-name">Experiences</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-dark">5</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-plane text-muted"></i>
+                  <span class="nav-main-link-name">Trips</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-dark">4</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Trips</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-suitcase text-xdream-light"></i>
+                  <span class="nav-main-link-name">Hawaii</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-suitcase text-danger-light"></i>
+                  <span class="nav-main-link-name">Iceland</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-suitcase text-xsmooth-light"></i>
+                  <span class="nav-main-link-name">New Zealand</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-suitcase text-xinspire-light"></i>
+                  <span class="nav-main-link-name">Japan</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Account</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-user-circle text-muted"></i>
+                  <span class="nav-main-link-name">Profile</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-cog text-muted"></i>
+                  <span class="nav-main-link-name">Settings</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Dashboards</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_pages_dashboard_all.html">
+                  <i class="nav-main-link-icon fa fa-arrow-left text-muted"></i>
+                  <span class="nav-main-link-name">Go Back</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="row g-0 flex-md-grow-1">
+          <div class="col-lg-5 col-xl-3 h100-scroll">
+            <div class="content">
+              <!-- Logo -->
+              <div class="text-center d-lg-none push">
+                <a class="link-fx fs-lg text-dark fw-semibold" href="index.html">
+                  <span class="text-muted">x</span>Travel
+                </a>
+              </div>
+              <!-- END Logo -->
+
+              <!-- Toggle Side Content -->
+              <div class="row g-sm d-lg-none push">
+                <div class="col-6">
+                  <!-- Toggle Sidebar -->
+                  <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+                  <button type="button" class="btn w-100 btn-primary" data-toggle="layout" data-action="sidebar_toggle">
+                    <i class="fa fa-bars opacity-50 me-1"></i> Menu
+                  </button>
+                </div>
+                <div class="col-6">
+                  <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+                  <button type="button" class="btn w-100 btn-alt-primary" data-toggle="class-toggle" data-target="#side-content" data-class="d-none">
+                    <i class="fa fa-flask me-1"></i> Filters
+                  </button>
+                </div>
+              </div>
+              <!-- END Toggle Side Content -->
+
+              <!-- Search Travel -->
+              <form class="push" action="db_travel.html" method="POST" onsubmit="return false;">
+                <div class="mb-2">
+                  <input type="text" class="form-control form-control-lg py-3 fs-base text-center" id="db-travel-location" name="db-travel-location" placeholder="Where are you going?">
+                </div>
+                <div class="mb-4">
+                  <div class="input-daterange input-group input-group-lg" data-date-format="mm/dd/yyyy" data-week-start="1" data-autoclose="true" data-today-highlight="true">
+                    <input type="text" class="form-control border-end-0 py-3 fs-base" id="db-travel-from" name="db-travel-from" placeholder="Arriving.." data-week-start="1" data-autoclose="true" data-today-highlight="true">
+                    <span class="input-group-text bg-body-extra-light border-start-0 border-end-0 fw-semibold">
+                      <i class="fa fa-fw fa-angle-double-right fs-base text-muted"></i>
+                    </span>
+                    <input type="text" class="form-control border-start-0 py-3 fs-base" id="db-travel-to" name="db-travel-to" placeholder="Leaving.." data-week-start="1" data-autoclose="true" data-today-highlight="true">
+                  </div>
+                </div>
+              </form>
+              <!-- END Search Travel -->
+
+              <!-- Side Content -->
+              <div id="side-content" class="d-none d-lg-block push">
+                <!-- House Type -->
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">
+                      <i class="fa fa-fw fa-home opacity-25 me-1"></i> House Type
+                    </h3>
+                    <div class="block-options">
+                      <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                    </div>
+                  </div>
+                  <div class="block-content">
+                    <div class="row g-sm items-push mb-4">
+                      <div class="col-12">
+                        <div class="form-check form-block">
+                          <input type="radio" class="form-check-input" id="db-travel-house-type-entire" name="db-travel-house-type">
+                          <label class="form-check-label" for="db-travel-house-type-entire">
+                            <span class="d-block text-center">
+                              <span class="d-block">
+                                Entire Place
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check form-block">
+                          <input type="radio" class="form-check-input" id="db-travel-house-type-private" name="db-travel-house-type">
+                          <label class="form-check-label" for="db-travel-house-type-private">
+                            <span class="d-block text-center">
+                              Private Room
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check form-block">
+                          <input type="radio" class="form-check-input" id="db-travel-house-type-shared" name="db-travel-house-type">
+                          <label class="form-check-label" for="db-travel-house-type-shared">
+                            <span class="d-block text-center">
+                              Shared Room
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END House Type -->
+
+                <!-- Trip -->
+                <div class="block block-rounded block-mode-hidden">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">
+                      <i class="fa fa-fw fa-plane opacity-25 me-1"></i> Trip
+                    </h3>
+                    <div class="block-options">
+                      <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                    </div>
+                  </div>
+                  <div class="block-content">
+                    <div class="row g-sm items-push mb-4">
+                      <div class="col-6">
+                        <div class="form-check form-block">
+                          <input type="radio" class="form-check-input" id="db-travel-trip-work" name="db-travel-trip">
+                          <label class="form-check-label" for="db-travel-trip-work">
+                            <span class="d-block text-center">
+                              Work
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check form-block">
+                          <input type="radio" class="form-check-input" id="db-travel-trip-leisure" name="db-travel-trip">
+                          <label class="form-check-label" for="db-travel-trip-leisure">
+                            <span class="d-block text-center">
+                              Leisure
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END Trip -->
+
+                <!-- Price Range -->
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">
+                      <i class="fa fa-fw fa-dollar-sign opacity-25 me-1"></i> Price Range
+                    </h3>
+                    <div class="block-options">
+                      <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                    </div>
+                  </div>
+                  <div class="block-content">
+                    <div class="mb-4">
+                      <input type="text" class="js-rangeslider" id="db-travel-price" name="db-travel-price" data-type="double" data-min="0" data-max="1000" data-from="0" data-to="1000" data-prefix="$">
+                    </div>
+                  </div>
+                </div>
+                <!-- END Price Range -->
+
+                <!-- Amenities -->
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">
+                      <i class="fa fa-fw fa-box-open opacity-25 me-1"></i> Amenities
+                    </h3>
+                    <div class="block-options">
+                      <button type="button" class="btn-block-option" data-toggle="block-option" data-action="content_toggle"></button>
+                    </div>
+                  </div>
+                  <div class="block-content">
+                    <div class="row g-sm items-push mb-4">
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-kitchen" name="db-travel-amenities-kitchen">
+                          <label class="form-check-label" for="db-travel-amenities-kitchen">Kitchen</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-shampoo" name="db-travel-amenities-shampoo">
+                          <label class="form-check-label" for="db-travel-amenities-shampoo">Shampoo</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-heating" name="db-travel-amenities-heating">
+                          <label class="form-check-label" for="db-travel-amenities-heating">Heating</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-airconditioning" name="db-travel-amenities-airconditioning">
+                          <label class="form-check-label" for="db-travel-amenities-airconditioning">Air conditioning</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-washer" name="db-travel-amenities-washer">
+                          <label class="form-check-label" for="db-travel-amenities-washer">Washer</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-dryer" name="db-travel-amenities-dryer">
+                          <label class="form-check-label" for="db-travel-amenities-dryer">Dryer</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-wifi" name="db-travel-amenities-wifi">
+                          <label class="form-check-label" for="db-travel-amenities-wifi">Wifi</label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="db-travel-amenities-breakfast" name="db-travel-amenities-breakfast">
+                          <label class="form-check-label" for="db-travel-amenities-breakfast">Breakfast</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END Amenities -->
+              </div>
+              <!-- END Side Content -->
+            </div>
+          </div>
+          <div class="col-lg-7 col-xl-9 h100-scroll bg-body-dark">
+            <!-- Main Content -->
+            <div class="content">
+              <div class="row">
+                <div class="col-md-6 col-xl-4">
+                  <!-- House -->
+                  <div class="block block-rounded">
+                    <div class="block-content p-0 overflow-hidden">
+                      <a class="img-link img-fluid-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                        <img class="img-fluid rounded-top" src="assets/media/photos/photo27.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="block-content">
+                      <h4 class="h6 mb-2">Luxury House</h4>
+                      <h5 class="h2 fw-light push">
+                        $380 <span class="fs-3 text-muted">per night</span>
+                      </h5>
+                    </div>
+                    <div class="block-content p-0">
+                      <div class="row text-center m-0 border-top border-bottom bg-body-light">
+                        <div class="col-6 border-end">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>4</strong> Bedrooms
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>2</strong> Bathrooms
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-content block-content-full">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                            Rent
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-alt-primary w-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END House -->
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <!-- House -->
+                  <div class="block block-rounded">
+                    <div class="block-content p-0 overflow-hidden">
+                      <a class="img-link img-fluid-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                        <img class="img-fluid rounded-top" src="assets/media/photos/photo28.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="block-content">
+                      <h4 class="h6 mb-2">Renovated Apartment</h4>
+                      <h5 class="h2 fw-light push">
+                        $75 <span class="fs-3 text-muted">per night</span>
+                      </h5>
+                    </div>
+                    <div class="block-content p-0">
+                      <div class="row text-center m-0 border-top border-bottom bg-body-light">
+                        <div class="col-6 border-end">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>2</strong> Bedrooms
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>1</strong> Bathroom
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-content block-content-full">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                            Rent
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-alt-primary w-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END House -->
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <!-- House -->
+                  <div class="block block-rounded">
+                    <div class="block-content p-0 overflow-hidden">
+                      <a class="img-link img-fluid-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                        <img class="img-fluid rounded-top" src="assets/media/photos/photo29.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="block-content">
+                      <h4 class="h6 mb-2">Best Tiny Apartment</h4>
+                      <h5 class="h2 fw-light push">
+                        $90 <span class="fs-3 text-muted">per night</span>
+                      </h5>
+                    </div>
+                    <div class="block-content p-0">
+                      <div class="row text-center m-0 border-top border-bottom bg-body-light">
+                        <div class="col-6 border-end">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>1</strong> Bedroom
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>1</strong> Bathroom
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-content block-content-full">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                            Rent
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-alt-primary w-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END House -->
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <!-- House -->
+                  <div class="block block-rounded">
+                    <div class="block-content p-0 overflow-hidden">
+                      <a class="img-link img-fluid-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                        <img class="img-fluid rounded-top" src="assets/media/photos/photo30.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="block-content">
+                      <h4 class="h6 mb-2">Cottage</h4>
+                      <h5 class="h2 fw-light push">
+                        $120 <span class="fs-3 text-muted">per night</span>
+                      </h5>
+                    </div>
+                    <div class="block-content p-0">
+                      <div class="row text-center m-0 border-top border-bottom bg-body-light">
+                        <div class="col-6 border-end">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>5</strong> Bedrooms
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>3</strong> Bathrooms
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-content block-content-full">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                            Rent
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-alt-primary w-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END House -->
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <!-- House -->
+                  <div class="block block-rounded">
+                    <div class="block-content p-0 overflow-hidden">
+                      <a class="img-link img-fluid-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                        <img class="img-fluid rounded-top" src="assets/media/photos/photo13.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="block-content">
+                      <h4 class="h6 mb-2">Downtown Apartment</h4>
+                      <h5 class="h2 fw-light push">
+                        $35 <span class="fs-3 text-muted">per night</span>
+                      </h5>
+                    </div>
+                    <div class="block-content p-0">
+                      <div class="row text-center m-0 border-top border-bottom bg-body-light">
+                        <div class="col-6 border-end">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>2</strong> Bedrooms
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>1</strong> Bathroom
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-content block-content-full">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                            Rent
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-alt-primary w-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END House -->
+                </div>
+                <div class="col-md-6 col-xl-4">
+                  <!-- House -->
+                  <div class="block block-rounded">
+                    <div class="block-content p-0 overflow-hidden">
+                      <a class="img-link img-fluid-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                        <img class="img-fluid rounded-top" src="assets/media/photos/photo26.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="block-content">
+                      <h4 class="h6 mb-2">Downtown Apartment</h4>
+                      <h5 class="h2 fw-light push">
+                        $150 <span class="fs-3 text-muted">per night</span>
+                      </h5>
+                    </div>
+                    <div class="block-content p-0">
+                      <div class="row text-center m-0 border-top border-bottom bg-body-light">
+                        <div class="col-6 border-end">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bed text-muted me-1"></i> <strong>2</strong> Bedrooms
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="py-3 mb-0">
+                            <i class="fa fa-fw fa-bath text-muted me-1"></i> <strong>1</strong> Bathroom
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block-content block-content-full">
+                      <div class="row">
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-primary w-100" href="javascript:void(0)">
+                            Rent
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a class="btn btn-sm btn-alt-primary w-100" data-toggle="layout" data-action="side_overlay_open" href="javascript:void(0)">
+                            View
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- END House -->
+                </div>
+              </div>
+            </div>
+            <!-- END Main Content -->
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for BS Datepicker + Ion Range Slider + Slick Slider plugins) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="assets/js/plugins/slick-carousel/slick.min.js"></script>
+
+    <!-- Page JS Helpers (BS Datepicker + Ion Range Slider + Slick Slider plugins) -->
+    <script>Dashmix.helpersOnLoad(['jq-datepicker', 'jq-rangeslider', 'jq-slick']);</script>
+  </body>
+</html>

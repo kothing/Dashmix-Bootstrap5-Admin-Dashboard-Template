@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="page-header-dark main-content-boxed">
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div class="d-flex align-items-center">
+            <!-- Logo -->
+            <a class="fw-semibold text-dual tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Boxed</span>
+            </a>
+            <!-- END Logo -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary ms-2" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-search"></i>
+            </button>
+            <!-- END Open Search Section -->
+
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user-circle"></i>
+                <i class="fa fa-angle-down opacity-50 ms-1"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
+                <div class="rounded-top fw-semibold text-white bg-image" style="background-image: url('assets/media/photos/photo20.jpg');">
+                  <div class="p-3 bg-black-50 rounded-top">
+                    <div class="d-flex align-items-center">
+                      <img class="img-avatar img-avatar48 img-avatar-thumb" src="assets/media/avatars/avatar3.jpg" alt="">
+                      <div class="ms-3">
+                        <a class="text-white fw-semibold" href="be_pages_generic_profile.html">Carol Ray</a>
+                        <div class="fs-sm text-white-75">c.ray@example.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <i class="fa fa-fw fa-globe opacity-50 me-1"></i>
+                      Projects
+                    </div>
+                    <span class="badge rounded-pill bg-primary">3</span>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <i class="fa fa-fw fa-sync-alt opacity-50 me-1"></i>
+                      Servers
+                    </div>
+                    <span class="badge rounded-pill bg-primary">1</span>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <i class="fa fa-fw fa-users opacity-50 me-1"></i>
+                      Customers
+                    </div>
+                    <span class="badge rounded-pill bg-primary">15</span>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-user-circle opacity-50 me-1"></i>
+                    Profile
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                    <i class="fab fa-fw fa-paypal opacity-50 me-1"></i>
+                    Billing
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-wrench opacity-50 me-1"></i>
+                    Preferences
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex align-items-center mb-0" href="op_auth_signin.html">
+                    <i class="fa fa-fw fa-sign-out-alt text-danger me-1"></i>
+                    Log Out
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-sidebar-dark">
+          <div class="content-header">
+            <form class="w-100" action="bd_search.html" method="POST">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search your projects.." id="page-header-search-input" name="page-header-search-input">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-alt-danger" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-sidebar-dark">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-spinner fa-spin text-primary"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Navigation -->
+        <div class="bg-sidebar-dark">
+          <div class="content">
+            <!-- Toggle Main Navigation -->
+            <div class="d-lg-none push">
+              <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+              <button type="button" class="btn w-100 btn-primary d-flex justify-content-between align-items-center" data-toggle="class-toggle" data-target="#main-navigation" data-class="d-none">
+                Menu
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+            <!-- END Toggle Main Navigation -->
+
+            <!-- Main Navigation -->
+            <div id="main-navigation" class="d-none d-lg-block push">
+              <ul class="nav-main nav-main-horizontal nav-main-hover nav-main-dark">
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="bd_dashboard.html">
+                    <i class="nav-main-link-icon fa fa-compass"></i>
+                    <span class="nav-main-link-name">Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-main-heading">Variations</li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-puzzle-piece"></i>
+                    <span class="nav-main-link-name">Variations</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="bd_simple_1.html">
+                        <span class="nav-main-link-name">Simple 1</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="bd_simple_2.html">
+                        <span class="nav-main-link-name">Simple 2</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="bd_image_1.html">
+                        <span class="nav-main-link-name">Image 1</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="bd_image_2.html">
+                        <span class="nav-main-link-name">Image 2</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="bd_video_1.html">
+                        <span class="nav-main-link-name">Video 1</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="bd_video_2.html">
+                        <span class="nav-main-link-name">Video 2</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                        <span class="nav-main-link-name">More Options</span>
+                      </a>
+                      <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="javascript:void(0)">
+                            <span class="nav-main-link-name">Another Link</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="javascript:void(0)">
+                            <span class="nav-main-link-name">Another Link</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="javascript:void(0)">
+                            <span class="nav-main-link-name">Another Link</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link active" href="bd_search.html">
+                    <i class="nav-main-link-icon fa fa-search"></i>
+                    <span class="nav-main-link-name">Search</span>
+                  </a>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link" href="be_pages_dashboard.html">
+                    <i class="nav-main-link-icon fa fa-undo"></i>
+                    <span class="nav-main-link-name">Go Back</span>
+                  </a>
+                </li>
+                <li class="nav-main-heading">Extra</li>
+                <li class="nav-main-item ms-lg-auto">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-brush"></i>
+                    <span class="nav-main-link-name d-lg-none">Themes</span>
+                  </a>
+                  <ul class="nav-main-submenu nav-main-submenu-right">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="default" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-default"></i>
+                        <span class="nav-main-link-name">Default</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xwork.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xwork"></i>
+                        <span class="nav-main-link-name">xWork</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xmodern.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xmodern"></i>
+                        <span class="nav-main-link-name">xModern</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xeco.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xeco"></i>
+                        <span class="nav-main-link-name">xEco</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xsmooth.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xsmooth"></i>
+                        <span class="nav-main-link-name">xSmooth</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xinspire.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xinspire"></i>
+                        <span class="nav-main-link-name">xInspire</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xdream.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xdream"></i>
+                        <span class="nav-main-link-name">xDream</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xpro.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xpro"></i>
+                        <span class="nav-main-link-name">xPro</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xplay.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xplay"></i>
+                        <span class="nav-main-link-name">xPlay</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- END Main Navigation -->
+          </div>
+        </div>
+        <!-- END Navigation -->
+        <!-- Page Content -->
+        <div class="content">
+          <!-- Search -->
+          <div class="p-3 bg-body-extra-light rounded push">
+            <form action="bd_search.html" method="POST">
+              <div class="input-group input-group-lg">
+                <input type="text" class="form-control form-control-alt" placeholder="Search..">
+                <span class="input-group-text border-0 bg-body">
+                  <i class="fa fa-fw fa-search"></i>
+                </span>
+              </div>
+            </form>
+          </div>
+          <!-- END Search -->
+
+          <!-- Results -->
+          <div class="block block-rounded">
+            <ul class="nav nav-tabs nav-tabs-block" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active" id="search-classic-tab" data-bs-toggle="tab" data-bs-target="#search-classic" role="tab" aria-controls="search-classic" aria-selected="true">
+                  Classic
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="search-photos-tab" data-bs-toggle="tab" data-bs-target="#search-photos" role="tab" aria-controls="search-photos" aria-selected="false">
+                  Photos
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="search-customers-tab" data-bs-toggle="tab" data-bs-target="#search-customers" role="tab" aria-controls="search-customers" aria-selected="false">
+                  Customers
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" id="search-projects-tab" data-bs-toggle="tab" data-bs-target="#search-projects" role="tab" aria-controls="search-projects" aria-selected="false">
+                  Projects
+                </button>
+              </li>
+            </ul>
+            <div class="block-content tab-content overflow-hidden">
+              <!-- Classic -->
+              <div class="tab-pane fade show active" id="search-classic" role="tabpanel" aria-labelledby="search-classic-tab" tabindex="0">
+                <div class="fs-3 fw-semibold pt-2 pb-4 mb-4 text-center border-bottom">
+                  <span class="text-primary fw-bold">10</span> websites found for <mark class="text-danger">Dashmix</mark>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                  <div class="col-lg-6">
+                    <h4 class="h5 mb-1">
+                      <a href="javascript:void(0)">Dashmix - Bootstrap 5 UI Framework</a>
+                    </h4>
+                    <div class="fs-sm text-success mb-1">https://pixelcave.com/</div>
+                    <p class="fs-sm text-muted">Tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti himenaeos habitant quis in sit varius lorem quis dictumst proin odio sagittis..</p>
+                  </div>
+                </div>
+                <nav aria-label="Classic Search Navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="javascript:void(0)">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- END Classic -->
+
+              <!-- Photos -->
+              <div class="tab-pane fade" id="search-photos" role="tabpanel" aria-labelledby="search-photos-tab" tabindex="0">
+                <div class="fs-3 fw-semibold pt-2 pb-4 mb-4 text-center border-bottom">
+                  <span class="text-primary fw-bold">36</span> photos found for <mark class="text-danger">inspiration</mark>
+                </div>
+                <div class="row g-sm push">
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo1.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo2.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo6.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo21.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo22.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo9.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo23.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo24.jpg" alt="">
+                  </div>
+                  <div class="col-md-6 col-lg-4 push">
+                    <img class="img-fluid" src="assets/media/photos/photo25.jpg" alt="">
+                  </div>
+                </div>
+                <nav aria-label="Photos Search Navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="javascript:void(0)">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- END Photos -->
+
+              <!-- Customers -->
+              <div class="tab-pane fade" id="search-customers" role="tabpanel" aria-labelledby="search-customers-tab" tabindex="0">
+                <div class="fs-3 fw-semibold pt-2 pb-4 mb-4 text-center border-bottom">
+                  <span class="text-primary fw-bold">10</span> results found for <mark class="text-danger">client</mark>
+                </div>
+                <table class="table table-striped table-borderless table-vcenter">
+                  <thead>
+                    <tr class="bg-body-dark">
+                      <th class="d-none d-sm-table-cell text-center" style="width: 40px;">#</th>
+                      <th class="text-center" style="width: 70px;"><i class="si si-user"></i></th>
+                      <th>Name</th>
+                      <th class="d-none d-sm-table-cell">Email</th>
+                      <th class="d-none d-lg-table-cell" style="width: 15%;">Access</th>
+                      <th class="text-center" style="width: 80px;">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">1</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar8.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Melissa Rice</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client1@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-primary">Personal</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">2</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar9.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">David Fuller</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client2@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-danger">Disabled</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">3</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar2.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Carol White</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client3@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-warning">Trial</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">4</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar7.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Betty Kelley</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client4@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-success">VIP</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">5</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar3.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Carol Ray</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client5@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-warning">Trial</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">6</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar9.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Jack Estrada</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client6@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-primary">Personal</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">7</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar12.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Jack Estrada</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client7@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-primary">Personal</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">8</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar1.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Judy Ford</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client8@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-warning">Trial</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">9</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar11.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Justin Hunt</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client9@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-success">VIP</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="d-none d-sm-table-cell text-center">10</td>
+                      <td class="text-center">
+                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar7.jpg" alt="">
+                      </td>
+                      <td class="fw-semibold">
+                        <a href="javascript:void(0)">Lisa Jenkins</a>
+                      </td>
+                      <td class="d-none d-sm-table-cell">
+                        client10@example.com
+                      </td>
+                      <td class="d-none d-lg-table-cell">
+                        <span class="badge bg-warning">Trial</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Edit">
+                            <i class="fa fa-pencil-alt"></i>
+                          </button>
+                          <button type="button" class="btn btn-sm btn-alt-secondary" data-bs-toggle="tooltip" title="Delete">
+                            <i class="fa fa-times"></i>
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <nav aria-label="Users Search Navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="javascript:void(0)">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- END Customers -->
+
+              <!-- Projects -->
+              <div class="tab-pane fade" id="search-projects" role="tabpanel" aria-labelledby="search-projects-tab" tabindex="0">
+                <div class="fs-3 fw-semibold pt-2 pb-4 mb-4 text-center border-bottom">
+                  <span class="text-primary fw-bold">6</span> projects found for <mark class="text-danger">HTML</mark>
+                </div>
+                <table class="table table-striped table-borderless table-hover table-vcenter">
+                  <thead>
+                    <tr class="bg-body-dark">
+                      <th style="width: 50%;">Project</th>
+                      <th class="d-none d-lg-table-cell text-center" style="width: 15%;">Status</th>
+                      <th class="d-none d-lg-table-cell text-center" style="width: 15%;">Sales</th>
+                      <th class="text-center" style="width: 20%;">Earnings</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <h4 class="h5 mt-3 mb-1">
+                          <a href="javascript:void(0)">Web Application Framework</a>
+                        </h4>
+                        <p class="d-none d-sm-block text-muted">
+                          Your web applications have never been so easy to create and publish.
+                        </p>
+                      </td>
+                      <td class="d-none d-lg-table-cell text-center">
+                        <span class="badge bg-success">Completed</span>
+                      </td>
+                      <td class="d-none d-lg-table-cell fs-xl text-center fw-semibold">1795</td>
+                      <td class="fs-xl text-center fw-semibold">$ 21,987</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h4 class="h5 mt-3 mb-1">
+                          <a href="javascript:void(0)">WP Theme</a>
+                        </h4>
+                        <p class="d-none d-sm-block text-muted">
+                          Create a fully functional website with just a few clicks.
+                        </p>
+                      </td>
+                      <td class="d-none d-lg-table-cell text-center">
+                        <span class="badge bg-warning">In Progress</span>
+                      </td>
+                      <td class="d-none d-lg-table-cell fs-xl text-center fw-semibold">1680</td>
+                      <td class="fs-xl text-center fw-semibold">$ 11,350</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h4 class="h5 mt-3 mb-1">
+                          <a href="javascript:void(0)">Dashboard Template</a>
+                        </h4>
+                        <p class="d-none d-sm-block text-muted">
+                          Explore new designs with this new and fresh dashboard admin template.
+                        </p>
+                      </td>
+                      <td class="d-none d-lg-table-cell text-center">
+                        <span class="badge bg-success">Completed</span>
+                      </td>
+                      <td class="d-none d-lg-table-cell fs-xl text-center fw-semibold">3500</td>
+                      <td class="fs-xl text-center fw-semibold">$ 16,218</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h4 class="h5 mt-3 mb-1">
+                          <a href="javascript:void(0)">Flaticon Set</a>
+                        </h4>
+                        <p class="d-none d-sm-block text-muted">
+                          A beatifully and and crafted icon set including more than 3000 icons.
+                        </p>
+                      </td>
+                      <td class="d-none d-lg-table-cell text-center">
+                        <span class="badge bg-success">Completed</span>
+                      </td>
+                      <td class="d-none d-lg-table-cell fs-xl text-center fw-semibold">2500</td>
+                      <td class="fs-xl text-center fw-semibold">$ 18,800</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h4 class="h5 mt-3 mb-1">
+                          <a href="javascript:void(0)">iOS UI Kit</a>
+                        </h4>
+                        <p class="d-none d-sm-block text-muted">
+                          Create your app wireframes easily with this new UI Kit featuring iOS based designs.
+                        </p>
+                      </td>
+                      <td class="d-none d-lg-table-cell text-center">
+                        <span class="badge bg-danger">Cancelled</span>
+                      </td>
+                      <td class="d-none d-lg-table-cell fs-xl text-center fw-semibold">2690</td>
+                      <td class="fs-xl text-center fw-semibold">$ 10,002</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <h4 class="h5 mt-3 mb-1">
+                          <a href="javascript:void(0)">Mobile App Framework</a>
+                        </h4>
+                        <p class="d-none d-sm-block text-muted">
+                          Create your iOS and Android applications with this powerful and modern framework.
+                        </p>
+                      </td>
+                      <td class="d-none d-lg-table-cell text-center">
+                        <span class="badge bg-success">Completed</span>
+                      </td>
+                      <td class="d-none d-lg-table-cell fs-xl text-center fw-semibold">1980</td>
+                      <td class="fs-xl text-center fw-semibold">$ 25,985</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <nav aria-label="Projects Search Navigation">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-left"></i>
+                        </span>
+                        <span class="visually-hidden">Previous</span>
+                      </a>
+                    </li>
+                    <li class="page-item active">
+                      <a class="page-link" href="javascript:void(0)">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)">4</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                        <span aria-hidden="true">
+                          <i class="fa fa-angle-double-right"></i>
+                        </span>
+                        <span class="visually-hidden">Next</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- END Projects -->
+            </div>
+          </div>
+          <!-- END Results -->
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="footer-static bg-body-extra-light">
+        <div class="content py-4">
+          <!-- Footer Navigation -->
+          <div class="row items-push fs-sm border-bottom pt-4">
+            <div class="col-6 col-md-4">
+              <h3 class="fw-light">Account</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-users text-primary-lighter me-1"></i> Customers
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fab fa-fw fa-paypal text-primary-lighter me-1"></i> Billing
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-wrench text-primary-lighter me-1"></i> Preferences
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold text-dark" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-user-circle text-muted me-1"></i> Carol Ray
+                  </a> -
+                  <a class="fw-semibold text-danger" href="javascript:void(0)">
+                    Log out?
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3 class="fw-light">Server</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-database text-primary-lighter me-1"></i> Databases
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe-americas text-primary-lighter me-1"></i> Domains
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-envelope text-primary-lighter me-1"></i> Emails
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-wrench text-primary-lighter me-1"></i> Management
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6 col-md-4">
+              <h3 class="fw-light">Projects</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe text-primary-lighter me-1"></i> example1.com
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe text-primary-lighter me-1"></i> example2.com
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe text-primary-lighter me-1"></i> example2.com
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold text-dark" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-plus text-muted me-1"></i> Add new project
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- END Footer Navigation -->
+
+          <!-- Footer Copyright -->
+          <div class="row fs-sm pt-4">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+          <!-- END Footer Copyright -->
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+  </body>
+</html>

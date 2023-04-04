@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xeco.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed page-header-dark page-header-glass main-content-narrow">
+      <!-- Side Overlay-->
+      <aside id="side-overlay">
+        <!-- Side Header -->
+        <div class="bg-primary">
+          <div class="content-header">
+            <div class="fs-lg fw-light text-white">
+              Server Settings
+            </div>
+
+            <!-- Close Side Overlay -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <a class="ms-auto text-white" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
+              <i class="fa fa-times-circle"></i>
+            </a>
+            <!-- END Close Side Overlay -->
+          </div>
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Side Content -->
+        <div class="content-side">
+          <div class="block pull-x">
+            <div class="block-content block-content-sm block-content-full bg-body">
+              <span class="text-uppercase fs-sm fw-bold">Settings</span>
+            </div>
+            <div class="block-content">
+              <form action="db_gaming.html" method="POST" onsubmit="return false;">
+                <div class="mb-4">
+                  <label class="form-label" for="dm-gaming-mode">Game Mode</label>
+                  <select class="form-select" id="dm-gaming-mode" name="dm-gaming-mode">
+                    <option value="1">Survival</option>
+                    <option value="2" selected>Creative</option>
+                    <option value="3">Adventure</option>
+                  </select>
+                  <p class="form-text">
+                    The default game mode for players on the server.
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="dm-gaming-difficulty">Game Difficulty</label>
+                  <select class="form-select" id="dm-gaming-difficulty" name="dm-gaming-difficulty">
+                    <option value="1">Peaceful</option>
+                    <option value="2">Easy</option>
+                    <option value="3" selected>Normal</option>
+                    <option value="4">Hard</option>
+                  </select>
+                  <p class="form-text">
+                    How difficult the game is for players in survival mode.
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-hardcore" name="dm-gaming-hardcore" value="1">
+                    <label class="form-check-label" for="dm-gaming-hardcore">Hardcore Mode</label>
+                  </div>
+                  <p class="form-text">
+                    Permanently ban players upon death.
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-monsters" name="dm-gaming-monsters" value="1" checked>
+                    <label class="form-check-label" for="dm-gaming-monsters">Enable Monsters</label>
+                  </div>
+                  <p class="form-text">
+                    Whether or not monsters are allowed to spawn in-game
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-animals" name="dm-gaming-animals" value="1" checked>
+                    <label class="form-check-label" for="dm-gaming-animals">Enable Animals</label>
+                  </div>
+                  <p class="form-text">
+                    Whether or not friendly animals are allowed to spawn in-game
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-npcs" name="dm-gaming-npcs" value="1" checked>
+                    <label class="form-check-label" for="dm-gaming-npcs">Enable NPCs</label>
+                  </div>
+                  <p class="form-text">
+                    Whether or not friendly mobs are allowed to spawn in-game
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-pvp" name="dm-gaming-pvp" value="1">
+                    <label class="form-check-label" for="dm-gaming-pvp">Enable PvP</label>
+                  </div>
+                  <p class="form-text">
+                    Whether or not players can harm and kill each other
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-nether" name="dm-gaming-nether" value="1" checked>
+                    <label class="form-check-label" for="dm-gaming-nether">Enable Nether</label>
+                  </div>
+                  <p class="form-text">
+                    Whether or not 'The Nether' can be accessed via portals
+                  </p>
+                </div>
+                <div class="mb-4">
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="dm-gaming-flight" name="dm-gaming-flight" value="1">
+                    <label class="form-check-label" for="dm-gaming-flight">Allow Flight</label>
+                  </div>
+                  <p class="form-text">
+                    Whether or not players can use fly-hacks in survival mode
+                  </p>
+                </div>
+              </form>
+            </div>
+            <div class="block-content row justify-content-center border-top">
+              <div class="col-9">
+                <a class="btn w-100 btn-alt-primary" href="javascript:void(0)">
+                  <i class="fa fa-fw fa-save opacity-50 me-1"></i> Save
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Side Content -->
+      </aside>
+      <!-- END Side Overlay -->
+
+      <!-- Sidebar -->
+      <!--
+        Sidebar Mini Mode - Display Helper classes
+
+        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header (mini Sidebar mode) -->
+        <div class="smini-visible-block">
+          <div class="content-header">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              D<span class="opacity-75">x</span>
+            </a>
+            <!-- END Logo -->
+          </div>
+        </div>
+        <!-- END Side Header (mini Sidebar mode) -->
+
+        <!-- Side Header (normal Sidebar mode) -->
+        <div class="smini-hidden">
+          <div class="content-header justify-content-lg-center">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Gaming</span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div class="d-lg-none">
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <a class="text-white ms-2" data-toggle="layout" data-action="sidebar_close" href="javascript:void(0)">
+                <i class="fa fa-times-circle"></i>
+              </a>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+        </div>
+        <!-- END Side Header (normal Sidebar mode) -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+          <!-- User Info -->
+          <div class="content-side content-side-full bg-black-10 text-center">
+            <div class="smini-hide">
+              <a class="img-link d-block mb-3" href="javascript:void(0)">
+                <img class="img-avatar img-avatar-thumb" src="assets/media/avatars/avatar8.jpg" alt="">
+              </a>
+              <a class="fw-semibold text-dual" href="javascript:void(0)">
+                @EmmaCraft
+              </a>
+              <span class="badge rounded-pill bg-danger">Gamer</span>
+            </div>
+          </div>
+          <!-- END User Info -->
+
+          <!-- Side Navigation -->
+          <div class="content-side content-side-full">
+            <ul class="nav-main">
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-gamepad"></i>
+                  <span class="nav-main-link-name">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Overview</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-server"></i>
+                  <span class="nav-main-link-name">My Servers</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-primary">4</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-desktop"></i>
+                  <span class="nav-main-link-name">Server Logs</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-inbox"></i>
+                  <span class="nav-main-link-name">Inbox</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-primary">7</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-wrench"></i>
+                  <span class="nav-main-link-name">Account Settings</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Users &amp; Groups</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-user"></i>
+                  <span class="nav-main-link-name">Manage Users</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-users"></i>
+                  <span class="nav-main-link-name">Manage Groups</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Server: MC_1685</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link active" href="db_gaming.html">
+                  <i class="nav-main-link-icon fa fa-heartbeat"></i>
+                  <span class="nav-main-link-name">Live Status</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-globe"></i>
+                  <span class="nav-main-link-name">World Design</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-lock"></i>
+                  <span class="nav-main-link-name">Security</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-user-lock"></i>
+                  <span class="nav-main-link-name">User Access</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-cog"></i>
+                  <span class="nav-main-link-name">Server Settings</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Dashboards</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_pages_dashboard_all.html">
+                  <i class="nav-main-link-icon fa fa-arrow-left"></i>
+                  <span class="nav-main-link-name">Go Back</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div>
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary me-1" data-toggle="layout" data-action="sidebar_toggle">
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary dropdown-toggle" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-server"></i>
+                <span class="d-none d-sm-inline ms-1">Server: MC_1685</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0" aria-labelledby="page-header-user-dropdown">
+                <div class="rounded-top fw-semibold text-center bg-body-light p-3">
+                  <div class="mb-1">
+                    <i class="fa fa-users opacity-50 me-1"></i> 12/16
+                  </div>
+                  <span class="badge bg-success d-inline-block mb-3">
+                    <i class="fa fa-spinner fa-spin me-1"></i> Running
+                  </span>
+                  <div class="row g-sm">
+                    <div class="col-6">
+                      <button type="button" class="btn btn-sm btn-primary w-100">
+                        <i class="fa fa-stop opacity-50 me-1"></i> Stop
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button type="button" class="btn btn-sm btn-alt-primary w-100">
+                        <i class="fa fa-redo opacity-50 me-1"></i> Restart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold">
+                        Server: MC_2345
+                      </span>
+                      <i class="fa fa-fw fa-server ms-1"></i>
+                    </div>
+                    <div class="fs-sm">
+                      <i class="fa fa-circle text-success me-1"></i> Friends
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold">
+                        Server: MC_0092
+                      </span>
+                      <i class="fa fa-fw fa-server ms-1"></i>
+                    </div>
+                    <div class="fs-sm">
+                      <i class="fa fa-circle text-danger me-1"></i> Family
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="fw-semibold">
+                        Server: MC_5679
+                      </span>
+                      <i class="fa fa-fw fa-server ms-1"></i>
+                    </div>
+                    <div class="fs-sm">
+                      <i class="fa fa-circle text-success me-1"></i> Personal
+                    </div>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    <div>
+                      <span class="fw-semibold">Add New Server</span>
+                      <p class="fs-sm text-muted mb-0">
+                        $10 per month
+                      </p>
+                    </div>
+                    <i class="fa fa-fw fa-plus text-primary ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+
+            <!-- Toggle Side Overlay -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="side_overlay_toggle">
+              <i class="fa fa-fw fa-cogs"></i>
+            </button>
+            <!-- END Toggle Side Overlay -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-primary">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <input type="text" class="form-control border-0" placeholder="Search your network.." id="page-header-search-input" name="page-header-search-input">
+                <button type="button" class="btn btn-primary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-primary-darker">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Hero -->
+        <div class="bg-image" style="background-image: url('assets/media/photos/bg_minecraft.png');">
+          <div class="bg-black-10">
+            <div class="content content-full content-top">
+              <div class="pt-5 pb-4 text-center">
+                <h1 class="h2 fw-bold mb-2 text-white">
+                  Server: MC_1685
+                </h1>
+                <h2 class="h5 text-white-75 mb-0">
+                  1GHz - 1GB RAM
+                </h2>
+                <span class="badge bg-success mt-2">
+                  <i class="fa fa-spinner fa-spin me-1"></i> Running
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Hero -->
+
+        <!-- Page Content -->
+        <div class="content content-full">
+          <!-- Live Stats -->
+          <!-- jQuery Sparkline (.js-sparkline class is initialized in Helpers.jqSparkline() -->
+          <!-- For more info and examples you can check out http://omnipotent.net/jquery.sparkline/#s-about -->
+          <div class="row">
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                <div class="block-content d-flex justify-content-between">
+                  <div class="me-3">
+                    <p class="text-muted mb-0">
+                      People Online
+                    </p>
+                    <p class="fs-3 fw-light mb-0">
+                      12 <small>/16</small>
+                    </p>
+                  </div>
+                  <div>
+                    <i class="fa fa-2x fa-users text-xeco-lighter"></i>
+                  </div>
+                </div>
+                <div class="block-content block-content-full overflow-hidden">
+                  <!-- Sparkline Gaming People Online Container -->
+                  <span class="js-sparkline" data-type="line"
+                        data-points="[4,2,3,5,6,3,4,6]"
+                        data-width="100%"
+                        data-height="110px"
+                        data-chart-range-min="0"
+                        data-line-color="#83b451"
+                        data-fill-color="rgba(104,149,80,.1)"
+                        data-spot-color="transparent"
+                        data-min-spot-color="transparent"
+                        data-max-spot-color="transparent"
+                        data-highlight-spot-color="#83b451"
+                        data-highlight-line-color="#83b451"
+                        data-tooltip-suffix="People"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full d-lg-flex align-items-lg-center justify-content-lg-between">
+                  <div class="text-center text-lg-start">
+                    <!-- Sparkline Gaming CPU Usage Container -->
+                    <span id="dm-gaming-sl-cpu" class="js-sparkline" data-type="line"
+                          data-points="[12,15,15,13,14,21,32,21,12,13,12,32]"
+                          data-width="160px"
+                          data-height="60px"
+                          data-chart-range-min="0"
+                          data-chart-range-max="100"
+                          data-line-color="#ffb119"
+                          data-fill-color="rgba(255,177,25,.1)"
+                          data-spot-color="transparent"
+                          data-min-spot-color="transparent"
+                          data-max-spot-color="transparent"
+                          data-highlight-spot-color="#ffb119"
+                          data-highlight-line-color="#ffb119"
+                          data-tooltip-suffix="%"></span>
+                  </div>
+                  <div class="text-center text-lg-end mt-4 mt-lg-0 ms-lg-3">
+                    <p class="text-muted mb-0">
+                      CPU Usage
+                    </p>
+                    <p class="fs-3 fw-light mb-0">
+                      <span id="dm-gaming-sl-cpu-current">32</span>%
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full d-lg-flex align-items-lg-center justify-content-lg-between">
+                  <div class="text-center text-lg-start">
+                    <!-- Sparkline Gaming RAM Usage Container -->
+                    <span id="dm-gaming-sl-ram" class="js-sparkline" data-type="line"
+                          data-points="[250,230,220,250,245,290,283,262,254,274,289,250]"
+                          data-width="160px"
+                          data-height="60px"
+                          data-chart-range-min="0"
+                          data-chart-range-max="1000"
+                          data-line-color="#de4f28"
+                          data-fill-color="rgba(224,79,26,.1)"
+                          data-spot-color="transparent"
+                          data-min-spot-color="transparent"
+                          data-max-spot-color="transparent"
+                          data-highlight-spot-color="#de4f28"
+                          data-highlight-line-color="#de4f28"
+                          data-tooltip-suffix="MB"></span>
+                  </div>
+                  <div class="text-center text-lg-end mt-4 mt-lg-0 ms-lg-3">
+                    <p class="text-muted mb-0">
+                      RAM Usage
+                    </p>
+                    <p class="fs-3 fw-light mb-0">
+                      <span id="dm-gaming-sl-ram-current">250</span>MB
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- END Live Stats -->
+
+          <!-- Console -->
+          <div class="block block-rounded">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Console Log</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option">
+                  <i class="fa fa-wrench"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content">
+              <form action="db_gaming.html" method="POST">
+                <div class="input-group">
+                  <input type="text" class="form-control" id="dm-gaming-send-command" name="dm-gaming-send-command" placeholder="...">
+                  <button type="submit" class="btn btn-primary">Send Command</button>
+                </div>
+              </form>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="bg-body-dark rounded p-3">
+                <pre class="mb-0"><code class="fs-sm">[12:00:02] MC_1685: Server started!
+[12:00:03] MC_1685: Using 243MB of RAM
+[12:00:05] MC_1685: Spawning.. 15%
+[12:00:06] MC_1685: Spawning.. 56%
+[12:00:09] MC_1685: Spawning.. 78%
+[12:00:10] MC_1685: Spawning.. 100%, Done!
+[12:03:32] MC_1685: 'johngamer' Player joined the server!
+[12:03:43] MC_1685: 'craft3222' Player joined the server!
+[12:04:54] MC_1685: 'minec34' Player joined the server!
+[12:05:55] MC_1685: 'matth' Player joined the server!</code></pre>
+              </div>
+            </div>
+          </div>
+          <!-- END Console -->
+
+          <!-- Plugins -->
+          <div class="block block-rounded">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Plugins</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option">
+                  <i class="fa fa-plus"></i> Add New
+                </button>
+                <button type="button" class="btn-block-option">
+                  <i class="fa fa-wrench"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content block-content-full">
+              <div class="table-responsive">
+                <table class="table table-hover table-striped table-vcenter">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th class="text-center">Version</th>
+                      <th class="text-center">Status</th>
+                      <th class="text-center">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <p class="fw-semibold mb-1">
+                          WorldEdit
+                        </p>
+                        <p class="fs-sm text-muted">
+                          An in-game map editor for both creative and survival modes
+                        </p>
+                      </td>
+                      <td class="text-center">
+                        <span class="fs-sm">v7.3.3</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" id="dm-gaming-plugin1" name="dm-gaming-plugin1" value="1" checked>
+                          <label class="form-check-label" for="dm-gaming-plugin1"></label>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <a class="btn btn-sm btn-alt-danger" href="javascript:void(0)">Uninstall</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="fw-semibold mb-1">
+                          PermissionsEx
+                        </p>
+                        <p class="fs-sm text-muted">
+                          It is a new permissions plugin, based on Permissions ideas and supports all of its features.
+                        </p>
+                      </td>
+                      <td class="text-center">
+                        <span class="fs-sm">v2.5.0</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" id="dm-gaming-plugin2" name="dm-gaming-plugin2" value="1" checked>
+                          <label class="form-check-label" for="dm-gaming-plugin2"></label>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <a class="btn btn-sm btn-alt-danger" href="javascript:void(0)">Uninstall</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="fw-semibold mb-1">
+                          WorldGuard
+                        </p>
+                        <p class="fs-sm text-muted">
+                          It is a powerful plugin with a large bag of tricks for server owners, server map makers, regular survival servers, and everyone in between!
+                        </p>
+                      </td>
+                      <td class="text-center">
+                        <span class="fs-sm">v10.1.2</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" id="dm-gaming-plugin3" name="dm-gaming-plugin3" value="1" checked>
+                          <label class="form-check-label" for="dm-gaming-plugin3"></label>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <a class="btn btn-sm btn-alt-danger" href="javascript:void(0)">Uninstall</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="fw-semibold mb-1">
+                          Vault
+                        </p>
+                        <p class="fs-sm text-muted">
+                          A Permissions, Chat, &amp; Economy API to give plugins easy hooks into these systems without needing to hook or depend on each individual plugin themselves.
+                        </p>
+                      </td>
+                      <td class="text-center">
+                        <span class="fs-sm">v1.9.2</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" id="dm-gaming-plugin4" name="dm-gaming-plugin4" value="1" checked>
+                          <label class="form-check-label" for="dm-gaming-plugin4"></label>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <a class="btn btn-sm btn-alt-danger" href="javascript:void(0)">Uninstall</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="fw-semibold mb-1">
+                          Essentials
+                        </p>
+                        <p class="fs-sm text-muted">
+                          Essentials offers over 100 commands and features useful on just about every server.
+                        </p>
+                      </td>
+                      <td class="text-center">
+                        <span class="fs-sm">v2.8.8</span>
+                      </td>
+                      <td class="text-center">
+                        <div class="form-check form-switch">
+                          <input type="checkbox" class="form-check-input" id="dm-gaming-plugin5" name="dm-gaming-plugin5" value="1">
+                          <label class="form-check-label" for="dm-gaming-plugin5"></label>
+                        </div>
+                      </td>
+                      <td class="text-center">
+                        <a class="btn btn-sm btn-alt-danger" href="javascript:void(0)">Uninstall</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- END Plugins -->
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="bg-body-light">
+        <div class="content py-0">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for jQuery Sparkline plugin) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Page JS Helpers (jQuery Sparkline Plugin) -->
+    <script>Dashmix.helpersOnLoad('jq-sparkline');</script>
+  </body>
+</html>

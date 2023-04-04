@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xdream.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o side-scroll page-header-fixed page-header-dark">
+
+      <!-- Sidebar -->
+      <!--
+        Sidebar Mini Mode - Display Helper classes
+
+        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header -->
+        <div class="bg-header-dark">
+          <div class="content-header bg-white-5">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              <span class="smini-visible">
+                D<span class="opacity-75">x</span>
+              </span>
+              <span class="smini-hidden">
+                Dash<span class="opacity-75">mix</span>
+                <span class="fw-normal">File Hosting</span>
+              </span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div>
+              <!-- Extra Settings -->
+              <a class="btn btn-sm btn-alt-secondary" href="javascript:void(0)">
+                <i class="fa fa-cog"></i>
+              </a>
+              <!-- END Extra Settings -->
+
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-times-circle"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+          <!-- Side Actions -->
+          <div class="content-side smini-hide">
+            <a class="btn btn-alt-success w-100" href="javascript:void(0)">
+              <i class="fa fa-plus me-1"></i> Add New
+            </a>
+          </div>
+          <!-- END Side Actions -->
+
+          <!-- Side Navigation -->
+          <div class="content-side">
+            <ul class="nav-main">
+              <li class="nav-main-item">
+                <a class="nav-main-link active" href="db_file_hosting.html">
+                  <i class="nav-main-link-icon fa fa-rocket"></i>
+                  <span class="nav-main-link-name">All Files</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Files</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-file-word"></i>
+                  <span class="nav-main-link-name">Documents</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-secondary">19</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-file-image"></i>
+                  <span class="nav-main-link-name">Photos</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-secondary">45</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-file-video"></i>
+                  <span class="nav-main-link-name">Videos</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-secondary">65</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-file-audio"></i>
+                  <span class="nav-main-link-name">Audio</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-secondary">28</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Tags</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-danger"></i>
+                  <span class="nav-main-link-name">Work</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-danger">98</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-success"></i>
+                  <span class="nav-main-link-name">Personal</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-success">34</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-info"></i>
+                  <span class="nav-main-link-name">Project X</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-info">56</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-warning"></i>
+                  <span class="nav-main-link-name">Trip</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-warning">10</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-plus text-muted"></i>
+                  <span class="nav-main-link-name">Add New Tag</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div class="d-flex align-items-center">
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+            <button type="button" class="btn btn-alt-secondary me-1 d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+
+            <!-- Toggle Sidebar Mini Mode -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+            <button type="button" class="btn btn-alt-secondary me-1 d-none d-lg-inline-block" data-toggle="layout" data-action="sidebar_mini_toggle">
+              <i class="fa fa-fw fa-ellipsis-v"></i>
+            </button>
+            <!-- END Toggle Sidebar Mini Mode -->
+
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary d-lg-none" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-fw fa-search"></i> <span class="ms-1 d-none d-sm-inline-block">Search..</span>
+            </button>
+            <!-- END Open Search Section -->
+
+            <!-- Search form in larger screens -->
+            <form class="d-none d-lg-inline-block ms-1" action="be_pages_generic_search.html" method="POST">
+              <input type="text" class="form-control border-0 rounded" placeholder="Search All Files.." id="page-header-search-input-full" name="page-header-search-input-full" style="min-width: 320px;">
+            </form>
+            <!-- END Search form in larger screens -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-none d-lg-inline mx-1">lisa.d@example.com</span>
+                <span class="badge rounded-pill bg-dark">VIP</span>
+                <i class="fa fa-fw fa-angle-down ms-1"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0 overflow-hidden" aria-labelledby="page-header-user-dropdown">
+                <div class="row g-0">
+                  <div class="col-5 d-flex align-items-center justify-content-center bg-image p-2" style="background-image: url('assets/media/photos/photo10.jpg');">
+                    <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/media/avatars/avatar1.jpg" alt="">
+                  </div>
+                  <div class="col-7 p-2 fs-sm">
+                    <a class="dropdown-item fw-semibold" href="be_pages_generic_profile.html">
+                      <i class="fa fa-fw fa-user-circle me-1"></i>
+                      Lisa Doe
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                      <i class="fa fa-fw fa-pencil-alt me-1"></i>
+                      Edit My Profile
+                    </a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="op_auth_signin.html">
+                      <i class="fa fa-fw fa-sign-out-alt me-1"></i>
+                      Log Out
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-header-dark">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+                <input type="text" class="form-control border-0" placeholder="Search All Files.." id="page-header-search-input" name="page-header-search-input">
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-primary-darker">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="row g-0 flex-md-grow-1">
+          <div class="col-md-4 col-lg-5 col-xl-3 order-md-1">
+            <div class="content">
+              <!-- Toggle Storage Info -->
+              <div class="d-md-none push">
+                <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+                <button type="button" class="btn w-100 btn-alt-primary" data-toggle="class-toggle" data-target="#side-content" data-class="d-none">
+                  Storage Info
+                </button>
+              </div>
+              <!-- END Toggle Storage Info -->
+
+              <!-- Storage Info -->
+              <div id="side-content" class="d-none d-md-block push">
+                <!-- Current Status -->
+                <div class="block block-rounded">
+                  <div class="block-content">
+                    <h4 class="h5 text-muted mb-2">Storage</h4>
+                    <p class="h1 fw-bold mb-1">
+                      920GB
+                      <span class="fs-sm text-muted">of 1TB</span>
+                    </p>
+                    <div class="progress push" style="height: 5px;">
+                      <div class="progress-bar bg-danger" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="fs-sm text-muted">
+                      <a href="javascript:void(0)">Upgrade Plan?</a>
+                    </p>
+                  </div>
+                </div>
+                <!-- END Current Status -->
+
+                <!-- Storage Stats -->
+                <div class="block block-rounded mb-2">
+                  <div class="block-content border-bottom">
+                    <h4 class="h5 text-muted mb-2">Documents</h4>
+                    <p class="h2 fw-bold mb-1">
+                      80GB
+                      <span class="fs-sm text-muted">of 1TB</span>
+                    </p>
+                    <div class="progress push" style="height: 5px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 8%;" aria-valuenow="8" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="block-content border-bottom">
+                    <h4 class="h5 text-muted mb-2">Photos</h4>
+                    <p class="h2 fw-bold mb-1">
+                      40GB
+                      <span class="fs-sm text-muted">of 1TB</span>
+                    </p>
+                    <div class="progress push" style="height: 5px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 4%;" aria-valuenow="4" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="block-content border-bottom">
+                    <h4 class="h5 text-muted mb-2">Videos</h4>
+                    <p class="h2 fw-bold mb-1">
+                      780GB
+                      <span class="fs-sm text-muted">of 1TB</span>
+                    </p>
+                    <div class="progress push" style="height: 5px;">
+                      <div class="progress-bar bg-warning" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  <div class="block-content">
+                    <h4 class="h5 text-muted mb-2">Audio</h4>
+                    <p class="h2 fw-bold mb-1">
+                      20GB
+                      <span class="fs-sm text-muted">of 1TB</span>
+                    </p>
+                    <div class="progress push" style="height: 5px;">
+                      <div class="progress-bar bg-success" role="progressbar" style="width: 2%;" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END Storage Stats -->
+              </div>
+              <!-- END Storage Status -->
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-9 order-md-0 bg-body-dark">
+            <div class="content">
+              <!-- Breadcrumb -->
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-alt bg-body-extra-light px-4 py-2 rounded push fs-sm">
+                  <li class="breadcrumb-item">
+                    <a href="javascript:void(0)">
+                      <i class="fa fa-home"></i>
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item" aria-current="page">
+                    <div class="dropdown d-inline">
+                      <a href="javascript:void(0)" id="example-dropdown-folder" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Work <i class="fa fa-angle-down opacity-50 ms-1"></i>
+                      </a>
+                      <div class="dropdown-menu fs-sm" aria-labelledby="example-dropdown-folder">
+                        <a class="dropdown-item" href="javascript:void(0)">
+                          <i class="fa fa-folder me-1"></i> Personal
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                          <i class="fa fa-folder me-1"></i> Travel
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                          <i class="fa fa-folder me-1"></i> Meeting
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <div class="dropdown d-inline">
+                      <a href="javascript:void(0)" id="example-dropdown-folder-2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Project X <i class="fa fa-angle-down opacity-50 ms-1"></i>
+                      </a>
+                      <div class="dropdown-menu fs-sm" aria-labelledby="example-dropdown-folder-2">
+                        <a class="dropdown-item" href="javascript:void(0)">
+                          <i class="fa fa-folder me-1"></i> WordPress Theme
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                          <i class="fa fa-folder me-1"></i> Admin Template
+                        </a>
+                        <a class="dropdown-item" href="javascript:void(0)">
+                          <i class="fa fa-folder me-1"></i> Web App
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </nav>
+              <!-- END Breadcrumb -->
+
+              <!-- Folders -->
+              <h2 class="content-heading border-black-op">
+                <i class="far fa-fw fa-folder me-1"></i> Folders (4)
+              </h2>
+              <div class="row items-push">
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Inspiration Folder -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Inspiration Folder Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2">
+                          <i class="fa fa-folder fa-4x text-info"></i>
+                        </p>
+                        <p class="fw-semibold fs-lg mb-0">
+                          Inspiration
+                        </p>
+                        <p class="fs-sm text-muted">
+                          14 Files
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Inspiration Folder Block -->
+
+                    <!-- Inspiration Folder Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-share opacity-50 me-1"></i> Open
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-pencil-alt me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Inspiration Folder Hover Options -->
+                  </div>
+                  <!-- END Inspiration Folder -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Source Code Folder -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Source Code Folder Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2">
+                          <i class="fa fa-folder fa-4x text-info"></i>
+                        </p>
+                        <p class="fw-semibold fs-lg mb-0">
+                          Source Code
+                        </p>
+                        <p class="fs-sm text-muted">
+                          25 Files
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Source Code Folder Block -->
+
+                    <!-- Source Code Folder Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-share opacity-50 me-1"></i> Open
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-pencil-alt me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Source Code Folder Hover Options -->
+                  </div>
+                  <!-- END Source Code Folder -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- PSDs Folder -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- PSDs Folder Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2">
+                          <i class="fa fa-folder fa-4x text-info"></i>
+                        </p>
+                        <p class="fw-semibold fs-lg mb-0">
+                          PSDs
+                        </p>
+                        <p class="fs-sm text-muted">
+                          67 Files
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END PSDs Folder Block -->
+
+                    <!-- PSDs Folder Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-share opacity-50 me-1"></i> Open
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-pencil-alt me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END PSDs Folder Hover Options -->
+                  </div>
+                  <!-- END PSDs Folder -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Backup Folder -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Backup Folder Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2">
+                          <i class="fa fa-folder fa-4x text-info"></i>
+                        </p>
+                        <p class="fw-semibold fs-lg mb-0">
+                          Backup
+                        </p>
+                        <p class="fs-sm text-muted">
+                          3 Files
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Backup Folder Block -->
+
+                    <!-- Backup Folder Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-share opacity-50 me-1"></i> Open
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-pencil-alt me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Backup Folder Hover Options -->
+                  </div>
+                  <!-- END Backup Folder -->
+                </div>
+              </div>
+              <!-- END Folders -->
+
+              <!-- Files -->
+              <h2 class="content-heading border-black-op">
+                <i class="far fa-fw fa-file me-1"></i> Files (7)
+              </h2>
+              <div class="row items-push">
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <img class="img-fluid" src="assets/media/photos/photo22.jpg" alt="">
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          background_1.jpg
+                        </p>
+                        <p class="fs-sm text-muted">
+                          0.9mb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <img class="img-fluid" src="assets/media/photos/photo21.jpg" alt="">
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          background_2.jpg
+                        </p>
+                        <p class="fs-sm text-muted">
+                          3.4mb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <img class="img-fluid" src="assets/media/photos/photo24.jpg" alt="">
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          background_3.jpg
+                        </p>
+                        <p class="fs-sm text-muted">
+                          2.3mb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <i class="fa fa-fw fa-4x fa-file-alt text-muted"></i>
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          notes.txt
+                        </p>
+                        <p class="fs-sm text-muted">
+                          3kb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <i class="fa fa-fw fa-4x fa-file-excel text-danger"></i>
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          Accounting.xlsx
+                        </p>
+                        <p class="fs-sm text-muted">
+                          33kb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <i class="fa fa-fw fa-4x fa-file-word text-default"></i>
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          Research.docx
+                        </p>
+                        <p class="fs-sm text-muted">
+                          50kb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+                <div class="col-sm-6 col-md-4 col-xl-3 d-flex flex-column">
+                  <!-- Example File -->
+                  <div class="options-container w-100 flex-grow-1 rounded bg-body d-flex align-items-center">
+                    <!-- Example File Block -->
+                    <div class="options-item block block-rounded block-transparent mb-0 w-100">
+                      <div class="block-content text-center">
+                        <p class="mb-2 overflow-hidden">
+                          <i class="fa fa-fw fa-4x fa-file-powerpoint text-warning"></i>
+                        </p>
+                        <p class="fw-semibold text-break mb-0">
+                          Presentation.pptx
+                        </p>
+                        <p class="fs-sm text-muted">
+                          4.5mb
+                        </p>
+                      </div>
+                    </div>
+                    <!-- END Example File Block -->
+
+                    <!-- Example File Hover Options -->
+                    <div class="options-overlay rounded bg-primary-dark-op">
+                      <div class="options-overlay-content">
+                        <div class="mb-3">
+                          <a class="btn btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-eye opacity-50 me-1"></i> View
+                          </a>
+                        </div>
+                        <div class="btn-group">
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-download me-1"></i>
+                          </a>
+                          <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                            <i class="fa fa-trash me-1"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- END Example File Hover Options -->
+                  </div>
+                  <!-- END Example File -->
+                </div>
+              </div>
+              <!-- END Files -->
+            </div>
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="bg-body-light">
+        <div class="content py-0">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+  </body>
+</html>

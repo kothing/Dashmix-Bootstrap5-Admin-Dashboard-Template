@@ -1,0 +1,3653 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <title>Dashmix Docs by pixelcave</title>
+
+    <meta name="description" content="Dashmix documentation created by pixelcave" />
+    <meta name="author" content="pixelcave" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png" />
+
+    <!-- Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/pixelcave.docs.min.css" />
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <div id="page-container" class="sidebar-o side-scroll">
+      <!-- Sidebar -->
+      <nav id="sidebar">
+        <!-- Sidebar Content -->
+        <div class="sidebar-content">
+          <div class="content-side content-side-full pos-relative">
+            <!-- Close Sidebar, Visible only on mobile screens -->
+            <div class="pos-absolute pos-top-right d-lg-none">
+              <a
+                class="d-inline-block text-danger m-3"
+                href="javascript:void(0)"
+                data-toggle="layout"
+                data-action="sidebar_close"
+              >
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+            <!-- END Close Sidebar -->
+
+            <!-- Side Header -->
+            <div class="mb-3">
+              <h1 class="font-size-lg font-w700 mb-2">Dashmix <a href="">Docs</a></h1>
+              <div class="font-size-sm font-w600 text-muted">v5.5 - December 6, 2022</div>
+            </div>
+            <!-- END Side Header -->
+
+            <!-- Side Navigation -->
+            <ul class="nav-main">
+              <li class="nav-main-heading">Template</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-changelog" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-list text-primary"></i>
+                  <span class="nav-main-link-name">Changelog</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-updating" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-arrow-up text-primary"></i>
+                  <span class="nav-main-link-name">Updating</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Intro</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-package" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-briefcase text-muted"></i>
+                  <span class="nav-main-link-name">Package</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-bootstrap" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-rocket text-muted"></i>
+                  <span class="nav-main-link-name">Bootstrap</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-gulp" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-cogs text-muted"></i>
+                  <span class="nav-main-link-name">Gulp Tasks</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Structure</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-html" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-code text-info"></i>
+                  <span class="nav-main-link-name">HTML</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-sass" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-code text-info"></i>
+                  <span class="nav-main-link-name">Sass</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-javascript" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-code text-info"></i>
+                  <span class="nav-main-link-name">JavaScript</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">More</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-laravel-starter-kit" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fab fa-laravel text-warning"></i>
+                  <span class="nav-main-link-name">Laravel Starter Kit</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-tips" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-thumbs-up text-warning"></i>
+                  <span class="nav-main-link-name">Quick Tips</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-credits" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-link text-warning"></i>
+                  <span class="nav-main-link-name">Credits</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Pixelcave</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="#section-thankyou" data-toggle="scroll-to" data-offset="50">
+                  <i class="nav-main-link-icon fa fa-heart text-danger"></i>
+                  <span class="nav-main-link-name">Thank you</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="https://pixelcave.com">
+                  <i class="nav-main-link-icon fa fa-globe text-danger"></i>
+                  <span class="nav-main-link-name">pixelcave.com</span>
+                </a>
+              </li>
+            </ul>
+            <!-- END Side Navigation -->
+          </div>
+        </div>
+        <!-- Sidebar Content -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Toggle Sidebar -->
+        <div class="pos-fixed pos-ontop-content d-print-none">
+          <button
+            type="button"
+            class="btn btn-secondary pos-absolute pos-top-left m-1 m-lg-3"
+            data-toggle="layout"
+            data-action="sidebar_toggle"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+        <!-- END Toggle Sidebar -->
+
+        <!-- Pixelcave Links -->
+        <div class="content d-print-none">
+          <div class="row text-center py-5">
+            <div class="col-6 col-md-3 py-3 invisible" data-toggle="appear" data-class="animated fadeInDown">
+              <a class="item" href="https://pixelcave.com/#subscribe">
+                <div class="item-icon">
+                  <i class="fa fa-envelope-open"></i>
+                </div>
+                <div class="item-text">Subscribe to our news</div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-3 py-3 invisible"
+              data-toggle="appear"
+              data-class="animated fadeInDown"
+              data-timeout="200"
+            >
+              <a class="item item-success" href="https://pixelcave.com">
+                <div class="item-icon">
+                  <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="item-text">Check out more projects</div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-3 py-3 invisible"
+              data-toggle="appear"
+              data-class="animated fadeInDown"
+              data-timeout="400"
+            >
+              <a class="item item-twitter" href="https://twitter.com/pixelcave">
+                <div class="item-icon">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="item-text">Find us on Twitter</div>
+              </a>
+            </div>
+            <div
+              class="col-6 col-md-3 py-3 invisible"
+              data-toggle="appear"
+              data-class="animated fadeInDown"
+              data-timeout="600"
+            >
+              <a
+                class="item item-danger"
+                href="https://www.youtube.com/channel/UCilcZ4LbstpcOZu9Y6TLH1A?sub_confirmation=1"
+              >
+                <div class="item-icon">
+                  <i class="fab fa-youtube"></i>
+                </div>
+                <div class="item-text">Find us on YouTube</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- END Pixelcave Links -->
+
+        <!-- Page Content -->
+        <div class="content">
+          <h2>Thank you for choosing Dashmix!</h2>
+          <p>
+            We are very excited to release Dashmix 5 version as a free update to all of you who supported the project
+            all these years and keep supporting it with new purchases. It's our way of thanking you for choosing one of
+            our templates for your projects. We hope you like it and put it into good use by building new awesome
+            projects. Wish you all the best and happy coding! 🙏😊
+          </p>
+
+          <!-- Changelog -->
+          <h2 id="section-changelog">Changelog</h2>
+          <div class="accordion" id="changelog">
+            <!-- Update 5.5 -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0" id="changelog-update55-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update55-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update55-c"
+                  >
+                    5.5 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">December 6, 2022</div>
+              </div>
+              <div
+                id="changelog-update55-c"
+                class="collapse show"
+                aria-labelledby="changelog-update55-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-plus fa-li text-success"></i> Profile v2</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Profile v2 Edit</li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Bootstrap 5.2.3 (5.2.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Font Awesome 6.2.1 (6.1.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @ckeditor/* 35.3.2 (35.0.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @popperjs/core 2.11.6 (2.11.5)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> CKEditor4 4.20.1 (4.19.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Cropperjs 1.5.13 (1.5.12)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables 1.13.1 (1.12.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables Buttons 2.3.3 (2.2.3)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables Responsive 2.4.0 (2.3.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> FullCalendar 5.11.3 (5.11.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> PDFmake 0.2.6 (0.2.5)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> jQuery 3.6.1 (3.6.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> SimpleBar 5.3.9 (5.3.8)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Sweetalert2 11.6.15 (11.4.26)</li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Laravel Starter Kit: Laravel 9.42.2 (9.23.0)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 5.5 -->
+
+            <!-- Update 5.4 -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0" id="changelog-update54-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update54-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update54-c"
+                  >
+                    5.4 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">August 10, 2022</div>
+              </div>
+              <div
+                id="changelog-update54-c"
+                class="collapse"
+                aria-labelledby="changelog-update54-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-plus fa-li text-success"></i> Offcanvas</li>
+                    <li>
+                      <i class="fa fa-plus fa-li text-success"></i> Forms with floating labels (plaintext and input
+                      groups examples)
+                    </li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Centered Dropdowns</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Laravel Starter Kit: Vite integration</li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> Pass a function as a parameter in all
+                      <code>Dashmix.onLoad()</code> functions (used in various .js files in
+                      <code>assets/_js/pages</code>)
+                    </li>
+                  </ul>
+                  <h4>Deprecations</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-minus fa-li text-muted"></i> Bootstrap Colorpicker</li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Bootstrap 5.2.0 (5.1.3)</li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Font Awesome 6.1.2 (6.1.1) - 10 new icons
+                    </li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @ckeditor/* 35.0.1 (34.2.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> CKEditor4 4.19.1 (4.19.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Chart.js 3.9.1 (3.8.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> FullCalendar 5.11.2 (5.11.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> JSzip 3.10.1 (3.10.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Sweetalert2 11.4.26 (11.4.22)</li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Laravel Starter Kit: Laravel 9.23.0 (9.20.0)
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Bootstrap Colorpicker no longer works with the
+                      latest Bootstrap version and has to be removed
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Added <code>bootstrap/maps.scss</code> to
+                      <code>_scss/main.scss</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Added <code>bootstrap/offcanvas.scss</code> to
+                      <code>_scss/main.scss</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Removed
+                      <code>vendor/bootstrap-colorpicker</code> (and the file itself) from
+                      <code>_scss/main.scss</code>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 5.4 -->
+
+            <!-- Update 5.3 -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0" id="changelog-update53-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update53-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update53-c"
+                  >
+                    5.3 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">July 15, 2022</div>
+              </div>
+              <div
+                id="changelog-update53-c"
+                class="collapse"
+                aria-labelledby="changelog-update53-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-plus fa-li text-success"></i> Mini navigation in sidebar example</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Select2 in modal example</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Card’s design now match Block’s design</li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-check fa-li text-primary"></i> Inter font is now self hosted</li>
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Various small design improvements throughout the
+                      template
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-heartbeat fa-li text-danger"></i> Various small markup fixes</li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @popperjs/core 2.11.5 (2.11.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Font Awesome 6.1.1 (6.0.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> FullCalendar 5.11.0 (5.10.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @ckeditor/* 34.2.0 (32.0.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> CKEditor4 4.19.0 (4.17.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Chart.js 3.8.0 (3.7.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Flatpickr 4.6.13 (4.6.9)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables 1.12.1 (1.11.4)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables Buttons 2.2.3 (2.2.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables Responsive 2.3.0 (2.2.9)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Pdfmake 0.2.5 (0.2.4)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> JSzip 3.10.0 (3.7.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> jQuery Validation 1.19.5 (1.19.3)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> SweetAlert2 11.4.0 (11.4.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> SimpleBar 5.3.8 (5.3.6)</li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Laravel Starter Kit: Laravel 9.20.0 (9.0.0)
+                    </li>
+                  </ul>
+                  <h4>Changes</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-code fa-li text-warning"></i> Added <code>assets/fonts/inter/*</code> files</li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Removed Inter font (from Google Fonts) from the
+                      <code>&lt;head&gt;</code> section
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Added <code>_card.scss</code> to
+                      <code>_scss/main.scss</code>
+                    </li>
+                    <li>
+                      <i class="fa fa-code fa-li text-warning"></i> Removed
+                      <code>$theme-*-headings-color</code> variable from color themes
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 5.3 -->
+
+            <!-- Update 5.2 -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0" id="changelog-update52-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update52-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update52-c"
+                  >
+                    5.2 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">February 10, 2022</div>
+              </div>
+              <div
+                id="changelog-update52-c"
+                class="collapse"
+                aria-labelledby="changelog-update52-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-plus fa-li text-success"></i> Laravel 9 Starter Kit</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Font Awesome 6 (105 new icons)</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Checkout Page</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Responsive DataTables</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Email validation with dot rule</li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Replaced sass with sass-embedded for faster
+                      compilation times
+                    </li>
+                    <li><i class="fa fa-check fa-li text-primary"></i> Improved header overlay visibility</li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> <code>template.js</code> forEach is not a
+                      function error
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Bootstrap 5.1.3 (5.1.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @popperjs/core 2.11.2 (2.10.1)</li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Font Awesome 6.0.0 (5.15.4) - 105 New Icons
+                    </li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> FullCalendar 5.10.1 (5.9.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> @ckeditor/* 32.0.0 (29.2.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Chart.js 3.7.0 (3.5.1)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Pwstrength-bootstrap 3.1.1 (3.1.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables 1.11.4 (1.11.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> DataTables Buttons 2.2.2 (2.0.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Dropzone 5.9.3 (5.9.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Pdfmake 0.2.4 (0.2.2)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> Raty JS 3.1.1 (3.0.0)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> SweetAlert2 11.4.0 (11.1.5)</li>
+                    <li><i class="fa fa-angle-double-up fa-li text-info"></i> SimpleBar 5.3.6 (5.3.5)</li>
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Laravel Starter Kit: Laravel 9.0 (8.61.0)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 5.2 -->
+
+            <!-- Update 5.1 -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0" id="changelog-update51-h">
+                  <button
+                    class="btn btn-link font-w600 p-0"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#changelog-update51-c"
+                    aria-expanded="true"
+                    aria-controls="changelog-update51-c"
+                  >
+                    5.1 Update
+                  </button>
+                </h5>
+                <div class="font-size-sm text-muted">September 16, 2021</div>
+              </div>
+              <div
+                id="changelog-update51-c"
+                class="collapse"
+                aria-labelledby="changelog-update51-h"
+                data-parent="#changelog"
+              >
+                <div class="card-body">
+                  <h4>New Features</h4>
+                  <ul class="fa-ul">
+                    <li><i class="fa fa-plus fa-li text-success"></i> Mega menu</li>
+                    <li><i class="fa fa-plus fa-li text-success"></i> Vertical tabs</li>
+                  </ul>
+                  <h4>Improvements</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-check fa-li text-primary"></i> Dark mode toggle/off returns back to original
+                      sidebar/header style
+                    </li>
+                  </ul>
+                  <h4>Fixes</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-heartbeat fa-li text-danger"></i> Fix borders in a few Simple Statistics widgets
+                    </li>
+                  </ul>
+                  <h4>Updates</h4>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa fa-angle-double-up fa-li text-info"></i> Laravel Starter Kit: Laravel 8.61.0 (8.60.0)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- END Update 5.1 -->
+
+            <!-- Release 5.0 -->
+            <div class="card">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">5.0 Release</h5>
+                <div class="font-size-sm text-muted">September 9, 2021</div>
+              </div>
+            </div>
+            <!-- END Release 5.0 -->
+          </div>
+          <!-- END Changelog -->
+
+          <!-- Updating -->
+          <h2 id="section-updating">Updating</h2>
+          <p>
+            <strong>Dashmix</strong> will receive free updates in the future. One of the main goals was to make sure the
+            update progress is going to be as easy as possible. Due to its nature (template), updating can become an
+            unpleasant task.
+          </p>
+          <p>
+            Therefore we’ve tried to make it as easy as possible to let you apply your own overrides (in case you would
+            like to) to both Sass (<code>_scss/</code>) or JavaScript (<code>_js/</code>) files without altering the
+            original files. Please check <a href="#section-sass" data-toggle="scroll-to" data-offset="50">Sass</a> and
+            <a href="#section-javascript" data-toggle="scroll-to" data-offset="50">JavaScript</a> section for more info!
+          </p>
+          <p>In general, the following core folders/files will have to be updated with each update:</p>
+          <div class="bg-body-light p-3 rounded push">
+            <h3 class="mt-0">HTML/PHP Versions</h3>
+            <ul class="fa-ul mb-0">
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>assets/css/</code>
+                <ul class="fa-ul">
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>themes/*</code>
+                  </li>
+                  <li>
+                    <i class="far fa-file-alt fa-li"></i>
+                    <code>dashmix.css</code>
+                  </li>
+                  <li>
+                    <i class="far fa-file-alt fa-li"></i>
+                    <code>dashmix.min.css</code>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>assets/js/</code>
+                <ul class="fa-ul">
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>lib/*</code>
+                  </li>
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>plugins/*</code>
+                  </li>
+                  <li>
+                    <i class="far fa-file-alt fa-li"></i>
+                    <code>dashmix.app.min.js</code>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>assets/fonts/*</code>
+              </li>
+            </ul>
+            <h3>Laravel Starter Kit</h3>
+            <ul class="fa-ul mb-0">
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>public/js/</code>
+                <ul class="fa-ul">
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>lib/*</code>
+                  </li>
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>plugins/*</code>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>resources/</code>
+                <ul class="fa-ul">
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>fonts/*</code>
+                  </li>
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>sass/*</code>
+                    <p class="text-muted mb-0">
+                      Except <code>custom/</code> folder where you can make your own modifications
+                    </p>
+                  </li>
+                  <li>
+                    <i class="far fa-folder fa-li"></i>
+                    <code>js/dashmix/modules/*</code>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <i class="far fa-file-code fa-li"></i>
+                <code>vite.config.js</code>
+                <p class="text-muted mb-0">
+                  Please make sure you don’t override any custom additions you might have introduced
+                </p>
+              </li>
+              <li>
+                <i class="far fa-file-code fa-li"></i>
+                <code>package.json</code>
+                <p class="text-muted mb-0">
+                  Please make sure to update your npm dependencies and run <code>npm install</code> to update them
+                  afterwards
+                </p>
+              </li>
+            </ul>
+          </div>
+          <p>If you are working with source files (Sass and/or ES6), you will have to update the following as well:</p>
+          <div class="bg-body-light p-3 rounded push">
+            <h3 class="mt-0">HTML/PHP Versions</h3>
+            <ul class="fa-ul mb-0">
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>assets/_js/main/modules/*</code>
+              </li>
+              <li>
+                <i class="far fa-folder fa-li"></i>
+                <code>assets/_scss/*</code>
+                <div class="text-muted">
+                  Except <code>custom/</code> folder where you can make your own modifications
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p>
+            Moreover, if you are using Gulp tasks, remember to update the following files in your project’s root folder
+            and then run the command <code>npm install</code> from your console to install/update any new dependencies:
+          </p>
+          <div class="bg-body-light p-3 rounded push">
+            <h3 class="mt-0">HTML/PHP Versions</h3>
+            <ul class="fa-ul mb-0">
+              <li>
+                <i class="far fa-file-code fa-li"></i>
+                <code>.babelrc</code>
+              </li>
+              <li>
+                <i class="far fa-file-code fa-li"></i>
+                <code>gulpfile.babel.js</code>
+              </li>
+              <li>
+                <i class="far fa-file-code fa-li"></i>
+                <code>package.json</code>
+              </li>
+              <li>
+                <i class="far fa-file-code fa-li"></i>
+                <code>package-lock.json</code>
+              </li>
+            </ul>
+          </div>
+          <div class="alert alert-warning">
+            <p class="mb-0">
+              Remember that it’s always a good idea to backup your work before updating to a new version!
+            </p>
+          </div>
+          <div class="alert alert-primary">
+            <p class="mb-0">
+              When a new update becomes available, you will be able to download it from
+              <a class="font-w600" href="https://1.envato.market/jeV0n">Themeforest</a>. You can check the checkbox
+              under the product (<em>
+                <i class="far fa-check-square"></i> Get notified by email if this item is updated</em
+              >), <a class="font-w600" href="https://twitter.com/pixelcave">follow us on Twitter</a> or
+              <a class="font-w600" href="https://pixelcave.com/#subscribe">subscribe to our news</a> to stay up to date
+              about the availability of new updates.
+            </p>
+          </div>
+          <!-- END Updating -->
+
+          <!-- Package -->
+          <h2 id="section-package">Package</h2>
+          <p>
+            <strong>Dashmix</strong> was built with extra care based on the valuable feedback we keep receiving over the
+            past years working full-time on dashboard templates. It follows the best practices using the latest
+            technologies and we really hope that you will enjoy working with it. <strong>Dashmix</strong> will enable
+            you to build fast, beautiful, user friendly web applications and websites that will work seamlessly across
+            various screens and devices.
+          </p>
+          <p>Let's have a look at the contents of the current package:</p>
+          <ul class="fa-ul">
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>01 - Dashmix Source (HTML)</code>
+              <div>
+                Includes the abstract HTML version. This version can be used with any server side language/framework you
+                prefer or currently working with.
+              </div>
+            </li>
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>02 - Dashmix Source (PHP)</code>
+              <div>
+                Includes the abstract PHP version. This version can come really handy as a starting point if you would
+                like to build a custom PHP application. It can help you in many ways:
+              </div>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> It enables you to change various options of the layout just by
+                  updating the main variables found in <code>src/inc/_global/config.php</code>. The backend section has
+                  also its own folder with its own config file which can be used to overwrite the main variables of your
+                  choice for the pages in that section. For example, the extra config file for all backend pages
+                  (be_*.php) can be found in <code>src/inc/backend/config.php</code>.
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> It uses basic templating for separating common used code
+                  (header, sidebar, footer etc). The main views which are used in every page can be found in
+                  <code>src/inc/_global/views/*</code>. The backend section has its own folder with its own views which
+                  can be used for common code, used only in the pages in that section. For example, the extra views for
+                  all backend pages (be_*.php) can be found in <code>src/inc/backend/views/*</code>.
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> It features a recursive function that can build main
+                  navigation on the fly (with as many levels as you like) from a multidimensional array you can set in
+                  the config file of each section.
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> It features various functions that can populate your pages
+                  with dummy content for testing and showcasing purposes <code>src/inc/_classes/Template.php</code>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> In general, this version can also give you a good idea of how
+                  you could implement your own templating in the language/framework of your choice.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>03 - Dashmix Source (Laravel Starter Kit)</code>
+              <div>
+                If you are using Laravel to build your next project, then this starter kit is the perfect fit. It
+                features a clean Laravel installation with all Dashmix assets ready to work with Laravel Vite and a few
+                example pages to get you started. You can either take the parts you want and integrate them into your
+                current project or you can run the following commands to install all dependencies and start building
+                with Laravel like you would normally do.
+              </div>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i>
+                  <code>composer install && npm install && php artisan key:generate</code>
+                </li>
+              </ul>
+              <div>Afterwards, you can use the following Laravel (+ Vite) commands you already now and love:</div>
+              <ul class="fa-ul">
+                <li><i class="fa fa-angle-right fa-li"></i> <code>php artisan serve</code><br />Serves your project</li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> <code>npm run dev</code><br />Watches your files, compiles
+                  your assets on the fly and auto reloads your browser (must be run alongside with the previous command)
+                </li>
+                <li>
+                  <i class="fa fa-angle-right fa-li"></i> <code>npm run build</code><br />Compiles and prepares your
+                  assets for production
+                </li>
+              </ul>
+              <div>
+                Please have in mind that you have to already be familiar with Laravel to use this version. If you are
+                interested in learning Laravel, you can have a look at the
+                <a href="https://laravel.com/docs/9.x/">official documentation</a>. If you would like to use Dashmix in
+                your existing Laravel installation or replicate any page from the full HTML version, please have a look
+                at the
+                <a href="#section-laravel-starter-kit" data-toggle="scroll-to" data-offset="50">Laravel Starter Kit</a>
+                section for more info.
+              </div>
+            </li>
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>Documentation</code>
+              <div>Of course, it includes current documentation!</div>
+            </li>
+          </ul>
+          <div class="alert alert-primary">
+            <p class="mb-0">
+              You don’t have to use <strong>Node.js</strong> or <strong>Gulp</strong> with the template if you don't
+              like. You can ignore <code>.babelrc</code>, <code>gulpfile.babel.js</code>, <code>package.json</code> and
+              <code>package-lock.json</code> and work directly with the files found in the <code>src/</code> folder of
+              each version. In that case, you won't be able to take advantage of our premade tasks and if for example
+              you would like to work with and compile the Sass/ES6 files, you will just have to use your own compiling
+              method or tasks. Alternatively, you can just use the minimized production ready files (which are used by
+              default in all pages) and work as usual.
+            </p>
+          </div>
+          <!-- END Package -->
+
+          <!-- Bootstrap -->
+          <h2 id="section-bootstrap">Bootstrap</h2>
+          <p>
+            <a href="http://getbootstrap.com/">Bootstrap</a> is the world's most popular front-end component library. It
+            is easy to use and offers a large variety of CSS as well as JavaScript components.
+            <strong>Dashmix</strong> uses this framework at its core and builds on top its unique layout and features.
+            It redesigns/extends the original components and introduces new ones, featuring a modern and clean design.
+          </p>
+          <p>
+            If you are unfamiliar with the framework, its
+            <a href="https://getbootstrap.com/docs/5.2/">official website</a> will help you out a lot but if you just
+            want to start quickly, you can easily replicate any feature or component we already present in
+            <strong>Dashmix</strong> pages. If you find a feature in the official Bootstrap Docs you would like to use,
+            feel free to, since they are all available in <strong>Dashmix</strong>.
+          </p>
+          <!-- END Bootstrap -->
+
+          <!-- Gulp Tasks -->
+          <h2 id="section-gulp">Gulp Tasks</h2>
+          <p>
+            <a href="http://gulpjs.com">Gulp</a> is a JavaScript Task Runner. It enables you to automate repetitive
+            tasks like minification, compilation, unit testing, linting, etc, which makes your life easier.
+          </p>
+          <p>
+            In <strong>Dashmix</strong>, we've created many Gulp tasks which take care of everything for you! They set
+            up a web server which auto refreshes on file changes, compile on the fly your Sass and ES6 files into CSS
+            and ES5 respectively and build your production ready project.
+          </p>
+          <p>To use it with the template (HTML or PHP version), you will first have to:</p>
+          <ol>
+            <li>
+              <a href="https://nodejs.org/">Download and install Node.js</a>
+              <div class="text-muted">
+                Prefer the LTS version just to make sure there won't be any incompatibilities
+              </div>
+            </li>
+            <li>
+              Install gulp-cli globally by running the command <code>npm install -g gulp-cli</code> in your system’s
+              console.
+            </li>
+            <li>
+              (Optional step for running the PHP web server for the PHP version) Make sure that you've
+              <a href="http://php.net/manual/en/install.php">installed</a> PHP on your system and that PHP is included
+              in your system's PATH. You can try running <code>php --version</code> in your console to see if it is
+              already installed.
+            </li>
+            <li>
+              Install all required dependencies in your project’s folder by running the command
+              <code>npm install</code> in your system’s console -
+              <em
+                >You will have to run it from your project’s root folder which will have to include
+                <code>src/</code> folder, <code>.babelrc</code>, <code>gulpfile.babel.js</code>,
+                <code>package.json</code> and <code>package-lock.json</code> files.</em
+              >
+            </li>
+          </ol>
+          <p>
+            After you’ve successfully completed the previous steps, you will be able to run the following commands in
+            your system’s console from your project’s root folder and start working:
+          </p>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th style="width: 140px">Command</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-body-light">
+                <td colspan="2">
+                  <strong>Main Tasks</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp run-html</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    Sets up a custom static HTML Web server at <a href="http://localhost:3000">http://localhost:3000</a>
+                    which auto refreshes when you update any vital file in the project. It also starts watching for
+                    changes in the Sass and ES6 files and auto recompiles them to CSS and ES5 respectively if there is a
+                    change.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp run-php</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    Sets up a custom PHP Web server at <a href="http://localhost:3000">http://localhost:3000</a> which
+                    auto refreshes when you update any vital file in the project. It also starts watching for changes in
+                    the Sass and ES6 files and auto recompiles them to CSS and ES5 respectively if there is a change.
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp build</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    It will prepare and build your custom, minimized and production ready
+                    <strong>Dashmix</strong> project. After it completes, you will be able to find it under a new
+                    <code>dist/</code> folder in your project’s root folder.
+                  </p>
+                </td>
+              </tr>
+              <tr class="bg-body-light">
+                <td colspan="2">
+                  <strong>Additional Tasks (on demand)</strong>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp css</code>
+                </td>
+                <td>
+                  <p class="mb-2">Compiles from Sass to CSS (Autoprefixer auto adds required browser CSS prefixes).</p>
+                  <table class="table bg-white">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Entry</th>
+                        <th>Output</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_scss/main.scss</code>
+                        </td>
+                        <td class="w-50">
+                          <code>assets/css/dashmix.css</code><br />
+                          <code>assets/css/dashmix.min.css</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_scss/dashmix/themes/*</code>
+                        </td>
+                        <td class="w-50">
+                          <code>assets/css/themes/*.css</code><br />
+                          <code>assets/css/themes/*.min.css</code>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp js</code>
+                </td>
+                <td>
+                  <p class="mb-2">Webpack bundles JS modules together and Babel compiles from ES6 to ES5:</p>
+                  <table class="table bg-white">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Entry</th>
+                        <th>Output</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_js/main/app.js</code>
+                        </td>
+                        <td>
+                          <code>assets/js/dashmix.app.min.js</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_js/pages/*</code>
+                        </td>
+                        <td>
+                          <code>assets/js/pages/*.min.js</code>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp js-dev</code>
+                </td>
+                <td>
+                  <p class="mb-2">Webpack bundles JS modules together and Babel compiles from ES6 to ES5:</p>
+                  <table class="table bg-white">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Entry</th>
+                        <th>Output</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_js/main/app.js</code>
+                        </td>
+                        <td>
+                          <code>assets/js/dashmix.app.min.js</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_js/pages/*</code>
+                        </td>
+                        <td>
+                          <code>assets/js/pages/*.min.js</code>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="mb-2">
+                    Webpack runs with development mode and produces development friendly files as well:
+                  </p>
+                  <table class="table bg-white">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Entry</th>
+                        <th>Output</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_js/main/app.js</code>
+                        </td>
+                        <td>
+                          <code>assets/js/dashmix.app.js</code>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="w-50">
+                          <code>assets/_js/pages/*</code>
+                        </td>
+                        <td>
+                          <code>assets/js/pages/*.js</code>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>gulp watch</code>
+                </td>
+                <td>
+                  <p class="mb-0">
+                    It starts watching for changes in Sass and ES6 files and auto recompiles them to CSS and ES5
+                    respectively if there is a change. Useful if you would like to run it separately since it
+                    automatically runs when you use the <code>run-html</code> and <code>run-php</code> tasks.
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END Gulp Tasks -->
+
+          <!-- HTML -->
+          <h2 id="section-html">HTML</h2>
+          <p>
+            <strong>Dashmix</strong> features a super flexible, smart and powerful layout which can be used to create
+            dashboard and website pages with minimum effort using the same resources.
+          </p>
+          <p>
+            The layout offers many options which can be enabled just by adding or removing a class in the
+            <code>#page-container</code> element. If you play around with the PHP version, you will be able to set these
+            options from the <code>src/inc/_global/config.php</code> file.
+          </p>
+          <p>Let’s have a quick look at the generic HTML structure and get familiar with the layout:</p>
+          <pre class="pre-sh"><code class="html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1.0&quot;&gt;
+
+  &lt;!-- Title and Meta --&gt;
+  ...
+  &lt;!-- END Title and Meta --&gt;
+
+  &lt;!-- Icons --&gt;
+  &lt;!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers --&gt;
+  ...
+  &lt;!-- END Icons --&gt;
+
+  &lt;!-- Stylesheets --&gt;
+  &lt;!-- Page JS Plugins CSS go here --&gt;
+
+  &lt;!-- Dashmix framework --&gt;
+  &lt;link rel=&quot;stylesheet&quot; id=&quot;css-main&quot; href=&quot;assets/css/dashmix.min.css&quot;&gt;
+
+  &lt;!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: --&gt;
+  &lt;!-- &lt;link rel=&quot;stylesheet&quot; id=&quot;css-theme&quot; href=&quot;assets/css/themes/xpro.min.css&quot;&gt; --&gt;
+  &lt;!-- END Stylesheets --&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!-- Page Container --&gt;
+  &lt;!--
+    Available classes for #page-container:
+
+    GENERIC
+
+      &apos;remember-theme&apos;                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                  - Theme helper buttons [data-toggle=&quot;theme&quot;],
+                                                  - Layout helper buttons [data-toggle=&quot;layout&quot; data-action=&quot;dark_mode_[on/off/toggle]&quot;]
+                                                  - ..and/or Dashmix.layout(&apos;dark_mode_[on/off/toggle]&apos;)
+
+    SIDEBAR &amp; SIDE OVERLAY
+
+      &apos;sidebar-r&apos;                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+      &apos;sidebar-mini&apos;                              Mini hoverable Sidebar (screen width &gt; 991px)
+      &apos;sidebar-o&apos;                                 Visible Sidebar by default (screen width &gt; 991px)
+      &apos;sidebar-o-xs&apos;                              Visible Sidebar by default (screen width &lt; 992px)
+      &apos;sidebar-dark&apos;                              Dark themed sidebar
+
+      &apos;side-overlay-hover&apos;                        Hoverable Side Overlay (screen width &gt; 991px)
+      &apos;side-overlay-o&apos;                            Visible Side Overlay by default
+
+      &apos;enable-page-overlay&apos;                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+      &apos;side-scroll&apos;                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width &gt; 991px)
+
+    HEADER
+
+      &apos;&apos;                                          Static Header if no class is added
+      &apos;page-header-fixed&apos;                         Fixed Header
+
+
+    FOOTER
+
+      &apos;&apos;                                          Static Footer if no class is added
+      &apos;page-footer-fixed&apos;                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+    HEADER STYLE
+
+      &apos;&apos;                                          Classic Header style if no class is added
+      &apos;page-header-dark&apos;                          Dark themed Header
+      &apos;page-header-glass&apos;                         Light themed Header with transparency by default
+                                                  (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+      &apos;page-header-glass page-header-dark&apos;         Dark themed Header with transparency by default
+                                                  (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+    MAIN CONTENT LAYOUT
+
+      &apos;&apos;                                          Full width Main Content if no class is added
+      &apos;main-content-boxed&apos;                        Full width Main Content with a specific maximum width (screen width &gt; 1200px)
+      &apos;main-content-narrow&apos;                       Full width Main Content with a percentage width (screen width &gt; 1200px)
+      
+    DARK MODE
+
+      &apos;sidebar-dark page-header-dark dark-mode&apos;   Enable dark mode (light sidebar/header is not supported with dark mode)
+  --&gt;
+  &lt;div id=&quot;page-container&quot;&gt;
+    &lt;!-- Page loader --&gt;
+    &lt;!-- If #page-loader markup and also the &quot;show&quot; class is added, the loading screen will be enabled and auto hide once the page loads --&gt;
+    &lt;!-- &lt;div id=&quot;page-loader&quot; class=&quot;show&quot;&gt;&lt;/div&gt; --&gt;
+    
+    &lt;!-- Side Overlay--&gt;
+    &lt;aside id=&quot;side-overlay&quot;&gt;
+        ...
+    &lt;/aside&gt;
+    &lt;!-- END Side Overlay --&gt;
+
+    &lt;!-- Sidebar --&gt;
+    &lt;nav id=&quot;sidebar&quot;&gt;
+        ...
+    &lt;/nav&gt;
+    &lt;!-- END Sidebar --&gt;
+
+    &lt;!-- Header --&gt;
+    &lt;header id=&quot;page-header&quot;&gt;
+        ...
+    &lt;/header&gt;
+    &lt;!-- END Header --&gt;
+
+    &lt;!-- Main Container --&gt;
+    &lt;main id=&quot;main-container&quot;&gt;
+        ...
+    &lt;/main&gt;
+    &lt;!-- END Main Container --&gt;
+
+    &lt;!-- Footer --&gt;
+    &lt;footer id=&quot;page-footer&quot;&gt;
+        ...
+    &lt;/footer&gt;
+    &lt;!-- END Footer --&gt;
+  &lt;/div&gt;
+  &lt;!-- END Page Container --&gt;
+
+  &lt;!-- Dashmix JS --&gt;
+  &lt;script src=&quot;assets/js/dashmix.app.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;!-- jQuery (Needed only if you would like to use a jQuery based plugin in your page) --&gt;
+  &lt;script src=&quot;assets/js/lib/jquery.min.js&quot;&gt;&lt;/script&gt;
+
+  &lt;!-- Page JS Plugins + Page JS Code --&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+          <p>
+            As you can see, we kept the HTML structure as simple as possible, so we hope that you find it easy to
+            understand and implement in your own pages. Furthermore, have in mind that you can remove
+            <code>#side-overlay</code>, <code>#sidebar</code>, <code>#page-header</code> or
+            <code>#page-footer</code> markup if you would like to not have them in some of your pages. Everything will
+            work as expected, just make sure that you don’t use any related classes (to the element you removed) in
+            <code>#page-container</code>.
+          </p>
+          <!-- END HTML -->
+
+          <!-- Sass -->
+          <h2 id="section-sass">Sass</h2>
+          <p>
+            <strong>Dashmix</strong> was built with <a href="http://sass-lang.com/">Sass</a> using the latest
+            <code>SCSS</code> syntax. It is a powerful CSS pre-processor which extends the CSS language, adding features
+            that allow variables, mixins, functions and many other techniques, enabling you to make CSS that is more
+            maintainable and extendable.
+          </p>
+          <p>
+            If you would like to extend the framework and add your own styles or UI components, feel free to use the
+            Sass files included in the source (HTML and PHP version) under <code>src/assets/_scss/*</code> folder. You
+            can also use the included <a href="#section-gulp" data-toggle="scroll-to">Gulp tasks</a> to auto compile to
+            CSS every time you make a change (any required browser prefixes will be auto added after compilation, so you
+            don’t have to).
+          </p>
+          <p>
+            It is highly recommended though, to use the custom files we created for you to add your own styles and make
+            the <a href="#section-updating" data-toggle="scroll-to">updating</a> process easier. They can be found in
+            <code>assets/_scss/custom/</code>. In <code>assets/_scss/custom/_variables.scss</code> you will be able to
+            override any variables you want and in <code>assets/_scss/custom/_main.scss</code> you will be able to add
+            your own styles or override current ones.
+          </p>
+          <p>Let’s have a better look at the Sass files structure:</p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Files</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="w-25">
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>bootstrap/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Includes all original unaltered Bootstrap 5 Sass files. The concept is to never touch those files,
+                      so that a framework update is possible.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>dashmix/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Includes all Dashmix Sass files which follow the structure Bootstrap 5 uses. All Bootstrap 5
+                      overrides can also be found in here (variables/mixins/styles). We basically override what we can
+                      (using the available Bootstrap 5 variables) or want (mixins) to match our needs. Then we override
+                      the styles we can’t alter with variables and add our own components. This method allows us to
+                      easily update Bootstrap, resuse its features in our styles and also export a smaller main CSS file
+                      with fewer style overrides.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>vendor/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Includes all third party styles (eg animation.css, fontawesome icons, simple line icons). In here,
+                      you will also find all style overrides for the integrated plugins.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-folder mr-1"></i>
+                    <code>custom/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      This is your own folder in which you can add your own styles or overrides. Making your own changes
+                      in here will enable you to just update all other folders (when an update becomes available)
+                      without worrying of erasing your changes.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-file-alt mr-1"></i>
+                    <code>main.scss</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      This file is compiled to the main CSS stylesheet <code>dashmix.css</code>. From here you could
+                      easily update the compiled CSS file by commenting out the components you won’t use in your
+                      project. This way, you can achieve the smallest possible footprint for your main CSS file by only
+                      including what you need.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- END Sass -->
+
+          <!-- JavaScript -->
+          <h2 id="section-javascript">JavaScript</h2>
+          <p>
+            <strong>Dashmix</strong> custom JS functionality was built from scratch with ES6 (ECMAScript 2015). This
+            enabled us to take advantage of many new features which weren't available in ES5 (the version most web
+            browsers support and run) and write clean and more maintainable code.
+          </p>
+          <p>
+            We use webpack to bundle together separate JS files and Babel to compile ES6 to ES5. You can take advantage
+            of webpack and use it to also import plugins and libraries from the <code>node_modules</code> folder
+            directly in the custom code since all third party plugins used in <strong>Dashmix</strong> will be installed
+            with npm, too, after running <code>npm install</code>.
+          </p>
+          <p>
+            ES6 JS code can be found under <code>assets/_js/</code> folder. These files have to be compiled to ES5 first
+            before we include them in our pages and this is completely
+            <a href="#section-gulp" data-toggle="scroll-to">automated through the tasks</a> we've created.
+          </p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Files</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="w-25">
+                    <i class="far fa-folder mr-1"></i>
+                    <code>main/*</code>
+                  </td>
+                  <td class="text-muted">
+                    <p class="mb-0">
+                      Vital libraries (Bootstrap + SimpleBar) and custom <strong>Dashmix</strong> JS functionality used
+                      in all pages. If you would like to add your own functionality or overrides, you can do so in
+                      <code>assets/_js/main/app.js</code> (the inline comments will guide you through).
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-folder mr-1"></i>
+                    <code>pages/*</code>
+                  </td>
+                  <td class="text-muted">
+                    <p class="mb-0">
+                      Files with custom code showcasing various plugin examples. They are used separately only in
+                      specific pages.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="alert alert-warning push">
+            <p class="mb-0">
+              Please make sure that you don’t use snippets from ES6 code directly in your pages since older browsers
+              won't be able to run them.
+            </p>
+          </div>
+          <p>
+            Now, let’s have a better look at the JavaScript folder (<code>assets/js/*</code>) which includes the
+            compiled ES6 files as well as other JS resources:
+          </p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Files</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="w-25">
+                    <i class="far fa-folder mr-1"></i>
+                    <code>lib/*</code>
+                  </td>
+                  <td>
+                    <p>
+                      Third party optional libraries are included here. Currently only jQuery can be found and needs to
+                      be added only if you would like to use a jQuery based plugin in your page. The core JS
+                      functionality does not use it.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-folder mr-1"></i>
+                    <code>plugins/*</code>
+                  </td>
+                  <td>
+                    <p>
+                      All supported and integrated third-party plugins are included here. Some of them require from you
+                      to add their stylesheet as well, in the page you would like to use them (always before
+                      <code>dashmix.css</code> because for a few plugins we include style overrides).
+                    </p>
+                    <p class="mb-0">
+                      All those plugins will also be downloaded in <code>node_modules</code> folder after you run
+                      <code>npm install</code>. That means that you could also import and bundle them in the custom code
+                      if this is something you want.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-folder mr-1"></i>
+                    <code>pages/*</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      Custom JS code used in specific pages demonstrating the usage of various plugins and
+                      functionality. These files are compiled from <code>assets/_js/pages/*</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-file-alt mr-1"></i>
+                    <code>dashmix.app.min.js</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      The main file containing all vital libraries (Bootstrap + SimpleBar) and custom JS code needed for
+                      <strong>Dashmix</strong> features including layout and blocks API. It also includes various helper
+                      functions which you can call per page for enabling extra features (eg Table Helpers) or repetitive
+                      init code of various third party plugins. This file is compiled from
+                      <code>assets/_js/main/app.js</code>.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert alert-info push">
+            <p class="mb-0">
+              At the following section, we showcase various JS helpers for third party plugins. These are code snippets
+              which init plugins' functionality in the related markup. We have created many helpers to let you init
+              various plugins easily without repeating the same JS code over and over again in your pages.
+            </p>
+          </div>
+
+          <p>Let’s have a better look at the core JavaScript libraries included with Dashmix:</p>
+
+          <div class="table-responsive push">
+            <table class="js-table-sections table table-bordered table-vcenter mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Name</th>
+                  <th class="text-center" style="width: 70px">Helper</th>
+                  <th class="text-center" style="width: 70px">Version</th>
+                  <th class="text-center" style="width: 70px">Online</th>
+                </tr>
+              </thead>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Bootstrap.js</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">5.2.3</td>
+                  <td class="text-center">
+                    <a href="http://getbootstrap.com/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="4">
+                    <p>
+                      Bootstrap plugins offer extra functionality such as modals, tabs, tooltips &amp; popovers. All
+                      plugins can be used directly in the template. Some of them init automatically from Bootstrap (eg
+                      modals or tabs) but others need to be initialized on demand.
+                    </p>
+                    <p class="mb-2"><strong>Helpers</strong>:</p>
+                    <p>
+                      There are 2 available helpers for Bootstrap components: tooltips and popovers. These helpers are
+                      already called from Dashmix custom functionality on page load by default. You only must call them
+                      again if you inject new markup to the page and would like to init the related functionality on it.
+                    </p>
+                    <pre class="pre-sh"><code class="pwrap javascript">// Tooltip
+Dashmix.helpers(&apos;bs-tooltip&apos;);
+
+// Popover
+Dashmix.helpers(&apos;bs-popover&apos;);</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add data-* attributes to an element or use .js-* classes):
+                    </p>
+                    <pre class="pre-sh"><code class="pwrap html">&lt;!-- Tooltip with data-toggle --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;
+          data-bs-toggle=&quot;tooltip&quot;
+          data-bs-placement=&quot;top&quot;
+          title=&quot;Tooltip Text&quot;&gt;
+    Show Tooltip
+&lt;/button&gt;
+
+&lt;!-- Tooltip with class --&gt;
+&lt;button type=&quot;button&quot; class=&quot;js-bs-tooltip btn btn-primary&quot;
+          data-bs-placement=&quot;top&quot;
+          title=&quot;Tooltip Text&quot;&gt;
+    Show Tooltip
+&lt;/button&gt;</code></pre>
+                    <pre class="pre-sh"><code class="pwrap html">&lt;!-- Popover with data-toggle --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;
+          data-bs-toggle=&quot;popover&quot;
+          data-bs-placement=&quot;top&quot;
+          title=&quot;Popover title.&quot;
+          data-bs-content=&quot;Popover content.&quot;&gt;
+    Show Popover
+&lt;/button&gt;
+
+&lt;!-- Popover with class --&gt;
+&lt;button type=&quot;button&quot; class=&quot;js-bs-popover btn btn-primary&quot;
+          data-bs-placement=&quot;top&quot;
+          title=&quot;Popover title.&quot;
+          data-bs-content=&quot;Popover content.&quot;&gt;
+    Show Popover
+&lt;/button&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">SimpleBar</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">5.3.9</td>
+                  <td class="text-center">
+                    <a href="https://github.com/Grsmto/simplebar">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="4">
+                    <p class="mb-0">
+                      Custom scrollbars vanilla javascript library with native scroll, done simple, lightweight, easy to
+                      use and cross-browser.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Let’s have a better look at the available pure JS plugins:</p>
+
+          <div class="table-responsive push">
+            <table class="js-table-sections table table-bordered table-vcenter mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Name</th>
+                  <th class="text-center" style="width: 70px">CSS</th>
+                  <th class="text-center" style="width: 70px">Helper</th>
+                  <th class="text-center" style="width: 70px">Version</th>
+                  <th class="text-center" style="width: 70px">Online</th>
+                </tr>
+              </thead>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Chart.js</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">3.9.1</td>
+                  <td class="text-center">
+                    <a href="http://chartjs.org/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Simple, clean and engaging charts for designers and developers.</p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/chart.js/chart.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Charts page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">CKEditor 4</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">4.20.1</td>
+                  <td class="text-center">
+                    <a href="http://ckeditor.com/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      CKEditor is a ready-for-use HTML text editor designed to simplify web content creation. It's a
+                      WYSIWYG editor that brings common word processor features directly to your web pages.
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/ckeditor/ckeditor.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;js-ckeditor&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-ckeditor</code> id to a <code>textarea</code> or
+                      <code>js-ckeditor-inline</code> to a <code>div</code> for an inline editor):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;textarea id=&quot;js-ckeditor&quot; name=&quot;ckeditor&quot;&gt;Hello CKEditor!&lt;/textarea&gt;
+&lt;div id=&quot;js-ckeditor-inline&quot;&gt;Hello inline CKEditor!&lt;/div&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">CKEditor 5</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">35.3.2</td>
+                  <td class="text-center">
+                    <a href="http://ckeditor.com/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      CKEditor is a ready-for-use HTML text editor designed to simplify web content creation. It's a
+                      WYSIWYG editor that brings common word processor features directly to your web pages.
+                    </p>
+                    <p class="mb-3">
+                      <strong>Required JS files for Classic Editor</strong> (include after all other JS scripts):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/ckeditor5-classic/build/ckeditor.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Required JS files for Inline Editor</strong> (include after all other JS scripts):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/ckeditor5-inline/build/ckeditor.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Helper (for both Editors)</strong> (call it after all JS scripts are added):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;js-ckeditor5&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-ckeditor5-classic</code> or
+                      <code>js-ckeditor5-inline</code> id to a <code>div</code>):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;div id=&quot;js-ckeditor5-classic&quot;&gt;Hello classic CKEditor 5!&lt;/div&gt;
+or
+&lt;div id=&quot;js-ckeditor5-inline&quot;&gt;Hello inline CKEditor 5!&lt;/div&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Cropper.js</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.5.13</td>
+                  <td class="text-center">
+                    <a href="https://github.com/fengyuanchen/cropperjs">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Cropper.js is a JavaScript image cropper.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/cropperjs/cropper.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/cropperjs/cropper.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Image Cropper page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Dropzone.js</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">5.9.3</td>
+                  <td class="text-center">
+                    <a href="https://gitlab.com/meno/dropzone">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      DropzoneJS is an open source library that provides drag’n’drop file uploads with image previews.
+                    </p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/dropzone/min/dropzone.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/dropzone/min/dropzone.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (add <code>dropzone</code> class to a <code>form</code>):</p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;form class=&quot;dropzone&quot; action=&quot;&quot;&gt;&lt;/form&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Flatpickr</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">4.6.13</td>
+                  <td class="text-center">
+                    <a href="https://github.com/flatpickr/flatpickr">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Lightweight, powerful JavaScript datetimepicker with no dependencies.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/flatpickr/flatpickr.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/flatpickr/flatpickr.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all other scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;js-flatpickr&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-flatpickr</code> class to a text <code>input</code>):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;input type=&quot;text&quot; class=&quot;js-flatpickr form-control&quot;&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">FullCalendar</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">5.11.3</td>
+                  <td class="text-center">
+                    <a href="http://fullcalendar.io/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>A full-sized drag & drop JavaScript event calendar</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/fullcalendar/main.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/fullcalendar/main.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Calendar page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Highlight.js</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">9.16.2</td>
+                  <td class="text-center">
+                    <a href="https://github.com/isagalaev/highlight.js">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>JavaScript syntax highlighter.</p>
+                    <p class="mb-3">
+                      <strong>Required CSS files</strong> (include before main CSS - You can also include some other
+                      file from <code>styles</code> folder for alternative syntax highlighting):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/highlightjs/styles/atom-one-dark.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/highlightjs/highlight.pack.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all other scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;js-highlightjs&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Syntax Highlighting page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">SimpleMDE Markdown Editor</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.11.2</td>
+                  <td class="text-center">
+                    <a href="https://github.com/NextStepWebs/simplemde-markdown-editor">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      A simple, beautiful, and embeddable JavaScript Markdown editor. Delightful editing for beginners
+                      and experts alike. Features built-in autosaving and spell checking. It has been slightly edited to
+                      fix a conflict issue with FontAwesome.
+                    </p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/simplemde/simplemde.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/simplemde/simplemde.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;js-simplemde&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-simplemde</code> class to a <code>textarea</code>):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;textarea class=&quot;js-simplemde&quot; id=&quot;simplemde&quot; name=&quot;simplemde&quot;&gt;Hello SimpleMDE!&lt;/textarea&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">SweetAlert2</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">11.6.15</td>
+                  <td class="text-center">
+                    <a href="https://github.com/limonte/sweetalert2">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>An awesome replacement for JavaScript's alert.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/sweetalert2/sweetalert2.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Required JS files</strong> (include after all core JS scripts - es6-promise.auto.min.js is
+                      required for IE10 and up support):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/es6-promise/es6-promise.auto.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/sweetalert2/sweetalert2.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Dialogs page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Let’s have a better look at the jQuery based plugins which require jQuery to work:</p>
+
+          <div class="table-responsive push">
+            <table class="js-table-sections table table-bordered table-vcenter mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Name</th>
+                  <th class="text-center" style="width: 70px">Version</th>
+                  <th class="text-center" style="width: 70px">Online</th>
+                </tr>
+              </thead>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery</td>
+                  <td class="font-w600 text-info text-center">3.6.1</td>
+                  <td class="text-center">
+                    <a href="http://jquery.com/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="3">
+                    <p>
+                      jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document
+                      traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use
+                      API that works across a multitude of browsers. With a combination of versatility and
+                      extensibility, jQuery has changed the way that millions of people write JavaScript.
+                    </p>
+                    <p class="mb-3">
+                      <strong>Required JS files</strong> (include after Dashmix JS and before any jQuery plugin):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/lib/jquery.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-responsive push">
+            <table class="js-table-sections table table-bordered table-vcenter mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Name</th>
+                  <th class="text-center" style="width: 70px">CSS</th>
+                  <th class="text-center" style="width: 70px">Helper</th>
+                  <th class="text-center" style="width: 70px">Version</th>
+                  <th class="text-center" style="width: 70px">Online</th>
+                </tr>
+              </thead>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Bootstrap Datepicker</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.9.0</td>
+                  <td class="text-center">
+                    <a href="https://github.com/eternicode/bootstrap-datepicker">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>A nice and customizable datepicker plugin for Bootstrap.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-datepicker&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (add <code>js-datapicker</code> class to an input):</p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;input type=&quot;text&quot; class=&quot;js-datepicker form-control&quot;&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Bootstrap Maxlength</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.10.1</td>
+                  <td class="text-center">
+                    <a href="https://github.com/mimo84/bootstrap-maxlength">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      This plugin integrates by default with Bootstrap using badges to display the maximum length of the
+                      field where the user is inserting text. Uses the HTML5 attribute "maxlength" to work.
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-maxlength&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-maxlength</code> class to a text <code>input</code>):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;input type=&quot;text&quot; class=&quot;js-maxlength form-control&quot; maxlength=&quot;20&quot;&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Bootstrap Notify</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">3.1.3</td>
+                  <td class="text-center">
+                    <a href="https://github.com/mouse0270/bootstrap-notify">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Turns standard Bootstrap alerts into "Growl-like" notifications.</p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-notify&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out the Notifications page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">DataTables</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.13.1</td>
+                  <td class="text-center">
+                    <a href="http://datatables.net/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based
+                      upon the foundations of progressive enhancement, and will add advanced interaction controls to any
+                      HTML table.
+                    </p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/datatables-bs5/css/dataTables.bootstrap5.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/datatables-buttons-bs5/css/buttons.bootstrap5.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/datatables-responsive-bs5/css/responsive.bootstrap5.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/datatables/jquery.dataTables.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-bs5/js/dataTables.bootstrap5.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-responsive/js/dataTables.responsive.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-responsive-bs5/js/responsive.bootstrap5.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons/dataTables.buttons.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons-bs5/js/buttons.bootstrap5.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons-jszip/jszip.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons-pdfmake/pdfmake.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons-pdfmake/vfs_fonts.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons/buttons.print.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/datatables-buttons/buttons.html5.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out DataTables page under Tables for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Easy Pie Chart</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">2.1.7</td>
+                  <td class="text-center">
+                    <a href="https://github.com/rendro/easy-pie-chart">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Easy Pie Chart is a lightweight plugin to draw simple, animated pie charts for single values.</p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/easy-pie-chart/jquery.easypiechart.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-easy-pie-chart&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-pie-chart</code> class to a <code>div</code> element):
+                    </p>
+                    <pre class="pre-sh mb-0"><code class="pwrap html">&lt;div class=&quot;js-pie-chart pie-chart&quot;
+    data-percent=&quot;25&quot;
+    data-line-width=&quot;2&quot;
+    data-size=&quot;100&quot;
+    data-bar-color=&quot;#ef5350&quot;
+    data-track-color=&quot;#e9e9e9&quot;
+    data-scale-color=&quot;#d9d9d9&quot;&gt;
+    &lt;span&gt;..Content..&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Ion Range Slider</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">2.3.1</td>
+                  <td class="text-center">
+                    <a href="https://github.com/IonDen/ion.rangeSlider">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Easy, flexible and responsive range sliders.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-rangeslider&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-rangeslider</code> class to a text <code>input</code>):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;input type=&quot;text&quot; class=&quot;js-rangeslider form-control&quot; value=&quot;50&quot;&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Appear</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.0.0</td>
+                  <td class="text-center">
+                    <a href="https://github.com/bas2k/jquery.appear/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      jQuery plugin to call a function when an element appears. We use it to make an element visible on
+                      scrolling.
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/jquery-appear/jquery.appear.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-appear&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add data-* attributes to an element and the <code>invisible</code> class):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;div class=&quot;invisible&quot; data-toggle=&quot;appear&quot;&gt;
+    Content..
+&lt;/div&gt;</code></pre>
+                    <p class="mb-2">You can also use more options:</p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;div class=&quot;invisible&quot; data-toggle=&quot;appear&quot;
+           data-class=&quot;animated fadeInUp&quot;
+           data-timeout=&quot;250&quot;
+           data-offset=&quot;-100&quot;&gt;
+    Content..
+&lt;/div&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Countdown</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">2.2.0</td>
+                  <td class="text-center">
+                    <a href="https://github.com/hilios/jQuery.countdown">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>The Final Countdown plugin for jQuery.</p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/jquery-countdown/jquery.countdown.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Coming Soon page for usage example.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Password Strength Meter</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">3.1.1</td>
+                  <td class="text-center">
+                    <a href="https://github.com/ablanco/jquery.pwstrength.bootstrap">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      The jQuery Password Strength Meter is a plugin for Bootstrap that provides rulesets for visualy
+                      displaying the quality of a users typed in password.
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/pwstrength-bootstrap/pwstrength-bootstrap.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&quot;jq-pw-strength&quot;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (use the following markup):</p>
+                    <pre class="pre-sh mb-0"><code class="pwrap html">&lt;div class="js-pw-strength-container"&gt;
+    &lt;label class="form-label" for="example-pw"&gt;Password&lt;/label&gt;
+    &lt;input type="password" class="js-pw-strength form-control" id="example-pw" name="example-pw"&gt;
+    &lt;div class="js-pw-strength-progress pw-strength-progress mt-1"&gt;&lt;/div&gt;
+    &lt;p class="js-pw-strength-feedback form-text mb-0"&gt;&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Sparkline</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">2.4.1</td>
+                  <td class="text-center">
+                    <a href="http://omnipotent.net/jquery.sparkline/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      This jQuery plugin generates sparklines (small inline charts) directly in the browser using data
+                      supplied either inline in the HTML, or via JavaScript.
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/jquery-sparkline/jquery.sparkline.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-sparkline&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;span class=&quot;js-sparkline&quot; data-type=&quot;line&quot; data-points=&quot;[9,5,2,4,6,1,3,5]&quot;&gt;&lt;/span&gt;</code></pre>
+                    <p class="mb-0">
+                      <em>Please check out Charts page under Components for more usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Validation</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.19.5</td>
+                  <td class="text-center">
+                    <a href="https://github.com/jzaefferer/jquery-validation/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      The jQuery Validation Plugin provides drop-in validation for your existing forms, while making all
+                      kinds of customizations to fit your application really easy.
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/jquery-validation/jquery.validate.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/jquery-validation/additional-methods.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Helper</strong> (call it before setting up your custom validation rules - it will load the
+                      default options for you):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap javascript">Dashmix.helpers(&apos;jq-validation&apos;);</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Validation page under Forms for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Masked Input</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.4.1</td>
+                  <td class="text-center">
+                    <a href="http://digitalbush.com/projects/masked-input-plugin">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      This is a masked input plugin for the jQuery JavaScript library. It allows a user to more easily
+                      enter fixed width input where you would like them to enter the data in a certain format (dates,
+                      phone numbers, etc).
+                    </p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/jquery.maskedinput/jquery.maskedinput.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-masked-inputs&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (the helper inits various classes to work with):</p>
+                    <p class="mb-0">
+                      <em>Please check out Plugins page under Forms for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jQuery Raty</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">3.1.1</td>
+                  <td class="text-center">
+                    <a href="https://github.com/wbotelhos/raty">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>A star rating plugin.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/raty-js/jquery.raty.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/raty-js/jquery.raty.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Rating page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">jVectorMap</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">3.1.1</td>
+                  <td class="text-center">
+                    <a href="http://jvectormap.com/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Vector Maps component.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/jvectormap/dist/jquery-jvectormap.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/jvectormap/dist/jquery-jvectormap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;assets/js/plugins/jvectormap/maps/__map-file__.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-0">
+                      <em>Please check out Vector Maps page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Magnific Popup</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.1.0</td>
+                  <td class="text-center">
+                    <a href="https://github.com/dimsemenov/Magnific-Popup">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Light and responsive lightbox script with focus on performance.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/magnific-popup/magnific-popup.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/magnific-popup/jquery.magnific-popup.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-magnific-popup&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (with <code>js-gallery</code> class):</p>
+                    <p class="mb-0">
+                      <em>Please check out Gallery page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Nestable2</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.6.0</td>
+                  <td class="text-center">
+                    <a href="https://github.com/RamonSmit/Nestable2">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Drag &amp; Drop hierarchical list with mouse and touch compatibility.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/nestable2/jquery.nestable.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/nestable2/jquery.nestable.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong>
+                    </p>
+                    <p class="mb-0">
+                      <em>Please check out Nestable page under Components for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Select2</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">4.0.13</td>
+                  <td class="text-center">
+                    <a href="https://github.com/select2/select2">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>
+                      Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets,
+                      and infinite scrolling of results.
+                    </p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/select2/css/select2.min.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/select2/js/select2.full.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-select2&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (add <code>js-select2</code> class to a <code>select</code> element):
+                    </p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;select class=&quot;js-select2 form-control&quot; style=&quot;width: 100%;&quot; data-placeholder=&quot;Choose one..&quot;&gt;
+    &lt;option&gt;&lt;/option&gt;&lt;!-- Required for data-placeholder attribute to work with Select2 plugin --&gt;
+    &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Slick</td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-check text-success"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">1.8.1</td>
+                  <td class="text-center">
+                    <a href="https://github.com/kenwheeler/slick">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>The last carousel you'll ever need.</p>
+                    <p class="mb-3"><strong>Required CSS files</strong> (include before main CSS):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/slick-carousel/slick.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/js/plugins/slick-carousel/slick-theme.css&quot;&gt;</code></pre>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/slick-carousel/slick.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;jq-slick&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (with <code>js-slider</code> class):</p>
+                    <pre class="pre-sh"><code class="pwrap html">&lt;div class=&quot;js-slider&quot;&gt;
+    &lt;div&gt;
+        Slide #1
+    &lt;/div&gt;
+    &lt;div&gt;
+        Slide #2
+    &lt;/div&gt;
+    &lt;div&gt;
+        Slide #3
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <p class="mb-0">
+                      <em>Please check out Sliders page under Components for more usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Vide</td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="text-center">
+                    <i class="fa fa-times text-danger"></i>
+                  </td>
+                  <td class="font-w600 text-info text-center">0.5.1</td>
+                  <td class="text-center">
+                    <a href="http://vodkabears.github.io/vide/">
+                      <i class="fa fa-globe"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td colspan="5">
+                    <p>Easy as hell jQuery plugin for video backgrounds.</p>
+                    <p class="mb-3"><strong>Required JS files</strong> (include after all other JS scripts):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script src=&quot;assets/js/plugins/vide/jquery.vide.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+                    <p class="mb-3">
+                      <strong>Usage</strong> (set the url of your video in the <code>data-vide-bg</code> attribute of a
+                      <code>div</code> similar to the following):
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;div class=&quot;bg-video&quot; data-vide-bg=&quot;url/to/your/video/without/the/file/extension&quot;
+                      data-vide-options=&quot;posterType: jpg&quot;&gt;
+    ...
+&lt;/div&gt;</code></pre>
+                    <p class="mb-0">
+                      <strong>Note:</strong> If you are having issues with the auto video playback in Safari 11, please
+                      have a look at
+                      <a href="https://github.com/vodkabears/Vide/issues/206"
+                        >https://github.com/vodkabears/Vide/issues/206</a
+                      >
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Finally, let’s have a better look at few custom helpers:</p>
+
+          <div class="table-responsive push">
+            <table class="js-table-sections table table-bordered table-vcenter mb-0">
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Print Page</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>A helper which prints the main content of the current page.</p>
+                    <p class="mb-3"><strong>Helper</strong> (just by calling the following function):</p>
+                    <pre class="pre-sh mb-0"><code class="pwrap javascript">Dashmix.helpers('dm-print');</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Class Toggle</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>
+                      A helper which allows you to toggle a custom class on the element of your choice on button click.
+                    </p>
+                    <p class="mb-3"><strong>Helper</strong>:</p>
+                    <p class="mb-3">
+                      This helper is already called by default on page load. You only must call it again if you inject
+                      new markup to the page and would like to init the functionality on it.
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap javascript">Dashmix.helpers(&apos;dm-toggle-class&apos;);</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-3">Your target element</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;div class=&quot;js-target-class&quot;&gt;&lt;/div&gt;</code></pre>
+                    <p class="mb-3">Your button</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;button type=&quot;button&quot; data-toggle=&quot;class-toggle&quot; data-target=&quot;.js-target-class&quot; data-class=&quot;your-class&quot;&gt;
+    Toggle
+&lt;/button&gt;</code></pre>
+                    <p class="mb-0">
+                      <em
+                        >In this specific example, each button click will toggle the class 'your-class' on the element
+                        with class 'js-target-class'.</em
+                      >
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Ripple</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>A helper which animates a ripple on button click.</p>
+                    <p class="mb-3"><strong>Helper</strong>:</p>
+                    <p class="mb-3">
+                      This helper is already called by default on page load. You only must call it again if you inject
+                      new markup to the page and would like to init the functionality on it.
+                    </p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap javascript">Dashmix.helpers(&apos;dm-ripple&apos;);</code></pre>
+                    <p class="mb-3"><strong>Usage</strong> (add data-* attributes to a button):</p>
+                    <pre
+                      class="pre-sh mb-0"
+                    ><code class="pwrap html">&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;click-ripple&quot;&gt;Primary&lt;/button&gt;</code></pre>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Table Sections</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>
+                      A helper which allows you to create table sections that toggle on row click (like an accordion
+                      component).
+                    </p>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;dm-table-tools-sections&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-3">1. Add the class <code>js-table-sections</code> to your table</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;table class=&quot;js-table-sections table table-hover&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+                    <p class="mb-3">
+                      2. Use the following markup in your table to create clickable header rows and their content
+                    </p>
+                    <pre class="pre-sh"><code class="pwrap html">...
+&lt;tbody class=&quot;js-table-sections-header&quot;&gt;One row&lt;/tbody&gt;
+&lt;tbody&gt;Multiple rows which show/hide on previous tbody’s row click&lt;/tbody&gt;
+&lt;tbody class=&quot;js-table-sections-header&quot;&gt;One row&lt;/tbody&gt;
+&lt;tbody&gt;Multiple rows which show/hide on previous tbody’s row click&lt;/tbody&gt;
+&lt;tbody class=&quot;js-table-sections-header&quot;&gt;One row&lt;/tbody&gt;
+&lt;tbody&gt;Multiple rows which show/hide on previous tbody’s row click&lt;/tbody&gt;
+...
+</code></pre>
+                    <p class="mb-0">
+                      <em>Please check out Helpers page under Tables for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="js-table-sections-header">
+                <tr>
+                  <td class="font-w600">Checkable Table</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>A helper which allows you to create a table with checkable rows.</p>
+                    <p class="mb-3"><strong>Helper</strong> (call it after all JS scripts are added):</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;script&gt;Dashmix.helpersOnLoad(&apos;dm-table-tools-checkable&apos;);&lt;/script&gt;</code></pre>
+                    <p class="mb-3"><strong>Usage</strong>:</p>
+                    <p class="mb-3">1. Add the class <code>js-table-checkable</code> to your table</p>
+                    <pre
+                      class="pre-sh"
+                    ><code class="pwrap html">&lt;table class=&quot;js-table-checkable table table-hover&quot;&gt;
+  ...
+&lt;/table&gt;</code></pre>
+                    <p class="mb-3">2. Use similar markup in your table to create checkable rows</p>
+                    <pre class="pre-sh"><code class="pwrap html">...
+&lt;thead&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;check-all&quot; name=&quot;check-all&quot;&gt;
+    &lt;/th&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;row_1&quot; name=&quot;row_1&quot;&gt;
+    &lt;/td&gt;
+    &lt;td&gt;Name 2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;row_2&quot; name=&quot;row_2&quot;&gt;
+    &lt;/td&gt;
+    &lt;td&gt;Name 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+...
+</code></pre>
+                    <p class="mb-0">
+                      <em>Please check out Helpers page under Tables for usage examples.</em>
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="alert alert-info push">
+            <p>
+              You can run multiple helpers in a page by using an array:<br /><code
+                >Dashmix.helpers(['helper1', 'helper2', 'helper3']);</code
+              >
+            </p>
+            <p class="mb-0">
+              Alternatively, you can also use helpersOnLoad function to run them once DOM Content is loaded:<br /><code
+                >Dashmix.helpersOnLoad(['helper1', 'helper2', 'helper3']);</code
+              >
+            </p>
+          </div>
+          <div class="alert alert-info push">
+            <p class="mb-0">
+              Feel free to ignore the provided helpers and use your own plugin inits after you’ve included the resources
+              of the ones you need in your page.
+            </p>
+          </div>
+          <div class="alert alert-warning push">
+            <p class="mb-0">
+              When a helper is called and functionality/plugin is initialized, a class
+              <code>js-HELPER_NAME-enabled</code>
+              is auto added to the element. This ensures that if you add a similar element dynamically to your page and
+              call the helper again, the functionality/plugin will be initialized only on the new element. It’s a nice
+              convenient solution but please have in mind that if you copy-paste an element to your markup from your
+              browser’s developer tools, then you will also copy this extra class, so remember to remove it!
+            </p>
+          </div>
+          <!-- END JavaScript -->
+
+          <!-- Laravel Starter Kit -->
+          <h2 id="section-laravel-starter-kit">Laravel Starter Kit</h2>
+          <h3>Using it in an existing Laravel installation</h3>
+          <p>
+            If you already have your own Laravel (with Vite) app and would like to use Dashmix in an existing
+            installation, then you will just have to copy over the following folders/files:
+          </p>
+          <ul class="fa-ul">
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>public/</code>
+              <ul class="fa-ul">
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>media/*</code>
+                </li>
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>js/lib/*</code>
+                </li>
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>js/plugins/*</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="far fa-folder fa-li"></i>
+              <code>resources/</code>
+              <ul class="fa-ul">
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>fonts/*</code>
+                </li>
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>sass/*</code>
+                </li>
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>js/dashmix/*</code>
+                </li>
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>js/pages/*</code>
+                </li>
+                <li>
+                  <i class="far fa-folder fa-li"></i>
+                  <code>views/*</code>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <i class="far fa-file-alt fa-li"></i>
+              <code>routes/web.php</code>
+              <p class="text-muted mb-0">Migrate example routes</p>
+            </li>
+            <li>
+              <i class="far fa-file-alt fa-li"></i>
+              <code>vite.config.js</code>
+              <p class="text-muted mb-0">Migrate Vite configuration</p>
+            </li>
+          </ul>
+          <p>Afterwards, just install the required npm dependencies by running the following console command:</p>
+          <p>
+            <code>npm i bootstrap@^5 @popperjs/core@^2 simplebar@^5</code>
+          </p>
+          <p>
+            Furthermore, if you aren't already using Sass in you current project, you should install that dependency as
+            well:
+          </p>
+          <p>
+            <code>npm i sass -D</code>
+          </p>
+          <h3>Blade Templates</h3>
+          <p>
+            The provided Blade Templates under <code>resources/views/</code> folder have everything you need to recreate
+            any demo page we showcase in the PHP and HTML versions. If you are not familiar with Blade Templates, you
+            can have a look at the <a href="https://laravel.com/docs/9.x/blade">official docs</a> where they explained
+            in detail. They can help us in many ways but most importantly, they enable us to create master layouts, so
+            that we don’t repeat the same content in each one of our pages.
+          </p>
+          <h3>Blade Layout Templates</h3>
+          <p>
+            First of all, it’s important to know that we provide 2 main layouts, the simple and the backend layout. As
+            you must have already seen from the
+            <a href="#section-html" data-toggle="scroll-to" data-offset="50">HTML Structure</a> section, the simple
+            layout is actually just a subset of the backend layout (the main structure). It is the same layout without a
+            header, sidebar, side overlay and footer.
+          </p>
+          <div class="table-responsive push">
+            <table class="table table-bordered mb-0">
+              <thead class="thead-light">
+                <tr>
+                  <th>Files</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="w-50">
+                    <i class="far fa-fw fa-file-alt mr-1"></i>
+                    <code>resources/views/layouts/simple.blade.php</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      This is the simple layout which is ideal to recreate the one-page layout pages such as Sign In or
+                      Error pages. A page example using this layout can be found at
+                      <code>resources/views/landing.blade.php</code>.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <i class="far fa-fw fa-file-alt mr-1"></i>
+                    <code>resources/views/layouts/backend.blade.php</code>
+                  </td>
+                  <td>
+                    <p class="mb-0">
+                      This is the backend layout which includes all main elements (header, sidebar, side overlay and
+                      footer) and it is ideal for recreating full backend pages. A page example using this layout can be
+                      found at <code>resources/views/dashboard.blade.php</code>.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Before adding your own pages, you can create your custom layout based on your preferences or use the
+            existing ones to recreate any layout you want. You will just have to find the page from the HTML version
+            with the layout you are interested in, use the same classes used in <code>#page-container</code> element and
+            replace the HTML content of the main sections (header, sidebar, side overlay and footer) by copying over the
+            HTML markup you find in each related element.
+          </p>
+          <h3>Recreating a page from the HTML version</h3>
+          <p>
+            It is a simple process and we provide related page examples for each occasion under
+            <code>resources/views/pages/</code> folder. Let’s have a better look:
+          </p>
+          <ol>
+            <li>
+              <strong>Static content</strong> (example in <code>blank.blade.php</code>)
+              <p class="mb-0">If the page you are interested in doesn’t use plugins, you will have to:</p>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Copy over the HTML markup found in your <code>#main-container</code> element to your
+                  <code>@section('content')</code> section.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Static content with a plugin using a JS helper</strong> (example in <code>slick.blade.php</code>)
+              <p class="mb-0">
+                If the page you are interested in uses plugins for which we provide JS helpers, you will have to:
+              </p>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Copy over the HTML markup found in your <code>#main-container</code> element to your
+                  <code>@section('content')</code> section.
+                </li>
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Include plugins’ required CSS assets in your <code>@section('css')</code> section.
+                </li>
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Include plugins’ required JS assets in your <code>@section('js')</code> section.
+                </li>
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Create a .js file (with a call to the JS helper) in the <code>resources/js/pages/</code> folder, add
+                  it in your <code>vite.config.js</code> and include it in your <code>@section('js')</code> section.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong>Static content with a plugin using custom JS init code</strong> (example in
+              <code>datatables.blade.php</code>)
+              <p class="mb-0">
+                If the page you are interested in uses plugins for which you have to use custom JS to init it, you will
+                have to:
+              </p>
+              <ul class="fa-ul">
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Copy over the HTML markup found in your <code>#main-container</code> element to your
+                  <code>@section('content')</code> section.
+                </li>
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Include plugins’ required CSS assets in your <code>@section('css')</code> section.
+                </li>
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Include plugins’ required JS assets in your <code>@section('js')</code> section.
+                </li>
+                <li>
+                  <i class="fa fa-li fa-arrow-right"></i>
+                  Copy over the JS init code (found under <code>assets/_js/pages/</code> folder) used in the page from
+                  the HTML version, in the <code>resources/js/pages/</code> folder and add it in your
+                  <code>vite.config.js</code>. Afterwards, include it in your <code>@section('js')</code> section and
+                  edit it accordingly based on your preferences.
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            You can have a look at the
+            <a href="#section-javascript" data-toggle="scroll-to" data-offset="50">JavaScript Structure</a> section
+            where we include info about all integrated plugins, their required assets and their JS helper availability.
+            Moreover, it’s worth mentioning that if you are more experienced, you could use dynamic imports which is a
+            method of code-splitting and enables us to split JavaScript code into separate files, so you don't have to
+            create multiple .js files for each page.
+          </p>
+          <!-- END Laravel Starter Kit -->
+
+          <!-- Quick Tips -->
+          <h2 id="section-tips">Quick Tips</h2>
+          <h3>Wrapping <code>#page-container</code></h3>
+          <p>
+            If you would like to wrap the main layout <code>div#page-container</code> with another div, then you should
+            add the class <code>hero-static</code> to your wrapping div element to ensure that the flexbox layout will
+            keep working as expected and your main elements (eg footer), will be positioned accordingly.
+          </p>
+
+          <h3>CSS prefixes for older browsers</h3>
+          <p>
+            You can update the following array in <code>package.json</code> accordingly if you would like the
+            Autoprexifer to auto add CSS prefixes for older browser versions (when using the Gulp tasks to compile from
+            Sass to CSS). By default, we use the same as Bootstrap 5 does.
+          </p>
+          <pre class="pre-sh"><code class="javascript">"browserslist": [
+  "&gt;= 0.5%",
+  "last 2 major versions",
+  "not dead",
+  "Chrome &gt;= 60",
+  "Firefox &gt;= 60",
+  "Firefox ESR",
+  "iOS &gt;= 12",
+  "Safari &gt;= 12",
+  "not Explorer &lt;= 11"
+]</code></pre>
+
+          <h3>High resolution screens</h3>
+          <p>
+            The UI will look crispy clear on high resolution screens and if you would like your images to look great,
+            too, then you will have to use the <code>srcset</code> attribute of the <code>&lt;img&gt;</code> element.
+            For example, if you have an image <code>url/to/image.jpg</code> and its high resolution version
+            <code>url/to/image@2x.jpg</code>, you will have to use the following markup:
+          </p>
+          <pre
+            class="pre-sh"
+          ><code class="html">&lt;img src="url/to/image.jpg" srcset="url/to/image@2x.jpg 2x" alt="Image Description"&gt;</code></pre>
+          <p>
+            The browser will auto select the best version and load it accordingly. Older browsers will ignore the
+            <code>srcset</code> attribute and will load the regular image as usual.
+          </p>
+
+          <h3>Demo Forms</h3>
+          <p>
+            Please remember to remove <code>onsubmit=&quot;return false;&quot;</code> from
+            <code>&lt;form&gt;</code> tags if you are using a form from the example pages. It is just added to prevent
+            forms from submitting in case you click on a submit button while previewing the pages.
+          </p>
+
+          <h3>Favicons</h3>
+          <p>
+            If you would like to auto create your favicons from your image/logo, you can use the free service over at
+            <a href="http://realfavicongenerator.net">http://realfavicongenerator.net</a>
+          </p>
+          <!-- END Quick Tips -->
+
+          <!-- Credits -->
+          <h2 id="section-credits">Credits</h2>
+          <p>We’ve used the following resources as listed. Special thanks to all the authors for their hard work!</p>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Frameworks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="http://getbootstrap.com/">Bootstrap</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Photos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a
+                    class="font-w600"
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    title="A project by pixelcave"
+                    href="http://myphotopack.com"
+                  >
+                    <i class="fa fa-star text-warning"></i> MyPhotoPack
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://unsplash.com/">Unsplash</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Videos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://videos.pexels.com/">Pexels</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>Icons</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="https://fontawesome.com/">Font Awesome 6</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/thesabbir/simple-line-icons">Simple Line Icons</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-left">Libraries/Scripts</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="http://daneden.github.io/animate.css/">Animate.css</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="http://jquery.com">jQuery</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/bas2k/jquery.appear/">jQuery Appear</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/hilios/jQuery.countdown">jQuery Countdown</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/jzaefferer/jquery-validation/">jQuery Validation</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://digitalbush.com/projects/masked-input-plugin">jQuery Masked Input</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://omnipotent.net/jquery.sparkline">jQuery Sparklines</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/eternicode/bootstrap-datepicker">Bootstrap Datepicker</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/mouse0270/bootstrap-notify">Bootstrap Notify</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/Grsmto/simplebar">SimpleBar</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/nnnick/Chart.js">Chart.js</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://ckeditor.com">CKEditor</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://www.datatables.net">Datatables</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://gitlab.com/meno/dropzone">Dropzone</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/rendro/easy-pie-chart">Easy Pie Chart</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://arshaw.com/fullcalendar">FullCalendar</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/isagalaev/highlight.js">Highlight.js</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/dimsemenov/Magnific-Popup">Magnific Popup</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/select2/select2">Select2</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/kenwheeler/slick">Slick</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/IonDen/ion.rangeSlider">Ion Range Slider</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/wbotelhos/raty">jQuery Raty</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/mimo84/bootstrap-maxlength">Bootstrap Maxlength</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://jvectormap.com/">jVectorMap</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/NextStepWebs/simplemde-markdown-editor">SimpleMDE</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://limonte.github.io/sweetalert2">SweetAlert2</a></td>
+              </tr>
+              <tr>
+                <td><a href="http://vodkabears.github.io/vide/">Vide</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/FezVrasta/popper.js">Popper.js</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/fengyuanchen/cropperjs">Cropper.js</a></td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://github.com/ablanco/jquery.pwstrength.bootstrap">jQuery Password Strength Meter</a>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/RamonSmit/Nestable2">Nestable2</a></td>
+              </tr>
+              <tr>
+                <td><a href="https://github.com/flatpickr/flatpickr">Flatpickr</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END Credits -->
+
+          <!-- Thank You -->
+          <h2 id="section-thankyou">Thank You!</h2>
+          <p>
+            Thank you so much for supporting our work by choosing one of our products! We wish you all the best with
+            your upcoming projects and endeavors in life! If you would like to check out more of our work, be sure to
+            visit <a href="https://pixelcave.com">our website</a>.
+          </p>
+          <p>
+            <strong>Have a great day and happy coding!</strong>
+          </p>
+          <!-- END Thank You -->
+        </div>
+        <!-- END Page Content -->
+
+        <!-- Pixelcave Logo -->
+        <div class="overflow-hidden py-6 bg-body-light text-center">
+          <img
+            class="img-fluid invisible"
+            src="assets/media/various/pixelcave-logo.png"
+            alt="pixelcave logo"
+            data-toggle="appear"
+            data-class="animated fadeInDown"
+          />
+        </div>
+        <!-- END Pixelcave Logo -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer">
+        <div
+          class="content content-full font-size-sm d-flex flex-column flex-sm-row justify-content-sm-between text-center text-sm-left"
+        >
+          <div class="py-2 py-sm-0"><strong>Dashmix Docs</strong> &copy; <span data-toggle="year-copy"></span></div>
+          <div class="py-2 py-sm-0">
+            Crafted with <i class="fa fa-heart text-danger"></i> by
+            <a class="font-w600" href="https://pixelcave.com">pixelcave</a>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!-- Docs JS -->
+    <script src="assets/js/pixelcave.docs.min.js"></script>
+  </body>
+</html>

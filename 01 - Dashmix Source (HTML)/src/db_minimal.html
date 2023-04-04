@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="enable-page-overlay side-scroll page-header-dark page-header-glass main-content-boxed">
+      <!-- Side Overlay-->
+      <aside id="side-overlay">
+        <!-- Side Header -->
+        <div class="bg-primary">
+          <div class="content-header">
+            <!-- User Avatar -->
+            <a class="img-link me-1" href="javascript:void(0)">
+              <img class="img-avatar img-avatar32 img-avatar-thumb" src="assets/media/avatars/avatar5.jpg" alt="">
+            </a>
+            <!-- END User Avatar -->
+
+            <!-- User Info -->
+            <div class="ms-2">
+              <a class="text-white fw-semibold" href="javascript:void(0)">Danielle Jones</a>
+            </div>
+            <!-- END User Info -->
+
+            <!-- Close Side Overlay -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <a class="ms-auto text-white" href="javascript:void(0)" data-toggle="layout" data-action="side_overlay_close">
+              <i class="fa fa-times-circle"></i>
+            </a>
+            <!-- END Close Side Overlay -->
+          </div>
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Side Navigation -->
+        <div class="content-side content-side-full">
+          <ul class="nav-main">
+            <li class="nav-main-item">
+              <a class="nav-main-link active" href="db_minimal.html">
+                <i class="nav-main-link-icon fa fa-coffee"></i>
+                <span class="nav-main-link-name">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-main-heading">Pages</li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-rocket"></i>
+                <span class="nav-main-link-name">Features</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-shopping-bag"></i>
+                <span class="nav-main-link-name">Pricing</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-check"></i>
+                <span class="nav-main-link-name">Plans</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-life-ring"></i>
+                <span class="nav-main-link-name">Support</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-envelope"></i>
+                <span class="nav-main-link-name">Contact</span>
+              </a>
+            </li>
+            <li class="nav-main-heading">More</li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-user"></i>
+                <span class="nav-main-link-name">Account</span>
+              </a>
+            </li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="">
+                <i class="nav-main-link-icon fa fa-cog"></i>
+                <span class="nav-main-link-name">Settings</span>
+              </a>
+            </li>
+            <li class="nav-main-heading">Dashboards</li>
+            <li class="nav-main-item">
+              <a class="nav-main-link" href="be_pages_dashboard_all.html">
+                <i class="nav-main-link-icon fa fa-arrow-left"></i>
+                <span class="nav-main-link-name">Go Back</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- END Side Navigation -->
+      </aside>
+      <!-- END Side Overlay -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div>
+            <!-- Logo -->
+            <a class="fw-semibold text-dual tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Minimal</span>
+            </a>
+            <!-- END Logo -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-fw fa-search"></i>
+            </button>
+            <!-- END Open Search Section -->
+
+            <!-- Toggle Side Overlay -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-sm btn-alt-secondary" data-toggle="layout" data-action="side_overlay_toggle">
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Side Overlay -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-header-dark">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search or hit ESC.." id="page-header-search-input" name="page-header-search-input">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-alt-secondary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-header-dark">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-sun fa-spin"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Hero -->
+        <div class="bg-image" style="background-image: url('assets/media/photos/photo10@2x.jpg');">
+          <div class="bg-black-75">
+            <div class="content content-full content-top text-center">
+              <div class="pt-4 pb-3">
+                <h1 class="fw-light text-white mb-2">Dashboard</h1>
+                <h2 class="h4 fw-light text-white-75">Welcome to your personal web application</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END Hero -->
+
+        <!-- Page Content -->
+        <div class="content">
+          <div class="row">
+            <!-- Quick Stats -->
+            <div class="col-6 col-md-3">
+              <a class="block block-rounded block-link-pop text-center" href="javascript:void(0)">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <div class="fs-2 mb-1">15</div>
+                      <div class="text-muted">Sales</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a class="block block-rounded block-link-pop text-center" href="javascript:void(0)">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <div class="fs-2 mb-1">$120</div>
+                      <div class="text-muted">Earnings</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a class="block block-rounded block-link-pop text-center" href="javascript:void(0)">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <div class="fs-2 mb-1">$1.450</div>
+                      <div class="text-muted">Balance</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-3">
+              <a class="block block-rounded block-link-pop text-center" href="javascript:void(0)">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <div class="fs-2 mb-1">2</div>
+                      <div class="text-muted">Tickets</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- END Quick Stats -->
+
+            <!-- Charts -->
+            <!-- jQuery Sparkline (.js-sparkline class is initialized in Helpers.jqSparkline() -->
+            <!-- For more info and examples you can check out http://omnipotent.net/jquery.sparkline/#s-about -->
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop bg-in" href="javascript:void(0)">
+                <div class="block-content block-content-full d-flex justify-content-between">
+                  <div class="me-3">
+                    <i class="fa fa-2x fa-money-bill-alt text-primary-lighter"></i>
+                  </div>
+                  <div>
+                    <p class="fs-3 fw-light mb-0">
+                      + 15%
+                    </p>
+                    <p class="text-muted mb-0">
+                      Earnings
+                    </p>
+                  </div>
+                </div>
+                <div class="block-content block-content-full overflow-hidden">
+                  <!-- Sparkline Container -->
+                  <span class="js-sparkline" data-type="line"
+                        data-points="[120,140,60,85,160,180,120]"
+                        data-width="100%"
+                        data-height="140px"
+                        data-fill-color="transparent"
+                        data-spot-color="transparent"
+                        data-min-spot-color="transparent"
+                        data-max-spot-color="transparent"
+                        data-highlight-spot-color="#0665d0"
+                        data-highlight-line-color="#0665d0"
+                        data-tooltip-prefix="$"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full d-flex justify-content-between">
+                  <div class="me-3">
+                    <p class="fs-3 fw-light mb-0">
+                      + 55%
+                    </p>
+                    <p class="text-muted mb-0">
+                      Sales
+                    </p>
+                  </div>
+                  <div>
+                    <i class="fa fa-2x fa-boxes text-primary-lighter"></i>
+                  </div>
+                </div>
+                <div class="block-content block-content-full overflow-hidden">
+                  <!-- Sparkline Container -->
+                  <span class="js-sparkline" data-type="line"
+                        data-points="[45,28,36,63,70,85,120]"
+                        data-width="100%"
+                        data-height="140px"
+                        data-line-color="#689550"
+                        data-fill-color="transparent"
+                        data-spot-color="transparent"
+                        data-min-spot-color="transparent"
+                        data-max-spot-color="transparent"
+                        data-highlight-spot-color="#689550"
+                        data-highlight-line-color="#689550"
+                        data-tooltip-suffix="Sales"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full d-flex justify-content-between">
+                  <div class="me-3">
+                    <i class="fa fa-2x fa-users text-primary-lighter"></i>
+                  </div>
+                  <div>
+                    <p class="fs-3 fw-light mb-0">
+                      3.590
+                    </p>
+                    <p class="text-muted mb-0">
+                      Accounts
+                    </p>
+                  </div>
+                </div>
+                <div class="block-content block-content-full overflow-hidden">
+                  <!-- Sparkline Container -->
+                  <span class="js-sparkline" data-type="line"
+                        data-points="[320,420,180,98,520,630,250]"
+                        data-width="100%"
+                        data-height="140px"
+                        data-line-color="#333"
+                        data-fill-color="transparent"
+                        data-spot-color="transparent"
+                        data-min-spot-color="transparent"
+                        data-max-spot-color="transparent"
+                        data-highlight-spot-color="#333"
+                        data-highlight-line-color="#333"
+                        data-tooltip-suffix="Accounts"></span>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full d-flex justify-content-between">
+                  <div class="me-3">
+                    <p class="fs-3 fw-light mb-0">
+                      80
+                    </p>
+                    <p class="text-muted mb-0">
+                      Tickets
+                    </p>
+                  </div>
+                  <div>
+                    <i class="fa fa-2x fa-ticket-alt text-primary-lighter"></i>
+                  </div>
+                </div>
+                <div class="block-content block-content-full overflow-hidden">
+                  <!-- Sparkline Container -->
+                  <span class="js-sparkline" data-type="line"
+                        data-points="[3,5,8,2,1,6,7]"
+                        data-width="100%"
+                        data-height="140px"
+                        data-line-color="#ffb119"
+                        data-fill-color="transparent"
+                        data-spot-color="transparent"
+                        data-min-spot-color="transparent"
+                        data-max-spot-color="transparent"
+                        data-highlight-spot-color="#ffb119"
+                        data-highlight-line-color="#ffb119"
+                        data-tooltip-suffix="Tickets"></span>
+                </div>
+              </a>
+            </div>
+            <!-- END Charts -->
+
+            <!-- More Stats -->
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <div class="py-3 border-end">
+                        <div class="item item-circle bg-body-light mx-auto">
+                          <i class="fa fa-user-circle text-primary"></i>
+                        </div>
+                        <p class="fs-3 fw-light mt-3 mb-0">
+                          9
+                        </p>
+                        <p class="text-muted mb-0">
+                          Clients
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="py-3 border-end">
+                        <div class="item item-circle bg-body-light mx-auto">
+                          <i class="fa fa-chart-line text-primary"></i>
+                        </div>
+                        <p class="fs-3 fw-light mt-3 mb-0">
+                          3
+                        </p>
+                        <p class="text-muted mb-0">
+                          Invoices
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="py-3">
+                        <div class="item item-circle bg-body-light mx-auto">
+                          <i class="fa fa-comments text-primary"></i>
+                        </div>
+                        <p class="fs-3 fw-light mt-3 mb-0">
+                          2
+                        </p>
+                        <p class="text-muted mb-0">
+                          Chats
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6">
+              <a class="block block-rounded block-link-pop" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="row text-center">
+                    <div class="col-4">
+                      <div class="py-3 border-end">
+                        <div class="item item-circle bg-body-light mx-auto">
+                          <i class="fa fa-briefcase text-primary"></i>
+                        </div>
+                        <p class="fs-3 fw-light mt-3 mb-0">
+                          61
+                        </p>
+                        <p class="text-muted mb-0">
+                          Projects
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="py-3 border-end">
+                        <div class="item item-circle bg-body-light mx-auto">
+                          <i class="fa fa-paint-brush text-primary"></i>
+                        </div>
+                        <p class="fs-3 fw-light mt-3 mb-0">
+                          6
+                        </p>
+                        <p class="text-muted mb-0">
+                          Themes
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="py-3">
+                        <div class="item item-circle bg-body-light mx-auto">
+                          <i class="fa fa-wrench text-primary"></i>
+                        </div>
+                        <p class="fs-3 fw-light mt-3 mb-0">
+                          15
+                        </p>
+                        <p class="text-muted mb-0">
+                          Plugins
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- END More Stats -->
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="bg-body-light">
+        <div class="content py-0">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for jQuery Sparkline plugin) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Page JS Helpers (jQuery Sparkline Plugin) -->
+    <script>Dashmix.helpersOnLoad('jq-sparkline');</script>
+  </body>
+</html>

@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xmodern.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o sidebar-dark side-scroll page-header-fixed main-content-boxed">
+
+      <!-- Sidebar -->
+      <!--
+        Sidebar Mini Mode - Display Helper classes
+
+        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header (mini Sidebar mode) -->
+        <div class="smini-visible-block">
+          <div class="content-header bg-black-10">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              D<span class="opacity-75">x</span>
+            </a>
+            <!-- END Logo -->
+          </div>
+        </div>
+        <!-- END Side Header (mini Sidebar mode) -->
+
+        <!-- Side Header (normal Sidebar mode) -->
+        <div class="smini-hidden">
+          <div class="content-header justify-content-lg-center bg-black-10">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Hosting</span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div class="d-lg-none">
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-times-circle"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+        </div>
+        <!-- END Side Header (normal Sidebar mode) -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+          <!-- Side Actions -->
+          <div class="content-side content-side-full smini-hide">
+            <a class="btn btn-primary rounded-pill w-100" href="javascript:void(0)">
+              <i class="fa fa-plus opacity-50 me-1"></i> Add Server
+            </a>
+          </div>
+          <!-- END Side Actions -->
+
+          <!-- Side Navigation -->
+          <div class="content-side pt-0">
+            <ul class="nav-main">
+              <li class="nav-main-item">
+                <a class="nav-main-link active" href="db_hosting.html">
+                  <i class="nav-main-link-icon fa fa-chart-pie"></i>
+                  <span class="nav-main-link-name">Dashboard</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-success">3</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Hosting</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-globe"></i>
+                  <span class="nav-main-link-name">Domains</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Manage</span>
+                      <span class="nav-main-link-badge badge rounded-pill bg-success">3</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Registration</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Transfer</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Secure Hosting</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Anonymous FTP</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Site Statistics</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-inbox"></i>
+                  <span class="nav-main-link-name">Mail</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Manage</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Webmail</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Custom MX</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Announce Lists</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Anti-spam</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Filters</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Autoresponders</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-chess-queen"></i>
+                  <span class="nav-main-link-name">Goodies</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">MySQL Databases</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">One-Click Installs</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Subversion</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Cron Jobs</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Block Spiders</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-server"></i>
+                  <span class="nav-main-link-name">VPS</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Dashboard</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Usage</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Add Servers</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-users"></i>
+                  <span class="nav-main-link-name">Users</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Manage</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">SSH Keys</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Account Privileges</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Unix Groups</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-heading">Account</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-user-circle"></i>
+                  <span class="nav-main-link-name">Billing &amp; Account</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Manage</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Privacy Settings</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Make Payment</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">View Invoices</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Security</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Backups</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Affiliates</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Bandwidth Usage</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Disk Usage</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-life-ring"></i>
+                  <span class="nav-main-link-name">Support</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Contact Support</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Knowledge Base</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-heading">Dashboards</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_pages_dashboard_all.html">
+                  <i class="nav-main-link-icon si si-arrow-left"></i>
+                  <span class="nav-main-link-name">Go Back</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div>
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+            <button type="button" class="btn btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary d-lg-none" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-fw fa-search"></i> <span class="ms-1 d-none d-sm-inline-block">Search..</span>
+            </button>
+            <!-- END Open Search Section -->
+
+            <!-- Search form in larger screens -->
+            <form class="d-none d-lg-inline-block" action="be_pages_generic_search.html" method="POST">
+              <input type="text" class="form-control form-control-alt rounded-pill px-4" placeholder="Search.." id="page-header-search-input-full" name="page-header-search-input-full">
+            </form>
+            <!-- END Search form in larger screens -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-none d-lg-inline mx-1">mattd@example.com</span>
+                <span class="badge rounded-pill bg-success">PRO</span>
+                <i class="fa fa-fw fa-angle-down ms-1"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0" aria-labelledby="page-header-user-dropdown">
+                <div class="bg-primary rounded-top fw-semibold text-white text-center p-3">
+                  <img class="img-avatar img-avatar-thumb" src="assets/media/avatars/avatar16.jpg" alt="">
+                  <div class="pt-2">
+                    <a class="text-white fw-semibold" href="be_pages_generic_profile.html">Matt Doe</a>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <div class="row g-0">
+                    <div class="col-6 pe-2 border-end">
+                      <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                        Profile
+                        <i class="fa fa-fw fa-user opacity-50 ms-1"></i>
+                      </a>
+                      <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                        Settings
+                        <i class="fa fa-fw fa-cog opacity-50 ms-1"></i>
+                      </a>
+                      <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                        Billing
+                        <i class="fa fa-fw fa-money-check-alt opacity-50 ms-1"></i>
+                      </a>
+                    </div>
+                    <div class="col-6 ps-2">
+                      <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                        Servers
+                        <i class="fa fa-fw fa-server opacity-50 ms-1"></i>
+                      </a>
+                      <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                        Domains
+                        <i class="fa fa-fw fa-globe opacity-50 ms-1"></i>
+                      </a>
+                      <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                        Plans
+                        <i class="fa fa-fw fa-chess-rook opacity-50 ms-1"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="op_auth_signin.html">
+                    Sign Out
+                    <i class="fa fa-fw fa-sign-out-alt text-danger ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-sidebar-dark">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+                <input type="text" class="form-control border-0" placeholder="Search Application.." id="page-header-search-input" name="page-header-search-input">
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-primary-darker">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="content content-full">
+          <!-- Overview -->
+          <h2 class="fw-light mt-4 mb-3">Overview</h2>
+          <div class="row">
+            <div class="col-sm-6 col-lg-3">
+              <div class="block block-rounded block-fx-pop text-center">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <a class="link-fx fs-1 fw-semibold" href="javascript:void(0)">3</a>
+                      <div class="fs-sm fw-semibold text-uppercase text-muted mt-1">Domains</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="block block-rounded block-fx-pop text-center">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <a class="link-fx fs-1 fw-semibold" href="javascript:void(0)">1</a>
+                      <div class="fs-sm fw-semibold text-uppercase text-muted mt-1">VPS Server</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="block block-rounded block-fx-pop text-center">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <a class="link-fx fs-1 fw-semibold" href="javascript:void(0)">1</a>
+                      <div class="fs-sm fw-semibold text-uppercase text-muted mt-1">Active Plan</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="block block-rounded block-fx-pop text-center">
+                <div class="block-content block-content-full ratio ratio-16x9">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div>
+                      <a class="link-fx text-warning fs-1 fw-semibold" href="javascript:void(0)">$70</a>
+                      <div class="fs-sm fw-semibold text-uppercase text-muted mt-1">Pending..</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Overview -->
+
+          <!-- VPS -->
+          <div class="d-flex justify-content-between align-items-center mt-6 mb-3">
+            <h2 class="fw-light mb-0">VPS</h2>
+            <button type="button" class="btn btn-primary btn-sm btn-primary rounded-pill px-3" onclick="Dashmix.block('open', '#dm-add-server');">
+              <i class="fa fa-plus opacity-50 me-1"></i> Add Server
+            </button>
+          </div>
+          <div class="overflow-hidden">
+            <div id="dm-add-server" class="block block-rounded bg-body-dark d-none animated fadeIn">
+              <div class="block-header bg-body-light">
+                <h3 class="block-title">Add a new VPS</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option">
+                    <i class="si si-question"></i>
+                  </button>
+                  <button type="button" class="btn-block-option" data-toggle="block-option" data-action="close">
+                    <i class="si si-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content block-content-full">
+                <form action="db_hosting.html" method="POST" onsubmit="return false;">
+                  <div class="row g-sm mb-0 items-push mb-4">
+                    <div class="col-md-5">
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          vps158875_
+                        </span>
+                        <input type="text" class="form-control" id="example-hosting-name" name="example-hosting-name" placeholder="Name..">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <select class="form-select" id="example-hosting-vps" name="example-hosting-vps">
+                        <option value="0">Please select a config</option>
+                        <option value="1">$19/m - 2GB RAM, 30GB Storage, Unlimited Domains</option>
+                        <option value="2">$29/m - 4GB RAM, 60GB Storage, Unlimited Domains</option>
+                        <option value="3">$49/m - 6GB RAM, 120GB Storage, Unlimited Domains</option>
+                        <option value="4">$69/m - 8GB RAM, 240GB Storage, Unlimited Domains</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <button type="submit" class="btn btn-alt-primary w-100">
+                        <i class="fa fa-plus opacity-50 me-1"></i> Create
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="block block-rounded block-fx-pop mb-2">
+            <div class="block-content block-content-full border-start border-3 border-dark">
+              <div class="d-md-flex justify-content-md-between align-items-md-center">
+                <div class="p-1 p-md-3 w-50">
+                  <h3 class="h4 fw-bold mb-1">vps158875_ny1</h3>
+                  <p class="fs-sm text-muted">
+                    <i class="fa fa-map-pin me-1"></i> New York
+                  </p>
+                  <div class="mb-0">
+                    <div class="progress mb-1" style="height: 6px;">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 33%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="fs-sm fw-semibold mb-3">
+                      <span class="fw-bold">1GB</span> of <span class="fw-bold">3GB</span> RAM
+                    </p>
+                    <div class="progress mb-1" style="height: 6px;">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <p class="fs-sm fw-semibold mb-3">
+                      <span class="fw-bold">25GB</span> of <span class="fw-bold">50GB</span> Disk Space
+                    </p>
+                  </div>
+                </div>
+                <div class="p-1 p-md-3 text-md-end">
+                  <a class="btn btn-sm btn-alt-primary rounded-pill px-3 me-1 my-1" href="javascript:void(0)">
+                    <i class="fa fa-redo opacity-50 me-1"></i> Restart
+                  </a>
+                  <a class="btn btn-sm btn-alt-primary rounded-pill px-3 me-1 my-1" href="javascript:void(0)">
+                    <i class="fa fa-wrench opacity-50 me-1"></i> Manage
+                  </a>
+                  <a class="btn btn-sm btn-alt-danger rounded-pill px-3 my-1" href="javascript:void(0)">
+                    <i class="fa fa-times opacity-50 me-1"></i> Delete
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END VPS -->
+
+          <!-- Domains -->
+          <div class="d-flex justify-content-between align-items-center mt-6 mb-3">
+            <h2 class="fw-light mb-0">Domains</h2>
+            <button type="button" class="btn btn-primary btn-sm btn-primary rounded-pill px-3" onclick="Dashmix.block('open', '#dm-add-domain');">
+              <i class="fa fa-plus opacity-50 me-1"></i> Add Domain
+            </button>
+          </div>
+          <div class="overflow-hidden">
+            <div id="dm-add-domain" class="block block-rounded d-none bg-body-dark animated fadeIn">
+              <div class="block-header bg-body-light">
+                <h3 class="block-title">Add a new domain</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option">
+                    <i class="si si-question"></i>
+                  </button>
+                  <button type="button" class="btn-block-option" data-toggle="block-option" data-action="close">
+                    <i class="si si-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content block-content-full">
+                <form action="db_hosting.html" method="POST" onsubmit="return false;">
+                  <div class="row g-sm items-push">
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="example-hosting-domain" name="example-hosting-domain" placeholder="example.com">
+                    </div>
+                    <div class="col-md-3">
+                      <button type="submit" class="btn btn-alt-primary w-100">
+                        <i class="fa fa-arrows-alt-h me-1"></i> Transfer
+                      </button>
+                    </div>
+                    <div class="col-md-3">
+                      <button type="submit" class="btn btn-alt-primary w-100">
+                        <i class="fa fa-plus opacity-50 me-1"></i> Register
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="block block-rounded block-fx-pop mb-2">
+            <div class="block-content block-content-full border-start border-3 border-success">
+              <div class="d-md-flex justify-content-md-between align-items-md-center">
+                <div class="p-1 p-md-3">
+                  <h3 class="h4 fw-bold mb-1">example.com</h3>
+                  <p class="fs-sm mb-2">
+                    <a class="me-1 mb-1" href="javascript:void(0)">DNS</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Visit</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">WebFTP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">FTP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Add IP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Email</a>
+                  </p>
+                  <p class="fs-sm text-muted mb-0">
+                    Expires on 15th June, 2030
+                  </p>
+                </div>
+                <div class="p-1 p-md-3">
+                  <a class="btn btn-sm btn-alt-primary rounded-pill px-3 me-1 my-1" href="javascript:void(0)">
+                    <i class="fa fa-wrench opacity-50 me-1"></i> Manage
+                  </a>
+                  <a class="btn btn-sm btn-alt-danger rounded-pill px-3 my-1" href="javascript:void(0)">
+                    <i class="fa fa-times opacity-50 me-1"></i> Delete
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block-rounded block-fx-pop mb-2">
+            <div class="block-content block-content-full border-start border-3 border-success">
+              <div class="d-md-flex justify-content-md-between align-items-md-center">
+                <div class="p-1 p-md-3">
+                  <h3 class="h4 fw-bold mb-1">example.co.uk</h3>
+                  <p class="fs-sm mb-2">
+                    <a class="me-1 mb-1" href="javascript:void(0)">DNS</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Visit</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">WebFTP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">FTP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Add IP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Email</a>
+                  </p>
+                  <p class="fs-sm text-muted mb-0">
+                    Expires on 12th October, 2027
+                  </p>
+                </div>
+                <div class="p-1 p-md-3">
+                  <a class="btn btn-sm btn-alt-primary rounded-pill px-3 me-1 my-1" href="javascript:void(0)">
+                    <i class="fa fa-wrench opacity-50 me-1"></i> Manage
+                  </a>
+                  <a class="btn btn-sm btn-alt-danger rounded-pill px-3 my-1" href="javascript:void(0)">
+                    <i class="fa fa-times opacity-50 me-1"></i> Delete
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block block-rounded block-fx-pop mb-2">
+            <div class="block-content block-content-full border-start border-3 border-warning">
+              <div class="d-md-flex justify-content-md-between align-items-md-center">
+                <div class="p-1 p-md-3">
+                  <h3 class="h4 fw-bold mb-1">example.io</h3>
+                  <p class="fs-sm mb-2">
+                    <a class="me-1 mb-1" href="javascript:void(0)">DNS</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Visit</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">WebFTP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">FTP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Add IP</a>
+                    <a class="me-1 mb-1" href="javascript:void(0)">Email</a>
+                  </p>
+                  <p class="fs-sm mb-0">
+                    <a class="fw-semibold text-danger" href="javascript:void(0)">Expires in 1 week - Renew Today</a>
+                  </p>
+                </div>
+                <div class="p-1 p-md-3">
+                  <a class="btn btn-sm btn-alt-primary rounded-pill px-3 me-1 my-1" href="javascript:void(0)">
+                    <i class="fa fa-wrench opacity-50 me-1"></i> Manage
+                  </a>
+                  <a class="btn btn-sm btn-alt-danger rounded-pill px-3 my-1" href="javascript:void(0)">
+                    <i class="fa fa-times opacity-50 me-1"></i> Delete
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Domains -->
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer">
+        <div class="content py-0">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+  </body>
+</html>

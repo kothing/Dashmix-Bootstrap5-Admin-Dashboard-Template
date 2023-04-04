@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xpro.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="page-header-dark main-content-boxed">
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div class="d-flex align-items-center">
+            <!-- Logo -->
+            <a class="fw-semibold text-dual tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Analytics</span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Open Search Section -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+            <button type="button" class="btn btn-alt-secondary ms-2" data-toggle="layout" data-action="header_search_on">
+              <i class="fa fa-search"></i>
+            </button>
+            <!-- END Open Search Section -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary dropdown-toggle" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-none d-sm-inline me-1">John Smith</span>
+                <span class="badge rounded-pill bg-success">PRO</span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-user-dropdown">
+                <div class="rounded-top fw-semibold text-white text-center bg-image" style="background-image: url('assets/media/photos/photo16.jpg');">
+                  <div class="p-3">
+                    <img class="img-avatar img-avatar-thumb" src="assets/media/avatars/avatar10.jpg" alt="">
+                  </div>
+                  <div class="p-3 bg-primary-dark-op">
+                    <a class="text-white fw-semibold" href="be_pages_generic_profile.html">John Smith</a>
+                    <div class="text-white-75">j.smith@example.com</div>
+                  </div>
+                </div>
+                <div class="p-2">
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Profile
+                    <i class="fa fa-fw fa-user-circle opacity-50 ms-1"></i>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Websites
+                    <div>
+                      <span class="badge rounded-pill bg-primary">3</span>
+                      <i class="fa fa-fw fa-globe opacity-50 ms-1"></i>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Subscriptions
+                    <div>
+                      <span class="badge rounded-pill bg-primary">1</span>
+                      <i class="fa fa-fw fa-sync-alt opacity-50 ms-1"></i>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Billing
+                    <i class="fab fa-fw fa-paypal opacity-50 ms-1"></i>
+                  </a>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="javascript:void(0)">
+                    Preferences
+                    <i class="fa fa-fw fa-wrench opacity-50 ms-1"></i>
+                  </a>
+                  <div role="separator" class="dropdown-divider"></div>
+                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="op_auth_signin.html">
+                    Log Out
+                    <i class="fa fa-fw fa-sign-out-alt text-danger ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-header-dark">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-primary" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+                <input type="text" class="form-control" placeholder="Search your websites.." id="page-header-search-input" name="page-header-search-input">
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-primary">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-spinner fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Navigation -->
+        <div class="bg-sidebar-dark">
+          <div class="content">
+            <!-- Toggle Main Navigation -->
+            <div class="d-lg-none push">
+              <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+              <button type="button" class="btn w-100 btn-primary d-flex justify-content-between align-items-center" data-toggle="class-toggle" data-target="#main-navigation" data-class="d-none">
+                Menu
+                <i class="fa fa-bars"></i>
+              </button>
+            </div>
+
+            <!-- END Toggle Main Navigation -->
+
+            <!-- Main Navigation -->
+            <div id="main-navigation" class="d-none d-lg-block push">
+              <ul class="nav-main nav-main-horizontal nav-main-hover nav-main-dark">
+                <li class="nav-main-item">
+                  <a class="nav-main-link active" href="db_analytics.html">
+                    <i class="nav-main-link-icon fa fa-chart-pie"></i>
+                    <span class="nav-main-link-name">Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-main-heading">Manage</li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-globe"></i>
+                    <span class="nav-main-link-name">Websites</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                        <span class="nav-main-link-name">example-website1.com</span>
+                      </a>
+                      <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-coffee"></i>
+                            <span class="nav-main-link-name">Overview</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-users"></i>
+                            <span class="nav-main-link-name">Visitors</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-file-alt"></i>
+                            <span class="nav-main-link-name">Content</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-rocket"></i>
+                            <span class="nav-main-link-name">Technology</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-share-alt"></i>
+                            <span class="nav-main-link-name">Social</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                        <span class="nav-main-link-name">example-website2.com</span>
+                      </a>
+                      <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-coffee"></i>
+                            <span class="nav-main-link-name">Overview</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-users"></i>
+                            <span class="nav-main-link-name">Visitors</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-file-alt"></i>
+                            <span class="nav-main-link-name">Content</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-rocket"></i>
+                            <span class="nav-main-link-name">Technology</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-share-alt"></i>
+                            <span class="nav-main-link-name">Social</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                        <span class="nav-main-link-name">example-website3.com</span>
+                      </a>
+                      <ul class="nav-main-submenu">
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-coffee"></i>
+                            <span class="nav-main-link-name">Overview</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-users"></i>
+                            <span class="nav-main-link-name">Visitors</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-file-alt"></i>
+                            <span class="nav-main-link-name">Content</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-rocket"></i>
+                            <span class="nav-main-link-name">Technology</span>
+                          </a>
+                        </li>
+                        <li class="nav-main-item">
+                          <a class="nav-main-link" href="">
+                            <i class="nav-main-link-icon fa fa-share-alt"></i>
+                            <span class="nav-main-link-name">Social</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-sync-alt"></i>
+                    <span class="nav-main-link-name">Subscriptions</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Active</span>
+                        <span class="nav-main-link-badge badge rounded-pill bg-success">1</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Manage</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Settings</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-heading">Account</li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-user-circle"></i>
+                    <span class="nav-main-link-name">Billing &amp; Account</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Manage</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Privacy Settings</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Make Payment</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">View Invoices</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Security</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Statistics</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-item">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-life-ring"></i>
+                    <span class="nav-main-link-name">Support</span>
+                  </a>
+                  <ul class="nav-main-submenu">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Contact Support</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" href="">
+                        <span class="nav-main-link-name">Knowledge Base</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-main-item ms-lg-auto">
+                  <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                    <i class="nav-main-link-icon fa fa-brush"></i>
+                    <span class="nav-main-link-name">Themes</span>
+                  </a>
+                  <ul class="nav-main-submenu nav-main-submenu-right">
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="default" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-default"></i>
+                        <span class="nav-main-link-name">Default</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xwork.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xwork"></i>
+                        <span class="nav-main-link-name">xWork</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xmodern.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xmodern"></i>
+                        <span class="nav-main-link-name">xModern</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xeco.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xeco"></i>
+                        <span class="nav-main-link-name">xEco</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xsmooth.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xsmooth"></i>
+                        <span class="nav-main-link-name">xSmooth</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xinspire.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xinspire"></i>
+                        <span class="nav-main-link-name">xInspire</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xdream.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xdream"></i>
+                        <span class="nav-main-link-name">xDream</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xpro.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xpro"></i>
+                        <span class="nav-main-link-name">xPro</span>
+                      </a>
+                    </li>
+                    <li class="nav-main-item">
+                      <a class="nav-main-link" data-toggle="theme" data-theme="assets/css/themes/xplay.min.css" href="#">
+                        <i class="nav-main-link-icon fa fa-circle text-xplay"></i>
+                        <span class="nav-main-link-name">xPlay</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <!-- END Main Navigation -->
+          </div>
+        </div>
+        <!-- END Navigation -->
+
+        <!-- Page Content -->
+        <div class="content content-full">
+          <!-- Overview -->
+          <div class="d-flex justify-content-between align-items-center py-3">
+            <h2 class="h3 fw-normal mb-0">Overview</h2>
+            <div class="dropdown">
+              <button type="button" class="btn btn-sm btn-alt-secondary px-3" id="dropdown-analytics-overview" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Last 30 days <i class="fa fa-fw fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end fs-sm" aria-labelledby="dropdown-analytics-overview">
+                <a class="dropdown-item" href="javascript:void(0)">This Week</a>
+                <a class="dropdown-item" href="javascript:void(0)">Previous Week</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0)">This Month</a>
+                <a class="dropdown-item" href="javascript:void(0)">Previous Month</a>
+              </div>
+            </div>
+          </div>
+          <div class="row items-push">
+            <div class="col-sm-6 col-xl-3">
+              <a class="block block-rounded block-fx-pop text-center h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="item item-circle bg-primary-lighter mx-auto my-3">
+                    <i class="fa fa-users text-primary"></i>
+                  </div>
+                  <div class="display-4 fw-bold">35.8k</div>
+                  <div class="text-muted mt-1">Visitors</div>
+                  <div class="py-3 fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    15.7%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <a class="block block-rounded block-fx-pop text-center h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="item item-circle bg-xinspire-lighter mx-auto my-3">
+                    <i class="fa fa-eye text-xinspire-dark"></i>
+                  </div>
+                  <div class="display-4 fw-bold">98.5k</div>
+                  <div class="text-muted mt-1">Page views</div>
+                  <div class="py-3 fs-4 fw-bold text-danger">
+                    <i class="fa fa-caret-down me-1"></i>
+                    2.4%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <a class="block block-rounded block-fx-pop text-center h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="item item-circle bg-xsmooth-lighter mx-auto my-3">
+                    <i class="fa fa-columns text-xsmooth"></i>
+                  </div>
+                  <div class="display-4 fw-bold">25</div>
+                  <div class="text-muted mt-1">Pages per visit</div>
+                  <div class="py-3 fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    52.5%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <a class="block block-rounded block-fx-pop text-center h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="item item-circle bg-xplay-lighter mx-auto my-3">
+                    <i class="fa fa-level-up-alt text-xplay"></i>
+                  </div>
+                  <div class="display-4 fw-bold">12.5%</div>
+                  <div class="text-muted mt-1">Bounce Rate</div>
+                  <div class="py-3 fs-4 fw-bold text-danger">
+                    <i class="fa fa-caret-down me-1"></i>
+                    5.7%
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- END Overview -->
+
+          <!-- Visitors Growth -->
+          <div class="d-flex justify-content-between align-items-center pt-5 pb-3">
+            <h2 class="h3 fw-normal mb-0">Visitors Growth</h2>
+            <div class="dropdown">
+              <button type="button" class="btn btn-sm btn-alt-secondary px-3" id="dropdown-analytics-visitors-growth" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                This Week <i class="fa fa-fw fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end fs-sm" aria-labelledby="dropdown-analytics-visitors-growth">
+                <a class="dropdown-item" href="javascript:void(0)">Last 30 days</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0)">Previous Week</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0)">This Month</a>
+                <a class="dropdown-item" href="javascript:void(0)">Previous Month</a>
+              </div>
+            </div>
+          </div>
+          <div class="block block-rounded block-fx-pop">
+            <div class="block-content block-content-full">
+              <div class="row">
+                <div class="col-md-5 col-lg-4 d-md-flex align-items-md-center">
+                  <div class="p-md-2 p-lg-3">
+                    <div class="display-4 fw-bold">3,687</div>
+                    <div class="fs-lg fw-bold">Your new website visitors</div>
+                    <div class="py-3 d-flex align-items-center">
+                      <div class="bg-success-light px-2 py-1 rounded me-3">
+                        <i class="fa fa-fw fa-caret-up text-success"></i>
+                      </div>
+                      <p class="mb-0">
+                        You have a <span class="fw-semibold text-success">25% Growth</span> in the last 30 days. Keep it up!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                  <div class="p-md-2 p-lg-3">
+                    <!-- Bars Chart Container -->
+                    <!-- Chart.js Chart is initialized in js/pages/db_analytics.min.js which was auto compiled from _js/pages/db_analytics.js -->
+                    <!-- For more info and examples you can check out http://www.chartjs.org/docs/ -->
+                    <canvas id="js-chartjs-analytics-bars"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- END Visitors Growth -->
+
+          <!-- Quick Statistics -->
+          <div class="d-flex justify-content-between align-items-center pt-5 pb-3">
+            <h2 class="h3 fw-normal mb-0">Quick Statistics</h2>
+            <div class="dropdown">
+              <button type="button" class="btn btn-sm btn-alt-secondary px-3" id="dropdown-analytics-quick-stats" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Last 30 days <i class="fa fa-fw fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-end fs-sm" aria-labelledby="dropdown-analytics-quick-stats">
+                <a class="dropdown-item" href="javascript:void(0)">This Week</a>
+                <a class="dropdown-item" href="javascript:void(0)">Previous Week</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="javascript:void(0)">This Month</a>
+                <a class="dropdown-item" href="javascript:void(0)">Previous Month</a>
+              </div>
+            </div>
+          </div>
+          <div class="row items-push">
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Followers</div>
+                  <div class="fs-2 fw-bold">1,500</div>
+                  <div class="fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    25.6%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Comments</div>
+                  <div class="fs-2 fw-bold">910</div>
+                  <div class="fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    18.6%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Downloads</div>
+                  <div class="fs-2 fw-bold">57.5k</div>
+                  <div class="fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    14.9%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Tickets</div>
+                  <div class="fs-2 fw-bold">75</div>
+                  <div class="fs-4 fw-bold text-danger">
+                    <i class="fa fa-caret-down me-1"></i>
+                    1.7%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Likes</div>
+                  <div class="fs-2 fw-bold">39.6k</div>
+                  <div class="fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    39.8%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Errors</div>
+                  <div class="fs-2 fw-bold">3</div>
+                  <div class="fs-4 fw-bold text-danger">
+                    <i class="fa fa-caret-down me-1"></i>
+                    25%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">Apps</div>
+                  <div class="fs-2 fw-bold">290</div>
+                  <div class="fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    1.2%
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-lg-3">
+              <a class="block block-rounded block-fx-pop h-100 mb-0" href="javascript:void(0)">
+                <div class="block-content block-content-full">
+                  <div class="fs-5 fw-semibold text-muted mb-3">New Accounts</div>
+                  <div class="fs-2 fw-bold">6,300</div>
+                  <div class="fs-4 fw-bold text-success">
+                    <i class="fa fa-caret-up me-1"></i>
+                    3.7%
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- END Quick Statistics -->
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer" class="footer-static bg-body-extra-light">
+        <div class="content py-4">
+          <!-- Footer Navigation -->
+          <div class="row items-push fs-sm border-bottom pt-4">
+            <div class="col-md-4">
+              <h3 class="h5 fw-bold">Account</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-sync-alt text-primary-light me-1"></i> Subscriptions
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fab fa-fw fa-paypal text-primary-light me-1"></i> Billing
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-wrench text-primary-light me-1"></i> Preferences
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold text-dark" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-user-circle me-1"></i> John Smith
+                  </a> -
+                  <a class="fw-semibold text-danger" href="javascript:void(0)">
+                    Log out?
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3 class="h5 fw-bold">Websites</h3>
+              <ul class="list list-simple-mini">
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe text-primary-light me-1"></i> example-website1.com
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe text-primary-light me-1"></i> example-website2.com
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-globe text-primary-light me-1"></i> example-website2.com
+                  </a>
+                </li>
+                <li>
+                  <a class="fw-semibold" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-plus text-primary-light me-1"></i> Add website
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3 class="h5 fw-bold">Company</h3>
+              <div>
+                0956 Sunshine Street, Suite 85<br>
+                Los Angeles, CA 98852<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+              </div>
+            </div>
+          </div>
+          <!-- END Footer Navigation -->
+
+          <!-- Footer Copyright -->
+          <div class="row fs-sm pt-4">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+          <!-- END Footer Copyright -->
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/chart.js/chart.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="assets/js/pages/db_analytics.min.js"></script>
+  </body>
+</html>
+

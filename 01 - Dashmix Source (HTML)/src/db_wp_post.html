@@ -1,0 +1,844 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="assets/js/plugins/dropzone/min/dropzone.min.css">
+
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o sidebar-dark sidebar-mini side-scroll page-header-fixed page-header-dark">
+
+      <!-- Sidebar -->
+      <!--
+        Sidebar Mini Mode - Display Helper classes
+
+        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header -->
+        <div class="bg-header-dark">
+          <div class="content-header bg-white-5">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              <span class="smini-visible">
+                D<span class="opacity-75">x</span>
+              </span>
+              <span class="smini-hidden">
+                Dash<span class="opacity-75">mix</span>
+                <span class="fw-normal">WP Post</span>
+              </span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div>
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-times-circle"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+        </div>
+        <!-- END Side Header -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+          <!-- Side Navigation -->
+          <div class="content-side">
+            <ul class="nav-main">
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-tachometer-alt"></i>
+                  <span class="nav-main-link-name">Dashboard</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Manage</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Updates</span>
+                      <span class="nav-main-link-badge badge rounded-pill bg-success">3</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-heading"></li>
+              <li class="nav-main-item open">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
+                  <i class="nav-main-link-icon fa fa-thumbtack"></i>
+                  <span class="nav-main-link-name">Posts</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">All Posts</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link active" href="db_wp_post.html">
+                      <span class="nav-main-link-name">Add New</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Categories</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Tags</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-camera"></i>
+                  <span class="nav-main-link-name">Media</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Library</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Add New</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-file"></i>
+                  <span class="nav-main-link-name">Pages</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">All Pages</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Add New</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-comment"></i>
+                  <span class="nav-main-link-name">Comments</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-success">3</span>
+                </a>
+              </li>
+              <li class="nav-main-heading"></li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-brush"></i>
+                  <span class="nav-main-link-name">Appearance</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Themes</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Customize</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Widgets</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Menus</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Editor</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-plug"></i>
+                  <span class="nav-main-link-name">Plugins</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Installed Plugins</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Add New</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Editor</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-user"></i>
+                  <span class="nav-main-link-name">Users</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">All Users</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Add New</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Your Profile</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-wrench"></i>
+                  <span class="nav-main-link-name">Tools</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Available Tools</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Import</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Export</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Export Personal Data</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Erase Personal Data</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-sliders-h"></i>
+                  <span class="nav-main-link-name">Settings</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">General</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Writing</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Reading</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Discussion</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Media</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Permalinks</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Privacy</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-heading"></li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="javascript:void(0)" data-toggle="layout" data-action="sidebar_mini_toggle">
+                  <i class="nav-main-link-icon fa fa-arrows-alt-h"></i>
+                  <span class="nav-main-link-name">Toggle Sidebar</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Header -->
+      <header id="page-header">
+        <!-- Header Content -->
+        <div class="content-header">
+          <!-- Left Section -->
+          <div>
+            <!-- Toggle Sidebar -->
+            <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+            <button type="button" class="btn btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_toggle">
+              <i class="fa fa-fw fa-bars"></i>
+            </button>
+            <!-- END Toggle Sidebar -->
+
+            <!-- Website Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-website-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-fw fa-home"></i>
+                <span class="d-none d-sm-inline ms-1">Website</span>
+              </button>
+              <div class="dropdown-menu p-0" aria-labelledby="page-header-website-dropdown">
+                <div class="p-2">
+                  <a class="dropdown-item mb-0" href="index.html">
+                    <i class="fa fa-fw fa-globe me-1"></i> Visit Site
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END Website Dropdown -->
+
+            <!-- Comments -->
+            <a class="btn btn-alt-secondary d-none d-sm-inline-block" href="javascript:void(0)">
+              <i class="fa fa-fw fa-comment"></i>
+              <span class="badge bg-black-50">3</span>
+            </a>
+            <!-- END Comments -->
+
+            <!-- New Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-new-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-fw fa-plus"></i>
+                <span class="d-none d-sm-inline ms-1">New</span>
+              </button>
+              <div class="dropdown-menu p-0" aria-labelledby="page-header-new-dropdown">
+                <div class="p-2">
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-thumbtack me-1"></i> Post
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-camera me-1"></i> Media
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-file me-1"></i> Page
+                  </a>
+                  <a class="dropdown-item" href="javascript:void(0)">
+                    <i class="fa fa-fw fa-user me-1"></i> User
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END New Dropdown -->
+          </div>
+          <!-- END Left Section -->
+
+          <!-- Right Section -->
+          <div>
+            <!-- User Dropdown -->
+            <div class="dropdown d-inline-block">
+              <button type="button" class="btn btn-alt-secondary" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="d-none d-lg-inline me-2">Howdy, John Doe</span>
+                <i class="fa fa-angle-down opacity-50"></i>
+              </button>
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0 overflow-hidden" aria-labelledby="page-header-user-dropdown">
+                <div class="row g-0">
+                  <div class="col-6 d-flex align-items-center justify-content-center bg-body-light p-2">
+                    <img class="img-avatar img-avatar96 img-avatar-thumb" src="assets/media/avatars/avatar10.jpg" alt="">
+                  </div>
+                  <div class="col-6 p-2 bg-body-extra-light">
+                    <a class="dropdown-item" href="be_pages_generic_profile.html">
+                      John Doe
+                      <div class="fs-sm text-muted">johndoe</div>
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                      Edit My Profile
+                    </a>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="op_auth_signin.html">
+                      Log Out
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END User Dropdown -->
+          </div>
+          <!-- END Right Section -->
+        </div>
+        <!-- END Header Content -->
+
+        <!-- Header Search -->
+        <div id="page-header-search" class="overlay-header bg-sidebar-dark">
+          <div class="content-header">
+            <form class="w-100" action="be_pages_generic_search.html" method="POST">
+              <div class="input-group">
+                <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+                <button type="button" class="btn btn-danger" data-toggle="layout" data-action="header_search_off">
+                  <i class="fa fa-fw fa-times-circle"></i>
+                </button>
+                <input type="text" class="form-control border-0" placeholder="Search WP Post.." id="page-header-search-input" name="page-header-search-input">
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- END Header Search -->
+
+        <!-- Header Loader -->
+        <!-- Please check out the Loaders page under Components category to see examples of showing/hiding it -->
+        <div id="page-header-loader" class="overlay-header bg-primary-darker">
+          <div class="content-header">
+            <div class="w-100 text-center">
+              <i class="fa fa-fw fa-2x fa-sun fa-spin text-white"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Header Loader -->
+      </header>
+      <!-- END Header -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="row g-0 flex-md-grow-1">
+          <div class="col-md-4 col-lg-5 col-xl-3 order-md-1 bg-body-extra-light">
+            <div class="content p-0">
+              <!-- Toggle Settings -->
+              <div class="d-md-none p-3">
+                <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+                <button type="button" class="btn w-100 btn-alt-info" data-toggle="class-toggle" data-target="#side-content" data-class="d-none">
+                  Settings
+                </button>
+              </div>
+              <!-- END Toggle Settings -->
+
+              <!-- Settings -->
+              <div id="side-content" class="d-none d-md-block push">
+                <div id="settings-accordion" role="tablist" aria-multiselectable="true">
+                  <div class="block mb-0">
+                    <div class="block-header bg-body p-0" role="tab" id="settings-accordion_h1">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s1" aria-expanded="true" aria-controls="settings-accordion_s1">Status &amp; Visibility</a>
+                    </div>
+                    <div id="settings-accordion_s1" class="collapse show" role="tabpanel" aria-labelledby="settings-accordion_h1" data-bs-parent="#settings-accordion">
+                      <div class="block-content">
+                        <div class="row mb-4">
+                          <label class="col-sm-4 col-form-label" for="example-wp-visibility">Visibility</label>
+                          <div class="col-sm-8">
+                            <select class="form-select" id="example-wp-visibility" name="example-wp-visibility">
+                              <option value="1" selected>Public</option>
+                              <option value="2">Private</option>
+                              <option value="3">Password Protected</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <label class="col-sm-4 col-form-label" for="example-wp-format">Post Format</label>
+                          <div class="col-sm-8">
+                            <select class="form-select" id="example-wp-format" name="example-wp-format">
+                              <option value="1">Gallery</option>
+                              <option value="2">Link</option>
+                              <option value="3">Image</option>
+                              <option value="4">Quote</option>
+                              <option value="5" selected>Standard</option>
+                              <option value="6">Video</option>
+                              <option value="7">Audio</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="mb-4">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-stick-front" name="example-wp-stick-front">
+                            <label class="form-check-label" for="example-wp-stick-front">Stick to Front Page</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-pending-review" name="example-wp-pending-review">
+                            <label class="form-check-label" for="example-wp-pending-review">Pending Review</label>
+                          </div>
+                        </div>
+                        <div class="row mb-4">
+                          <label class="col-sm-4 col-form-label" for="example-wp-author">Author</label>
+                          <div class="col-sm-8">
+                            <select class="form-select" id="example-wp-author" name="example-wp-author">
+                              <option value="1" selected>Admin</option>
+                              <option value="2">Author #1</option>
+                              <option value="3">Author #2</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block mb-0">
+                    <div class="block-header bg-body border-top p-0" role="tab" id="settings-accordion_h2">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s2" aria-expanded="true" aria-controls="settings-accordion_s2">Categories</a>
+                    </div>
+                    <div id="settings-accordion_s2" class="collapse" role="tabpanel" aria-labelledby="settings-accordion_h2" data-bs-parent="#settings-accordion">
+                      <div class="block-content block-content-full">
+                        <div class="mb-4">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-1" name="example-wp-cat-1">
+                            <label class="form-check-label" for="example-wp-cat-1">Projects</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-2" name="example-wp-cat-2">
+                            <label class="form-check-label" for="example-wp-cat-2">Work</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-3" name="example-wp-cat-3">
+                            <label class="form-check-label" for="example-wp-cat-3">Tutorials</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-4" name="example-wp-cat-4">
+                            <label class="form-check-label" for="example-wp-cat-4">Design</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-5" name="example-wp-cat-5">
+                            <label class="form-check-label" for="example-wp-cat-5">Web Development</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-6" name="example-wp-cat-6">
+                            <label class="form-check-label" for="example-wp-cat-6">Inspiration</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-cat-7" name="example-wp-cat-7">
+                            <label class="form-check-label" for="example-wp-cat-7">Uncategorized</label>
+                          </div>
+                        </div>
+                        <a class="link-fx fs-sm" href="javascript:void(0)">Add New Category</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block mb-0">
+                    <div class="block-header bg-body border-top p-0" role="tab" id="settings-accordion_h3">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s3" aria-expanded="true" aria-controls="settings-accordion_s3">Tags</a>
+                    </div>
+                    <div id="settings-accordion_s3" class="collapse" role="tabpanel" aria-labelledby="settings-accordion_h3" data-bs-parent="#settings-accordion">
+                      <div class="block-content">
+                        <div class="mb-4">
+                          <!-- Select2 (.js-select2 class is initialized in Helpers.jqSelect2()) -->
+                          <!-- For more info and examples you can check out https://github.com/select2/select2 -->
+                          <label class="form-label" for="example-wp-tags">Add New Tags</label>
+                          <select class="js-select2 form-select" id="example-wp-tags" name="example-wp-tags" style="width: 100%;" multiple>
+                            <option value="1" selected>tutorial</option>
+                            <option value="2">css</option>
+                            <option value="3">javascript</option>
+                            <option value="4">php</option>
+                            <option value="5">python</option>
+                            <option value="6">ruby</option>
+                            <option value="7">angular</option>
+                            <option value="8">react</option>
+                            <option value="9">vuejs</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block mb-0">
+                    <div class="block-header bg-body border-top p-0" role="tab" id="settings-accordion_h4">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s4" aria-expanded="true" aria-controls="settings-accordion_s4">Featured Image</a>
+                    </div>
+                    <div id="settings-accordion_s4" class="collapse" role="tabpanel" aria-labelledby="settings-accordion_h4" data-bs-parent="#settings-accordion">
+                      <div class="block-content block-content-full">
+                        <!-- Dropzone (functionality is auto initialized by the plugin itself in js/plugins/dropzone/dropzone.min.js) -->
+                        <!-- For more info and examples you can check out http://www.dropzonejs.com/#usage -->
+                        <form class="dropzone" action="be_forms_plugins.html"></form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block mb-0">
+                    <div class="block-header bg-body border-top p-0" role="tab" id="settings-accordion_h5">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s5" aria-expanded="true" aria-controls="settings-accordion_s5">Excerpt</a>
+                    </div>
+                    <div id="settings-accordion_s5" class="collapse" role="tabpanel" aria-labelledby="settings-accordion_h5" data-bs-parent="#settings-accordion">
+                      <div class="block-content">
+                        <div class="mb-4">
+                          <label class="form-label" for="example-wp-excerpt">Write an excerpt (optional)</label>
+                          <textarea class="form-control" id="example-wp-excerpt" name="example-wp-excerpt" rows="4"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block mb-0">
+                    <div class="block-header bg-body border-top p-0" role="tab" id="settings-accordion_h6">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s6" aria-expanded="true" aria-controls="settings-accordion_s6">Discussion</a>
+                    </div>
+                    <div id="settings-accordion_s6" class="collapse" role="tabpanel" aria-labelledby="settings-accordion_h6" data-bs-parent="#settings-accordion">
+                      <div class="block-content">
+                        <div class="mb-4">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-comments" name="example-wp-comments">
+                            <label class="form-check-label" for="example-wp-comments">Allow Comments</label>
+                          </div>
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="example-wp-pingbacks" name="example-wp-pingbacks">
+                            <label class="form-check-label" for="example-wp-pingbacks">Allow Pingbacks &amp; Trackbacks</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="block mb-0">
+                    <div class="block-header bg-body border-top p-0" role="tab" id="settings-accordion_h7">
+                      <a class="fw-semibold d-block w-100 p-3" data-bs-toggle="collapse" data-bs-parent="#settings-accordion" href="#settings-accordion_s7" aria-expanded="true" aria-controls="settings-accordion_s7">Layout</a>
+                    </div>
+                    <div id="settings-accordion_s7" class="collapse" role="tabpanel" aria-labelledby="settings-accordion_h7" data-bs-parent="#settings-accordion">
+                      <div class="block-content">
+                        <div class="mb-4">
+                          <label class="form-label" for="example-wp-layout-sidebar">Sidebar Settings</label>
+                          <div class="fs-sm text-muted mb-2">Select the desired Page layout</div>
+                          <select class="form-select" id="example-wp-layout-sidebar" name="example-wp-layout-sidebar">
+                            <option value="1" selected>Default Layout</option>
+                            <option value="2">No Sidebar</option>
+                            <option value="3">Left Sidebar</option>
+                            <option value="4">Right Sidebar</option>
+                          </select>
+                        </div>
+                        <div class="mb-4">
+                          <label class="form-label" for="example-wp-layout-header">Header Settings</label>
+                          <div class="fs-sm text-muted mb-2">Several options to change the header style on this page</div>
+                          <select class="form-select" id="example-wp-layout-header" name="example-wp-layout-header">
+                            <option value="1" selected>Default Header</option>
+                            <option value="2">Static Header</option>
+                            <option value="3">Transparent Header</option>
+                            <option value="4">Glassy Sticky Header</option>
+                          </select>
+                        </div>
+                        <div class="mb-4">
+                          <label class="form-label" for="example-wp-layout-footer">Footer Settings</label>
+                          <div class="fs-sm text-muted mb-2">Display the footer widgets?</div>
+                          <select class="form-select" id="example-wp-layout-footer" name="example-wp-layout-footer">
+                            <option value="1" selected>Default Footer</option>
+                            <option value="2">Display widgets (no socket)</option>
+                            <option value="3">Display sockets (no widgets)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END Settings -->
+            </div>
+          </div>
+          <div class="col-md-8 col-lg-7 col-xl-9 order-md-0 bg-body-dark">
+            <!-- Main Content -->
+            <div class="content">
+              <div class="block block-rounded">
+                <div class="block-content block-content-full d-flex justify-content-between border-bottom">
+                  <div>
+                    <button type="button" class="btn btn-sm btn-alt-secondary">
+                      <i class="fa fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-alt-secondary">
+                      <i class="fa fa-undo"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-alt-secondary">
+                      <i class="fa fa-redo"></i>
+                    </button>
+                  </div>
+                  <div>
+                    <a class="btn btn-sm btn-alt-info" href="javascript:void(0)">Preview</a>
+                    <a class="btn btn-sm btn-info" href="javascript:void(0)">Publish</a>
+                  </div>
+                </div>
+                <div class="block-content">
+                  <form action="db_wp_post.html" method="POST" onsubmit="return false;">
+                    <div class="mb-4">
+                      <input type="text" class="form-control py-4" id="post-title" name="post-title" placeholder="Add Title..">
+                    </div>
+                    <div class="mb-4">
+                      <!-- CKEditor (js-ckeditor id is initialized in Helpers.jsCkeditor()) -->
+                      <!-- For more info and examples you can check out http://ckeditor.com -->
+                      <textarea id="js-ckeditor" name="ckeditor">...</textarea>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- END Main Content -->
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+
+      <!-- Footer -->
+      <footer id="page-footer">
+        <div class="content py-0">
+          <div class="row fs-sm">
+            <div class="col-sm-6 order-sm-2 mb-1 mb-sm-0 text-center text-sm-end">
+              Crafted with <i class="fa fa-heart text-danger"></i> by <a class="fw-semibold" href="https://1.envato.market/ydb" target="_blank">pixelcave</a>
+            </div>
+            <div class="col-sm-6 order-sm-1 text-center text-sm-start">
+              <a class="fw-semibold" href="https://1.envato.market/r6y" target="_blank">Dashmix 5.5</a> &copy; <span data-toggle="year-copy"></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- jQuery (required for Select2 Plugin) -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/ckeditor/ckeditor.js"></script>
+    <script src="assets/js/plugins/select2/js/select2.full.min.js"></script>
+    <script src="assets/js/plugins/dropzone/min/dropzone.min.js"></script>
+
+    <!-- Page JS Helpers (CKEditor + Select2 plugins) -->
+    <script>
+      Dashmix.onLoad(function () {
+        CKEDITOR.config.height = '460';
+        Dashmix.helpers(['js-ckeditor', 'jq-select2']);
+      });
+    </script>
+  </body>
+</html>

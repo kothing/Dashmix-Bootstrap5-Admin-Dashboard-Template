@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>Dashmix - Bootstrap 5 Admin Template &amp; UI Framework</title>
+
+    <meta name="description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta name="author" content="pixelcave">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework">
+    <meta property="og:site_name" content="Dashmix">
+    <meta property="og:description" content="Dashmix - Bootstrap 5 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <!-- Icons -->
+    <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
+    <link rel="shortcut icon" href="assets/media/favicons/favicon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/media/favicons/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/favicons/apple-touch-icon-180x180.png">
+    <!-- END Icons -->
+
+    <!-- Stylesheets -->
+    <!-- Dashmix framework -->
+    <link rel="stylesheet" id="css-main" href="assets/css/dashmix.min.css">
+
+    <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
+    <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
+    <link rel="stylesheet" id="css-theme" href="assets/css/themes/xpro.min.css">
+    <!-- END Stylesheets -->
+  </head>
+
+  <body>
+    <!-- Page Container -->
+    <!--
+      Available classes for #page-container:
+
+      GENERIC
+
+        'remember-theme'                            Remembers active color theme and dark mode between pages using localStorage when set through
+                                                    - Theme helper buttons [data-toggle="theme"],
+                                                    - Layout helper buttons [data-toggle="layout" data-action="dark_mode_[on/off/toggle]"]
+                                                    - ..and/or Dashmix.layout('dark_mode_[on/off/toggle]')
+
+      SIDEBAR & SIDE OVERLAY
+
+        'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
+        'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
+        'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
+        'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
+        'sidebar-dark'                              Dark themed sidebar
+
+        'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
+        'side-overlay-o'                            Visible Side Overlay by default
+
+        'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
+
+        'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
+
+      HEADER
+
+        ''                                          Static Header if no class is added
+        'page-header-fixed'                         Fixed Header
+
+
+      FOOTER
+
+        ''                                          Static Footer if no class is added
+        'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
+
+      HEADER STYLE
+
+        ''                                          Classic Header style if no class is added
+        'page-header-dark'                          Dark themed Header
+        'page-header-glass'                         Light themed Header with transparency by default
+                                                    (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
+        'page-header-glass page-header-dark'         Dark themed Header with transparency by default
+                                                    (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
+
+      MAIN CONTENT LAYOUT
+
+        ''                                          Full width Main Content if no class is added
+        'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
+        'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
+
+      DARK MODE
+
+        'sidebar-dark page-header-dark dark-mode'   Enable dark mode (light sidebar/header is not supported with dark mode)
+    -->
+    <div id="page-container" class="sidebar-o sidebar-dark side-scroll">
+
+      <!-- Sidebar -->
+      <!--
+        Sidebar Mini Mode - Display Helper classes
+
+        Adding 'smini-hide' class to an element will make it invisible (opacity: 0) when the sidebar is in mini mode
+        Adding 'smini-show' class to an element will make it visible (opacity: 1) when the sidebar is in mini mode
+          If you would like to disable the transition animation, make sure to also add the 'no-transition' class to your element
+
+        Adding 'smini-hidden' to an element will hide it when the sidebar is in mini mode
+        Adding 'smini-visible' to an element will show it (display: inline-block) only when the sidebar is in mini mode
+        Adding 'smini-visible-block' to an element will show it (display: block) only when the sidebar is in mini mode
+      -->
+      <nav id="sidebar" aria-label="Main Navigation">
+        <!-- Side Header (mini Sidebar mode) -->
+        <div class="smini-visible-block">
+          <div class="content-header">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              D<span class="opacity-75">x</span>
+            </a>
+            <!-- END Logo -->
+          </div>
+        </div>
+        <!-- END Side Header (mini Sidebar mode) -->
+
+        <!-- Side Header (normal Sidebar mode) -->
+        <div class="smini-hidden">
+          <div class="content-header justify-content-lg-center">
+            <!-- Logo -->
+            <a class="fw-semibold text-white tracking-wide" href="index.html">
+              Dash<span class="opacity-75">mix</span>
+              <span class="fw-normal">Messages</span>
+            </a>
+            <!-- END Logo -->
+
+            <!-- Options -->
+            <div class="d-lg-none">
+              <!-- Close Sidebar, Visible only on mobile screens -->
+              <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
+              <button type="button" class="btn btn-sm btn-alt-secondary d-lg-none" data-toggle="layout" data-action="sidebar_close">
+                <i class="fa fa-times-circle"></i>
+              </button>
+              <!-- END Close Sidebar -->
+            </div>
+            <!-- END Options -->
+          </div>
+        </div>
+        <!-- END Side Header (normal Sidebar mode) -->
+
+        <!-- Sidebar Scrolling -->
+        <div class="js-sidebar-scroll">
+          <!-- Side Actions -->
+          <div class="content-side content-side-full bg-black-10 smini-hidden">
+            <button type="button" class="btn w-100 btn-sm btn-primary">
+              <i class="fa fa-plus opacity-50 me-1"></i> New Message
+            </button>
+          </div>
+          <!-- END Side Actions -->
+
+          <!-- Side Navigation -->
+          <div class="content-side">
+
+            <ul class="nav-main">
+              <li class="nav-main-item">
+                <a class="nav-main-link active" href="db_messages.html">
+                  <i class="nav-main-link-icon fa fa-inbox"></i>
+                  <span class="nav-main-link-name">Inbox</span>
+                  <span class="nav-main-link-badge badge rounded-pill bg-info">5</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-star"></i>
+                  <span class="nav-main-link-name">Starred</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-paper-plane"></i>
+                  <span class="nav-main-link-name">Sent Mail</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-box"></i>
+                  <span class="nav-main-link-name">All Mail</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Labels</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-danger"></i>
+                  <span class="nav-main-link-name">Personal</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-success"></i>
+                  <span class="nav-main-link-name">Work</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-warning"></i>
+                  <span class="nav-main-link-name">Friends</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-info"></i>
+                  <span class="nav-main-link-name">Trips</span>
+                </a>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-tag text-muted"></i>
+                  <span class="nav-main-link-name">Accounting</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">More</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                  <i class="nav-main-link-icon fa fa-list"></i>
+                  <span class="nav-main-link-name">Categories</span>
+                </a>
+                <ul class="nav-main-submenu">
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Social</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Promotions</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Updates</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Forums</span>
+                    </a>
+                  </li>
+                  <li class="nav-main-item">
+                    <a class="nav-main-link" href="">
+                      <span class="nav-main-link-name">Newsletters</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="">
+                  <i class="nav-main-link-icon fa fa-cog"></i>
+                  <span class="nav-main-link-name">Settings</span>
+                </a>
+              </li>
+              <li class="nav-main-heading">Dashboards</li>
+              <li class="nav-main-item">
+                <a class="nav-main-link" href="be_pages_dashboard_all.html">
+                  <i class="nav-main-link-icon fa fa-arrow-left"></i>
+                  <span class="nav-main-link-name">Go Back</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- END Side Navigation -->
+        </div>
+        <!-- END Sidebar Scrolling -->
+      </nav>
+      <!-- END Sidebar -->
+
+      <!-- Main Container -->
+      <main id="main-container">
+        <!-- Page Content -->
+        <div class="row g-0 flex-md-grow-1">
+          <div class="col-lg-5 col-xl-3 h100-scroll">
+            <div class="content">
+              <!-- Toggle Side Content -->
+              <div class="row g-sm d-lg-none push">
+                <div class="col-12 text-center mb-4">
+                  <!-- Logo -->
+                  <a class="fs-lg fw-semibold tracking-wide text-dark" href="index.html">
+                    Dash<span class="opacity-75">mix</span>
+                    <span class="fw-normal">Messages</span>
+                  </a>
+                  <!-- END Logo -->
+                </div>
+                <div class="col-6">
+                  <!-- Toggle Sidebar -->
+                  <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
+                  <button type="button" class="btn btn-primary w-100" data-toggle="layout" data-action="sidebar_toggle">
+                    <i class="fa fa-bars opacity-50 me-1"></i> Menu
+                  </button>
+                </div>
+                <div class="col-6">
+                  <!-- Class Toggle, functionality initialized in Helpers.dmToggleClass() -->
+                  <button type="button" class="btn btn-alt-primary w-100" data-toggle="class-toggle" data-target="#side-content" data-class="d-none">
+                    <i class="fa fa-envelope opacity-50 me-1"></i> Messages
+                  </button>
+                </div>
+              </div>
+              <!-- END Toggle Side Content -->
+
+              <!-- Side Content -->
+              <div id="side-content" class="d-none d-lg-block push">
+                <!-- Search Messages -->
+                <form action="db_messages.html" method="POST" onsubmit="return false;">
+                  <div class="mb-4">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search Messages..">
+                      <span class="input-group-text">
+                        <i class="fa fa-fw fa-search"></i>
+                      </span>
+                    </div>
+                  </div>
+                </form>
+                <!-- END Search Messages -->
+
+                <!-- Sorting/Filtering -->
+                <div class="d-flex justify-content-between mb-2">
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-sm btn-link fw-semibold dropdown-toggle" id="inbox-msg-sort" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sort by
+                    </button>
+                    <div class="dropdown-menu fs-sm" aria-labelledby="inbox-msg-sort">
+                      <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-sort-amount-down me-1"></i> Newest
+                      </a>
+                      <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-sort-amount-up me-1"></i> Oldest
+                      </a>
+                    </div>
+                  </div>
+                  <div class="dropdown">
+                    <button type="button" class="btn btn-sm btn-link fw-semibold dropdown-toggle" id="inbox-msg-filter" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Filter by
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end fs-sm" aria-labelledby="inbox-msg-filter">
+                      <a class="dropdown-item active" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-asterisk me-1"></i> New
+                      </a>
+                      <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-certificate me-1"></i> VIP
+                      </a>
+                      <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-exclamation-circle me-1"></i> Important
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- END Sorting/Filtering -->
+
+                <!-- Messages -->
+                <div class="list-group fs-sm">
+                  <a class="list-group-item list-group-item-action" href="javascript:void(0)">
+                    <span class="badge rounded-pill bg-primary m-1 float-end">1</span>
+                    <p class="fs-6 fw-bold mb-0">
+                      Error with modal
+                    </p>
+                    <p class="text-muted mb-2">
+                      There seems to be an issue when opening a modal, could you please check it..
+                    </p>
+                    <p class="fs-sm text-muted mb-0">
+                      <strong>Barbara Scott</strong>, 3 days ago
+                    </p>
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="javascript:void(0)">
+                    <span class="badge rounded-pill bg-primary m-1 float-end">2</span>
+                    <p class="fs-6 fw-bold mb-0">
+                      Action required
+                    </p>
+                    <p class="text-muted mb-2">
+                      Your account is inactive for a long time and you have to confirm your email once again..
+                    </p>
+                    <p class="fs-sm text-muted mb-0">
+                      <strong>Jesse Fisher</strong>, 1 hour ago
+                    </p>
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="javascript:void(0)">
+                    <span class="badge rounded-pill bg-primary m-1 float-end">1</span>
+                    <p class="fs-6 fw-bold mb-0">
+                      Website Released
+                    </p>
+                    <p class="text-muted mb-2">
+                      Our new website is live, feel free to visit it and let us know what..
+                    </p>
+                    <p class="fs-sm text-muted mb-0">
+                      <strong>Ryan Flores</strong>, 2 days ago
+                    </p>
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="javascript:void(0)">
+                    <span class="badge rounded-pill bg-primary m-1 float-end">3</span>
+                    <p class="fs-6 fw-bold mb-0">
+                      New Photo Pack
+                    </p>
+                    <p class="text-muted mb-2">
+                      Our new photo pack is now available to go live and we couldn’t be more excited..
+                    </p>
+                    <p class="fs-sm text-muted mb-0">
+                      <strong>Adam McCoy</strong>, 3 min ago
+                    </p>
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="javascript:void(0)">
+                    <span class="badge rounded-pill bg-primary m-1 float-end">9</span>
+                    <p class="fs-6 fw-bold mb-0">
+                      You have a new message
+                    </p>
+                    <p class="text-muted mb-2">
+                      Hi there, please check your profile, there is a new message waiting for you.
+                    </p>
+                    <p class="fs-sm text-muted mb-0">
+                      <strong>Jack Estrada</strong>, 4 hours ago
+                    </p>
+                  </a>
+                  <a class="list-group-item list-group-item-action" href="javascript:void(0)">
+                    <span class="badge rounded-pill bg-primary m-1 float-end">6</span>
+                    <p class="fs-6 fw-bold mb-0">
+                      Best of last week
+                    </p>
+                    <p class="text-muted mb-2">
+                      Last week has been full of new releases and products from indie developers.
+                    </p>
+                    <p class="fs-sm text-muted mb-0">
+                      <strong>Carl Wells</strong>, 2 days ago
+                    </p>
+                  </a>
+                </div>
+                <!-- END Messages -->
+              </div>
+              <!-- END Side Content -->
+            </div>
+          </div>
+          <div class="col-lg-7 col-xl-9 h100-scroll bg-body-dark">
+            <!-- Main Content -->
+            <div class="content">
+              <!-- Message -->
+              <div class="block block-rounded">
+                <div class="block-content block-content-sm block-content-full bg-body-light">
+                  <div class="d-flex py-3">
+                    <div class="flex-shrink-0 me-3 ms-2 overlay-container overlay-right">
+                      <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar8.jpg" alt="">
+                      <i class="far fa-circle text-white overlay-item fs-sm bg-success rounded-circle"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <a class="fw-semibold link-fx" href="javascript:void(0)">Mary Taylor</a>
+                          <div class="fs-sm text-muted">m.taylor@example.com</div>
+                        </div>
+                        <div class="col-sm-5 d-sm-flex align-items-sm-center">
+                          <div class="fs-sm text-muted text-sm-end w-100 mt-2 mt-sm-0">
+                            <p class="mb-0">April 2, 2018</p>
+                            <p class="mb-0">12:30</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content">
+                  <p>Dear Admin,</p>
+                  <p>Potenti elit lectus augue eget iaculis vitae etiam, ullamcorper etiam bibendum ad feugiat magna accumsan dolor, nibh molestie cras hac ac ad massa, fusce ante convallis ante urna molestie vulputate bibendum tempus ante justo arcu erat accumsan adipiscing risus, libero condimentum venenatis sit nisl nisi ultricies sed, fames aliquet consectetur consequat nostra molestie neque nullam scelerisque neque commodo turpis quisque etiam egestas vulputate massa, curabitur tellus massa venenatis congue dolor enim integer luctus, nisi suscipit gravida fames quis vulputate nisi viverra luctus id leo dictum lorem, inceptos nibh orci.</p>
+                  <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+                  <p>All the best,</p>
+                  <p>Mary</p>
+                </div>
+                <div class="block-content bg-body-light">
+                  <div class="row g-sm">
+                    <div class="col-4 col-xl-2">
+                      <div class="options-container fx-item-rotate-r">
+                        <img class="img-fluid options-item" src="assets/media/photos/photo16.jpg" alt="">
+                        <div class="options-overlay bg-black-75">
+                          <div class="options-overlay-content">
+                            <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                              <i class="fa fa-download"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="fs-sm text-muted pt-2">
+                        <i class="fa fa-paperclip"></i> 1a.jpg (785Kb)
+                      </p>
+                    </div>
+                    <div class="col-4 col-xl-2">
+                      <div class="options-container fx-item-rotate-r">
+                        <img class="img-fluid options-item" src="assets/media/photos/photo4.jpg" alt="">
+                        <div class="options-overlay bg-black-75">
+                          <div class="options-overlay-content">
+                            <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                              <i class="fa fa-download"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="fs-sm text-muted pt-2">
+                        <i class="fa fa-paperclip"></i> 1b.jpg (685kb)
+                      </p>
+                    </div>
+                    <div class="col-4 col-xl-2">
+                      <div class="options-container fx-item-rotate-r">
+                        <img class="img-fluid options-item" src="assets/media/photos/photo9.jpg" alt="">
+                        <div class="options-overlay bg-black-75">
+                          <div class="options-overlay-content">
+                            <a class="btn btn-sm btn-primary" href="javascript:void(0)">
+                              <i class="fa fa-download"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="fs-sm text-muted pt-2">
+                        <i class="fa fa-paperclip"></i> 1c.jpg (698kb)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- END Message -->
+
+              <!-- Reply -->
+              <div class="block block-rounded">
+                <div class="block-content block-content-full">
+                  <!-- CKEditor 5 Classic (js-ckeditor5-classic in Helpers.jsCkeditor5()) -->
+                  <!-- For more info and examples you can check out http://ckeditor.com -->
+                  <!-- CKEditor 5 Classic Container -->
+                  <div id="js-ckeditor5-classic"></div>
+                  <button type="button" class="btn btn-alt-primary mt-2">Send Message</button>
+                </div>
+              </div>
+              <!-- END Reply -->
+            </div>
+            <!-- END Main Content -->
+          </div>
+        </div>
+        <!-- END Page Content -->
+      </main>
+      <!-- END Main Container -->
+    </div>
+    <!-- END Page Container -->
+
+    <!--
+      Dashmix JS
+
+      Core libraries and functionality
+      webpack is putting everything together at assets/_js/main/app.js
+    -->
+    <script src="assets/js/dashmix.app.min.js"></script>
+
+    <!-- Page JS Plugins -->
+    <script src="assets/js/plugins/ckeditor5-classic/build/ckeditor.js"></script>
+
+    <!-- Page JS Helpers (CKEditor 5 plugins) -->
+    <script>Dashmix.helpersOnLoad(['js-ckeditor5']);</script>
+  </body>
+</html>
